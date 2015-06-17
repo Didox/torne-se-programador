@@ -1,0 +1,2 @@
+Para compilar usar:
+ruby exercicios.rb
