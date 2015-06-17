@@ -1,5 +1,3 @@
-a = "oi"
-b = "eu sou"
-c = "danilo"
 
-puts(a + b + c)
+a = $stdin.readline
+puts("seu nomero é:" + "     -    " + a)

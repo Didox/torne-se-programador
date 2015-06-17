@@ -1,4 +1,4 @@
-a = $stdin.readline.to_i
+a = $stdin.readline.to_i   #10
 b = a*50/2
 b = b+5-(3*150)+2+5*3/2
 b = b -10
@@ -8,3 +8,4 @@ c = a + b
 puts(b)
 puts(c)
 puts(a)
+
