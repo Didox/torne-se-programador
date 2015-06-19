@@ -1,12 +1,9 @@
-
+//3)
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-
+#include <stdlib.h> 
 int main() 
 {
-  int n1, n2 = 0;
+  int n1 = 0, n2 = 0;
 
   printf("Digite um numero \n");
   scanf("%d", &n1);
@@ -14,15 +11,15 @@ int main()
   scanf("%d", &n2);
 
   
-  if(n1 > n2){
-    printf("\n%d é o numero maior\n",n1);
+  if(n1 < n2){
+    printf("\n%d é o numero menor\n\n",n1);
   }
-  else if(n2 > n1){
-    printf("\n%d é o numero maior\n",n2);
+  else if(n2 < n1){
+    printf("\n%d é o numero menor\n\n",n2);
   }
   else{
     printf("\nos numeros são iguais\n");
   }
 
-  return 0;
+  system("pause");
 }
