@@ -1,42 +1,35 @@
-//24)
+
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  float mulheres_sim = 0;
-  float total_sim = 0;
-  float total_nao = 0;
-  float total_homem = 0;
-  float total_homem_nao = 0;
-  char resposta, sexo, i;
+  int cont=15, x=0, i, primos[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; //15
 
-  for(i=1; i<= 10; i++){
-    printf("Digite sexo M/F\n");
-    scanf(" %c",&sexo);
+  for(i=0;i<cont;i++){
+    printf("Digite um numero:\n");
+    int nb, dv=0;
+    scanf("%d", &nb);
 
-    printf("Digite a resposta S/N\n");
-    scanf(" %c",&resposta);
-
-    if(resposta == 'S'){
-      total_sim += 1;
-      if(sexo == 'F')
-        mulheres_sim += 1;
-    }
-    else if(resposta == 'N'){
-      total_nao += 1;
-      if(sexo == 'M')
-        total_homem_nao += 1;
+    for (i = 1; i <= nb; i++) {
+      if (nb % i == 0) { 
+        dv++;
+      }
     }
 
-    if(sexo == 'M')
-      total_homem += 1;
+    if(dv == 2){
+      primos[x] = nb;
+      x++;
+    } 
   }
 
+  
+  printf("Os numeros primos são: \n");
+  for(i=0;i<cont;i++){
+    if(primos[i] != 0)
+      printf("%d, ", primos[i]);
+  }
+  printf("\n");
 
-  printf("Pessoas que falaram sim: %.0f\n", total_sim); 
-  printf("Pessoas que falaram não: %.0f\n", total_nao); 
-  printf("Mulheres que falaram sim: %.0f\n", mulheres_sim); 
-  float porcentagem = total_homem_nao / total_homem * 100;
-  printf("Porcentagem de homens não entre todos os homens: %.0f%%\n", porcentagem);  
   system("pause");
 }

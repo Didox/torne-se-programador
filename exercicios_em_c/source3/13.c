@@ -1,27 +1,30 @@
-//13)
+
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  int idade_mais_90_quilos = 0, i = 0, idade = 0;
-  int idades = 0;
-  int todas_pessoas = 0;
-  float peso = 0;
+  int i, index=8; //8
+  char nomes[index][100];
+  float notas[index];
 
-  for(i=1; i<=7; i++){
-    printf("Digite a idade\n");
-    scanf("%d", &idade);
-    printf("Digite a peso\n");
-    scanf("%f", &peso);
+  for(i=0;i<index;i++){
+    printf("Digite o nome do %dº aluno:\n", (i + 1));
+    scanf("%s", nomes[i]);
 
-    if(peso > 90)
-      idade_mais_90_quilos += 1;
-    
-    idades += idade;
-    todas_pessoas = i;
+    printf("Digite a nota do %s:\n", nomes[i]);
+    scanf("%f", &notas[i]);
   }
 
-  printf("Pessoas com mais de 90 quilos: %d\n", idade_mais_90_quilos);
-  printf("Média de idade das pessoas: %d\n", (idades / todas_pessoas));
+  printf("Relatório de notas:\n");
+  printf("Aluno  Nota\n");
+  float soma = 0;
+  for(i=0;i<index;i++){
+    soma += notas[i];
+    printf("%s %.1f\n", nomes[i], notas[i]);
+  }
+
+  printf("A média da classe é %.1f:\n", (soma / index));
+
   system("pause");
 }

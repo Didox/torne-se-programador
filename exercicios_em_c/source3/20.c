@@ -1,30 +1,23 @@
-//20)
+
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  int maior = 0;
-  int menor = 0;
-  int numero = 1;
-  while(numero != 0){
-    if(menor == 0)
-      menor = numero;
+  int cont=50, i, v1[cont];
 
-    printf("Digite um numero\n");
-    scanf("%d", &numero);
-    
-    if(numero < 0)
-      printf("Somente numeros positivos\n");
-    else if(numero > 0){
-      if(numero > maior)
-        maior = numero;
-
-      if(numero < menor)
-        menor = numero;
-    }
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d:\n", (i + 1));
+    scanf("%d", &v1[i]);
   }
 
-  printf("O maior numero é: %d\n", maior);
-  printf("O menor numero é: %d\n", menor);
+  printf("Os números positivos são: \n");
+  for(i=0;i<cont;i++){
+    if(v1[i] >= 0){
+      printf("%d, ", v1[i]);
+    }
+  }
+  printf("\n");
+
   system("pause");
 }

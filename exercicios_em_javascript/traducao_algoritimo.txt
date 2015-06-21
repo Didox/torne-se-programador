@@ -1,0 +1,31 @@
+
+mostre('digite')
+document.write('digite')
+
+<br> = pula linha
+
+a = leia
+a = prompt()
+
+se(a == 1)
+if(a == 1)
+
+senao
+else{
+
+
+se(a == 1 ou a == 2)
+if(a == 1 || a == 2){
+
+se(a == 1 e a == 2)
+if(a == 1 && a == 2){
+
+fim se
+}
+
+se(1 == 1)
+
+fim se
+if(1==1){
+	
+}

@@ -1,37 +1,27 @@
 
-//23)
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  float idades_otimo = 0;
-  float qtd_otimo = 0;
+  int cont=5, i, x=0, a[cont], b[cont]; //5
 
-  float qtd_regular = 0;
-  float qtd_bom = 0;
-  float total = 15;
-  int idade, opiniao, i;
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d para p vetor A:\n", (i + 1));
+    scanf("%d", &a[i]);
 
-  for(i=1; i<= total; i++){
-    printf("Digite a idade\n");
-    scanf("%d", &idade);
-
-    printf("Digite sua opinião (ótimo - 3, bom - 2, regular - 1)\n");
-    scanf("%d", &opiniao);
-
-    if(opiniao == 3){
-      qtd_otimo += 1;
-      idades_otimo += idade;
-    }
-    else if(opiniao == 1)
-      qtd_regular += 1;
-    else if(opiniao == 2)
-      qtd_bom += 1;
+    printf("Digite um numero %d para p vetor B:\n", (i + 1));
+    scanf("%d", &b[i]);
   }
 
-  printf("Média de idade das pessoas que respondeu ótimo: %.2f\n", (idades_otimo / qtd_otimo)); 
-  printf("Quantidade de pessoas que respondeu regular: %.0f\n", qtd_regular); 
-  float porcentagem = qtd_bom / total * 100;
-  printf("Porcentagem que respondeu bom: %.0f%%\n", porcentagem);  
+  int soma = 0;
+  for(i=0;i<cont;i++){
+    int sub = b[cont-(i+1)] - a[i];
+    soma += sub;
+    printf("sub %d - %d = %d / soma %d \n", b[cont-(i+1)], a[i], sub, soma);
+  }
+
+  printf("O valor da soma é: %d\n", soma);
+
   system("pause");
 }

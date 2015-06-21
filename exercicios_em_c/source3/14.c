@@ -1,53 +1,51 @@
-//14)
+
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  float idade_superior_50_peso_inferior_60 = 0;
-  float qtd_inferior_peso_1_50 = 0;
-  float idades_inferior_peso_1_50 = 0;
-  float todas_pessoas = 0;
-  float qtd_olhos_azuis = 0;
-  float qtd_ruivos_nao_olhos_azuis = 0;
-  int idade, peso, altura, i;
-  char olhos, cabelos;
+  int i, index=6; //6
+  char nomes[index][100];
+  float notas_1[index];
+  float notas_2[index];
 
-  for(i=1; i<=20; i++){
-    printf("Digite a idade\n");
-    scanf("%d", &idade);
-    printf("Digite a peso\n");
-    scanf("%d", &peso);
-    printf("Digite a altura\n");
-    scanf("%d", &altura);
-    printf("Digite a cor dos olhos\n");
-    scanf(" %c",&olhos);
-    printf("Digite a cor dos cabelos\n");
-    scanf(" %c",&cabelos);
+  for(i=0;i<index;i++){
+    printf("Digite o nome do %dº aluno:\n", (i + 1));
+    scanf("%s", nomes[i]);
 
-    if(idade > 50 && peso < 60)
-      idade_superior_50_peso_inferior_60 += 1;
-    
-    if(altura < 1.50){
-      qtd_inferior_peso_1_50 += 1;
-      idades_inferior_peso_1_50 += idade;
-    }
+    printf("Digite a 1º nota do %s:\n", nomes[i]);
+    scanf("%f", &notas_1[i]);
 
-    if(olhos == 'A')
-      qtd_olhos_azuis += 1;
-
-    if(cabelos == 'R' && olhos != 'A')
-      qtd_ruivos_nao_olhos_azuis += 1;
-
-    todas_pessoas = i;
+    printf("Digite a 2º nota do %s:\n", nomes[i]);
+    scanf("%f", &notas_2[i]);
   }
 
-  printf("Pessoas superior a 50 anos e inferior a 60 quilos: %.0f\n", idade_superior_50_peso_inferior_60);
-  if(qtd_inferior_peso_1_50 < 1)
-    qtd_inferior_peso_1_50 = 1;
-  printf("A media de pessoas inferiores a 1.5: %.2f\n", (idades_inferior_peso_1_50 / qtd_inferior_peso_1_50));
-  float porcentagem = qtd_olhos_azuis / todas_pessoas * 100;
-  printf("A porcentagem de pessoas com olhos azuis são: %.0f%%\n", porcentagem);
-  printf("A quantidade de pessoas ruivos que não possuem olhos azuis: %.0f\n", qtd_ruivos_nao_olhos_azuis);
+  printf("Relatório de notas:\n");
+  printf("Aluno    1º nota    2º Nota    Média    Situação:\n");
+  float soma = 0;
+  int aprovados = 0;
+  int exame = 0;
+  int reprovados = 0;
+  for(i=0;i<index;i++){
+    float media = (notas_1[i] + notas_2[i]) / 2;
+    soma += media;
+    char situacao[100] = "Aprovado";
+    if(media < 5){
+      strcpy(situacao, "Reprovado");
+      reprovados++;
+    }
+    else if(media < 7){
+      strcpy(situacao, "Exame");
+      exame++;
+    }
+    else aprovados++;
+    printf("%s   %.1f       %.1f        %.1f      %s\n", nomes[i], notas_1[i], notas_2[i], media, situacao);
+  }
+
+  printf("A média da classe: %.1f\n", (soma / index));
+  printf("A quantidade de aprovados: %d\n", aprovados);
+  printf("A quantidade de exame: %d\n", exame);
+  printf("A quantidade de reprovados: %d\n", reprovados);
 
   system("pause");
 }

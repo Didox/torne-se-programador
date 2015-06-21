@@ -2377,32 +2377,604 @@ int main()
 }
 
 //10)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, x=0, j; //10
+  int vetor1[] = {4,7,5,8,2,15,9,6,10,11};
+  int vetor2[] = {3,4,5,8,2};
+
+  int primeiro_vetor_resultante[] = {0,0,0,0,0};
+  for(i=0;i<10;i++){
+    float v = vetor1[i] % 2;
+    if(v <= 0){
+      int par = vetor1[i];
+      int valores_somados = 0;
+      for(j=0;j<5;j++){
+        valores_somados += vetor2[j];
+      }
+      primeiro_vetor_resultante[x] = valores_somados + par;
+      x++;
+    }
+  }
+
+  x = 0;
+  int segundo_vetor_resultante[] = {0,0,0,0,0};
+  for(i=0;i<10;i++){
+    float v = vetor1[i] % 2;
+    if(v > 0){
+      int impar = vetor1[i];
+      int quantidade_divisores = 0;
+      for(j=0;j<5;j++){
+        float divi = impar % vetor2[j];
+        if(divi <=0){
+          quantidade_divisores += 1;
+        }
+      }
+      segundo_vetor_resultante[x] = quantidade_divisores;      
+      x++;
+    }
+  }
+
+  printf("Primeiro vetor resultante:\n");
+  for(i=0;i<5;i++){
+    printf("%d, ", primeiro_vetor_resultante[i]);
+  }
+  printf("\n");
+
+  printf("Segundo vetor resultante:\n");
+  for(i=0;i<5;i++){
+    printf("%d, ", segundo_vetor_resultante[i]);
+  }
+  printf("\n");
+  system("pause");
+}
+
+//11)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, x=0; //10
+  int vetor1[] = {4,7,5,8,2,15,9,6,10,11};
+  int vetor_par[5];
+  int vetor_impar[5];
+
+  for(i=0;i<10;i++){
+    float v = vetor1[i] % 2;
+    if(v <= 0){
+      vetor_par[x] = vetor1[i];
+      x++;
+    }
+  }
+
+  x = 0;
+  for(i=0;i<10;i++){
+    float v = vetor1[i] % 2;
+    if(v > 0){
+      vetor_impar[x] = vetor1[i];
+      x++;
+    }
+  }
+
+  printf("Vetor par:\n");
+  for(i=0;i<5;i++){
+    printf("%d, ", vetor_par[i]);
+  }
+  printf("\n");
+
+  printf("Vetor impar:\n");
+  for(i=0;i<5;i++){
+    printf("%d, ", vetor_impar[i]);
+  }
+  printf("\n");
+
+  system("pause");
+}
+
+//12)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i; //10
+  int numeros[5];
+
+  for(i=0;i<5;i++){
+    printf("Digite o %dº número:\n", (i + 1));
+    scanf("%d", &numeros[i]);
+  }
+
+  printf("Os números digitados foram:\n");
+  int soma = 0;
+  for(i=0;i<5;i++){
+    soma += numeros[i];
+    if(i < 4) printf("%d + ", numeros[i]);
+    else printf("%d = %d", numeros[i], soma);
+  }
+  printf("\n");
+
+  system("pause");
+}
+
+//13)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, index=8; //8
+  char nomes[index][100];
+  float notas[index];
+
+  for(i=0;i<index;i++){
+    printf("Digite o nome do %dº aluno:\n", (i + 1));
+    scanf("%s", nomes[i]);
+
+    printf("Digite a nota do %s:\n", nomes[i]);
+    scanf("%f", &notas[i]);
+  }
+
+  printf("Relatório de notas:\n");
+  printf("Aluno  Nota\n");
+  float soma = 0;
+  for(i=0;i<index;i++){
+    soma += notas[i];
+    printf("%s %.1f\n", nomes[i], notas[i]);
+  }
+
+  printf("A média da classe é %.1f:\n", (soma / index));
+
+  system("pause");
+}
+
+//14)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, index=6; //6
+  char nomes[index][100];
+  float notas_1[index];
+  float notas_2[index];
+
+  for(i=0;i<index;i++){
+    printf("Digite o nome do %dº aluno:\n", (i + 1));
+    scanf("%s", nomes[i]);
+
+    printf("Digite a 1º nota do %s:\n", nomes[i]);
+    scanf("%f", &notas_1[i]);
+
+    printf("Digite a 2º nota do %s:\n", nomes[i]);
+    scanf("%f", &notas_2[i]);
+  }
+
+  printf("Relatório de notas:\n");
+  printf("Aluno    1º nota    2º Nota    Média    Situação:\n");
+  float soma = 0;
+  int aprovados = 0;
+  int exame = 0;
+  int reprovados = 0;
+  for(i=0;i<index;i++){
+    float media = (notas_1[i] + notas_2[i]) / 2;
+    soma += media;
+    char situacao[100] = "Aprovado";
+    if(media < 5){
+      strcpy(situacao, "Reprovado");
+      reprovados++;
+    }
+    else if(media < 7){
+      strcpy(situacao, "Exame");
+      exame++;
+    }
+    else aprovados++;
+    printf("%s   %.1f       %.1f        %.1f      %s\n", nomes[i], notas_1[i], notas_2[i], media, situacao);
+  }
+
+  printf("A média da classe: %.1f\n", (soma / index));
+  printf("A quantidade de aprovados: %d\n", aprovados);
+  printf("A quantidade de exame: %d\n", exame);
+  printf("A quantidade de reprovados: %d\n", reprovados);
+
+  system("pause");
+}
+
+//15)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, index=8; //8
+  char nomes[index][100];
+  int locacoes[index];
+
+  for(i=0;i<index;i++){
+    printf("Digite o nome do %dº cliente:\n", (i + 1));
+    scanf("%s", nomes[i]);
+
+    int locacao = 1999;
+    while(locacao >= 1999){
+      printf("Digite a quantidade de locações do %s:\n", nomes[i]);
+      scanf("%d", &locacao);
+
+      if(locacao >= 1999){
+        printf("A quantidade de locações do %s precisa ser menor do que 1999\n", nomes[i]);
+      }
+    }
+
+    locacoes[i] = locacao;
+  }
+
+  for(i=0;i<index;i++){
+    printf("cliente: %s - %d locações gratis\n", nomes[i], (locacoes[i] / 10));
+  }
+
+  system("pause");
+}
+
+//16)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int i, index=5, x=0; //5
+  char nome[100];
+  float preco;
+  int precos_inferior_50 = 0;
+  char nome_produtos_entre_50_100[index][100];
+  int quantidade_produtos_superior_100 = 0;
+  float procos_produtos_superior_100 = 0;
+
+  for(i=0;i<index;i++){
+    printf("Digite o nome do produto:\n");
+    scanf("%s", nome);
+
+    printf("Digite o preço do produto:\n");
+    scanf("%f", &preco);
+
+    if(preco < 50) precos_inferior_50++;
+
+    if(preco >=50 && preco <= 100){
+      strcpy(nome_produtos_entre_50_100[x], nome);
+      x++;
+    }
+
+    if(preco > 100){
+      quantidade_produtos_superior_100++;
+      procos_produtos_superior_100 += preco;
+    }
+  }
+
+  printf("Quantidade de produtos com preço menor que R$ 50 é: %d\n", precos_inferior_50);
+  printf("Nome dos produtos entre R$ 50  a R$ 100 é: \n");
+  for(i=0;i<index;i++){
+    if(strncmp(nome_produtos_entre_50_100[i],"", 2) > 0){
+      printf("  %s\n", nome_produtos_entre_50_100[i]);
+    }
+  }
+  printf("Média dos preços maior que R$ 100 é: %.1f\n", (procos_produtos_superior_100 / quantidade_produtos_superior_100));
+
+  system("pause");
+}
 
 
+//17)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int vetnum1[] = {41,7,5,48,32,15,9,6,10,11};
+  int vetnum2[] = {40,77,1,8,23,15,9,56,10,151};
+  int v[20];
+
+  int i,j,aux, x=0;
+  for(i=0;i<9;i++){  
+    for(j=i+1;j<10;j++)
+    {
+      if(vetnum1[i]<vetnum1[j])
+      {
+        aux=vetnum1[i];
+        vetnum1[i]=vetnum1[j];
+        vetnum1[j]=aux;
+      }
+    }
+  }
+
+  for(i=0;i<9;i++){  
+    for(j=i+1;j<10;j++)
+    {
+      if(vetnum2[i]<vetnum2[j])
+      {
+        aux=vetnum2[i];
+        vetnum2[i]=vetnum2[j];
+        vetnum2[j]=aux;
+      }
+    }
+  }
+
+  for(i=0;i<10;i++){
+    v[x] = vetnum1[i];
+    x++;
+  }
+
+  for(i=0;i<10;i++){
+    v[x] = vetnum2[i];
+    x++;
+  }
 
 
+  for(i=0;i<20;i++){  
+    for(j=i+1;j<20;j++)
+    {
+      if(v[i]<v[j])
+      {
+        aux=v[i];
+        v[i]=v[j];
+        v[j]=aux;
+      }
+    }
+  }
 
+  for(i=0;i<20;i++){  
+    printf("Vetores ordenados %d: %d\n",(i+1),v[i]);
+  }
 
+  system("pause");
+}
 
+//18)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int v[] = {41,7,5,48,32,15,9,6,10,11,12,34,5,67,34};
+  int maior = 0, menor = 0;
+  int index_maior = 0, index_menor = 0, i;
 
+  for(i=0;i<15;i++){  
+    if(maior < v[i]){
+      maior = v[i];
+      index_maior = i;
+    }
 
+    if(menor == 0){
+      menor = v[i];
+      index_menor = i;
+    }
+    else if(menor > v[i]){
+      menor = v[i];
+      index_menor = i;
+    }
+  }
 
+  printf("O maior elemento é: %d e a posicao é: %d\n", maior, index_maior);
+  printf("O menor elemento é: %d e a posicao é: %d\n", menor, index_menor);
 
+  system("pause");
+}
 
+//19)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=10; //10
+  int v1[cont], v2[cont], v3[cont], i;
 
+  for(i=0;i<cont;i++){
+    printf("Digite o %dº numero da lista 1:\n", (i + 1));
+    scanf("%d", &v1[i]);
+  }
 
+  for(i=0;i<cont;i++){
+    printf("Digite o %dº numero da lista 2:\n", (i + 1));
+    scanf("%d", &v2[i]);
+  }
 
+  for(i=0;i<cont;i++){
+    v3[i] = v1[i] * v2[i];
+  }
 
+  printf("A multiplicação dos indices são: \n");
+  for(i=0;i<cont;i++){
+    printf("%d, ", v3[i]);
+  }
+  printf("\n");
 
+  system("pause");
+}
 
+//20)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=50, i, v1[cont];
 
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d:\n", (i + 1));
+    scanf("%d", &v1[i]);
+  }
 
+  printf("Os números positivos são: \n");
+  for(i=0;i<cont;i++){
+    if(v1[i] >= 0){
+      printf("%d, ", v1[i]);
+    }
+  }
+  printf("\n");
 
+  system("pause");
+}
 
+//21)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=30, i, v1[cont], v2[cont]; //30
 
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d:\n", (i + 1));
+    if (scanf("%d", &v1[i]) != 1) 
+      v1[i] = -1; 
+  }
 
+  for(i=0;i<cont;i++){
+    if (v1[i] != -1) v2[i] = v1[i];
+    else v2[i] = 1;
+  }
 
+  printf("Os valores do vetor 1 são: \n");
+  for(i=0;i<cont;i++){
+    if(v1[i] >= 0){
+      printf("%d, ", v1[i]);
+    }
+  }
+  printf("\n");
 
+  printf("Os valores do vetor 2 são: \n");
+  for(i=0;i<cont;i++){
+    if(v2[i] >= 0){
+      printf("%d, ", v2[i]);
+    }
+  }
+  printf("\n");
+
+  system("pause");
+}
+
+//22)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=10, i, v[cont], b[cont]; //10
+
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d:\n", (i + 1));
+    if (scanf("%d", &v[i]) != 1) 
+      v[i] = -1; 
+  }
+
+  for(i=0;i<cont;i++){
+    if (v[i] >= 0){
+      b[i] = v[i];
+    }
+    else b[i] = -1;
+  }
+
+  printf("O vetor b é: \n");
+  for(i=0;i<cont;i++){
+    if(b[i] != -1)
+      printf("%d, ", b[i]);
+  }
+  printf("\n");
+
+  system("pause");
+}
+
+//23)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=5, i, x=0, a[cont], b[cont]; //5
+
+  for(i=0;i<cont;i++){
+    printf("Digite um numero %d para p vetor A:\n", (i + 1));
+    scanf("%d", &a[i]);
+
+    printf("Digite um numero %d para p vetor B:\n", (i + 1));
+    scanf("%d", &b[i]);
+  }
+
+  int soma = 0;
+  for(i=0;i<cont;i++){
+    int sub = b[cont-(i+1)] - a[i];
+    soma += sub;
+    printf("sub %d - %d = %d / soma %d \n", b[cont-(i+1)], a[i], sub, soma);
+  }
+
+  printf("O valor da soma é: %d\n", soma);
+
+  system("pause");
+}
+
+//24)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=15, x=0, i, primos[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; //15
+
+  for(i=0;i<cont;i++){
+    printf("Digite um numero:\n");
+    int nb, dv=0;
+    scanf("%d", &nb);
+
+    for (i = 1; i <= nb; i++) {
+      if (nb % i == 0) { 
+        dv++;
+      }
+    }
+
+    if(dv == 2){
+      primos[x] = nb;
+      x++;
+    } 
+  }
+
+  
+  printf("Os numeros primos são: \n");
+  for(i=0;i<cont;i++){
+    if(primos[i] != 0)
+      printf("%d, ", primos[i]);
+  }
+  printf("\n");
+
+  system("pause");
+}
+
+//25)
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+int main() 
+{
+  int cont=15, i; //15
+  float v[cont], maior=0;
+
+  for(i=0;i<cont;i++){
+    printf("Digite um numero:\n");
+    scanf("%f", &v[i]);
+    if(maior < v[i]) maior = v[i];
+  }
+
+  
+  printf("Os numeros são: \n");
+  for(i=0;i<cont;i++){
+    printf("%.2f, ", (v[i] / maior));
+  }
+  printf("\n");
+
+  system("pause");
+}
 
 
 

@@ -1,40 +1,45 @@
-//16)
+
 #include <stdio.h>
 #include <stdlib.h> 
+#include <string.h>
 int main() 
 {
-  float idades = 0;
-  float peso_superior_90_altura_inferior_1_50 = 0;
-  float qtd_pessoas_10_30_anos_e_mais_1_90_altura = 0;
-  float todas_pessoas = 0;
-  int idade, i;
-  float peso,altura; 
+  int i, index=5, x=0; //5
+  char nome[100];
+  float preco;
+  int precos_inferior_50 = 0;
+  char nome_produtos_entre_50_100[index][100];
+  int quantidade_produtos_superior_100 = 0;
+  float procos_produtos_superior_100 = 0;
 
-  for(i=1; i<= 10; i++){
-    printf("Digite a idade\n");
-    scanf("%d", &idade);
+  for(i=0;i<index;i++){
+    printf("Digite o nome do produto:\n");
+    scanf("%s", nome);
 
-    printf("Digite um peso\n");
-    scanf("%f", &peso);
+    printf("Digite o preço do produto:\n");
+    scanf("%f", &preco);
 
-    printf("Digite uma altura\n");
-    scanf("%f", &altura);
+    if(preco < 50) precos_inferior_50++;
 
-    if(peso > 90 && altura < 1.50)
-      peso_superior_90_altura_inferior_1_50 += 1;
-
-    if(altura > 1.90){
-      if(idade >= 10 && idade <= 30)
-        qtd_pessoas_10_30_anos_e_mais_1_90_altura += 1;
+    if(preco >=50 && preco <= 100){
+      strcpy(nome_produtos_entre_50_100[x], nome);
+      x++;
     }
 
-    idades += idade;
-    todas_pessoas = i;
+    if(preco > 100){
+      quantidade_produtos_superior_100++;
+      procos_produtos_superior_100 += preco;
+    }
   }
-  printf("A média de idades é: %.2f\n", (idades/10));
-  printf("Quantidade de pessoas com altura superior a 90 e peso inverior a 1.50: %.0f\n", peso_superior_90_altura_inferior_1_50);
-  float porcentagem = qtd_pessoas_10_30_anos_e_mais_1_90_altura / todas_pessoas * 100;
-  printf("Porcentagem de pessoas que medem mais de 1,90 e com idade entre 10 e 30: %.0f%%\n", porcentagem);
+
+  printf("Quantidade de produtos com preço menor que R$ 50 é: %d\n", precos_inferior_50);
+  printf("Nome dos produtos entre R$ 50  a R$ 100 é: \n");
+  for(i=0;i<index;i++){
+    if(strncmp(nome_produtos_entre_50_100[i],"", 2) > 0){
+      printf("  %s\n", nome_produtos_entre_50_100[i]);
+    }
+  }
+  printf("Média dos preços maior que R$ 100 é: %.1f\n", (procos_produtos_superior_100 / quantidade_produtos_superior_100));
 
   system("pause");
 }

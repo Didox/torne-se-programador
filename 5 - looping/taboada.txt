@@ -1,0 +1,15 @@
+mostre("Digite" )
+mostre("1 - tabuada do  1" )
+mostre("2 - tabuada do 2" )
+a = leia #1
+
+tabuada = 1
+se(a == 1 ou a == 2)
+  enquanto(tabuada <= 10)
+  	mostre(a + " X " + tabuada + " = " + (a * tabuada))
+  	tabuada = tabuada + 1
+  fim
+senao
+  mostre("opção inválida")
+fim se
+	
