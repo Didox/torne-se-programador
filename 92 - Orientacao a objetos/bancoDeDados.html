@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Orientacao objeto</title>
+	<script type="text/javascript" src="file:///Users/didox/Downloads/orientacao_objetos/bancoDeDados.js"></script>
+	<script>
+	var c = new Cliente();
+	c.id=1;
+	c.nome="samir";
+	c.telefone="99999999";
+	c.endereco="rua nononononono";
+	c.salvar()
+	
+	var c = new Cliente();
+	c.id=2;
+	c.nome="danilo";
+	c.salvar()
+
+    //--------------------
+
+	var cl = new Cliente();
+	cl.id=3;
+	cl.nome="Valmir 1";
+	Cliente.salvar(cl);
+
+	var cl = new Cliente();
+	cl.id=4;
+	cl.nome="Valmir 2";
+	Cliente.salvar(cl);
+
+	var cl = new Cliente();
+	cl.id=5;
+	cl.nome="Valmir 3";
+	Cliente.salvar(cl);
+
+	function mostarUsuarios(){
+		document.write("<br><br><br>");
+		document.write("Lista de usuarios <br>");
+		document.write("<table border=\"1\">");
+		document.write("<tr>");
+		document.write("<td>Id</td>");
+		document.write("<td>Nome</td>");
+		document.write("<td>Telefone</td>");
+		document.write("<td>Endereco</td>");
+		document.write("</tr>");
+
+		for(i=0;i<Cliente.bancoEstatico.length;i++){
+			var c = Cliente.bancoEstatico[i];
+			document.write("<tr>");
+			document.write("<td>" + c.id + "</td>");
+			document.write("<td>" + c.nome + "</td>");
+			document.write("<td>" + c.telefone + "</td>");
+			document.write("<td>" + c.endereco + "</td>");
+			document.write("</tr>");
+		}
+
+		document.write("</table>");
+	}
+
+	mostarUsuarios();
+
+	</script>
+	</head>
+	<body>
+	</body>
+
+</html>
