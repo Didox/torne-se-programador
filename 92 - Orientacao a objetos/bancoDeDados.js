@@ -1,9 +1,9 @@
-function Cliente(){
+function Cliente(id, nome, endereco, telefone){
 	//atributos publicos//
-	this.nome;
-	this.endereco;
-	this.telefone;
-	this.id;
+	this.nome = nome;
+	this.endereco = endereco;
+	this.telefone = telefone;
+	this.id = id;
 	//metodos publicos//
 	this.salvar=function(){
 		Cliente.bancoEstatico.push(this);
