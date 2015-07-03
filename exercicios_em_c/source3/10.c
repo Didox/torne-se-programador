@@ -50,5 +50,4 @@ int main()
     printf("%d, ", segundo_vetor_resultante[i]);
   }
   printf("\n");
-  system("pause");
 }
