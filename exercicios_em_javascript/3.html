@@ -1,18 +1,9 @@
 <script>
-	document.write("Digite <br>" )
-	document.write("1 - taboada do  1 <br>" )
-	document.write("2 - taboada do 2 <br>" )
-	a = prompt()
-
-    taboada = 1
-	if(a == 1 || a == 2){
-		while(taboada <= 10){
-			document.write(a + " X " + taboada + " = " + (a * taboada) + " <br>")
-			taboada = taboada + 1
-		}
-	}
-	else{
-		document.write("opcao invalida  <br>")
-	}
-
+  debugger
+  for(i=1; i <= 100; i++){
+    document.write("Tabuada do  " + i + " <br>" );
+    for(x=1; x <= 100; x++){
+      document.write(i + " X " + x + " = " + (i * x) + " <br>")
+    }
+  }
 </script>

@@ -1,5 +1,5 @@
 puts("Digite um numero" )
-a = $stdin.readline.to_i
+a = gets.to_i
 tabuada=1
 
 while(tabuada <= 10) do

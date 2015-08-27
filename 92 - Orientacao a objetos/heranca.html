@@ -2,8 +2,7 @@
 <head>
 	<title>Orientacao objeto</title>
 	<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/92%20-%20Orientacao%20a%20objetos/cliente.js"></script>
-
-	<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/92%20-%20Orientacao%20a%20objetos/cliente_sigleton.js"></script>
+	<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/92%20-%20Orientacao%20a%20objetos/fornecedor.js"></script>
 	<script>
 	var c = new Cliente();
 	c.id=1;
@@ -19,20 +18,23 @@
 
     //--------------------
 
-	var cl1 = new Cliente();
-	cl1.id=3;
-	cl1.nome="Valmir 1";
-	Cliente.salvar(cl1);
+	var cl = new Cliente();
+	cl.id=3;
+	cl.nome="Valmir 1";
+	Cliente.salvar(cl);
 
-	var cl2 = new Cliente();
-	cl2.id=4;
-	cl2.nome="Valmir 2";
-	Cliente.salvar(cl2);
+	var cl = new Cliente();
+	cl.id=4;
+	cl.nome="Valmir 2";
+	Cliente.salvar(cl);
 
-	var cl3 = new Cliente();
-	cl3.id=5;
-	cl3.nome="Valmir 3 - " + cl1.nome;
-	Cliente.salvar(cl3);
+	var cl = new Cliente();
+	cl.id=5;
+	cl.nome="Valmir 3";
+	Cliente.salvar(cl);
+	var cnovo=new Cliente(300,"jose","Rua nononono",99987656);
+	cnovo.salvar();
+	new Cliente(300,"gabao","Rua nononono",99987656).salvar();
 
 	function mostarUsuarios(){
 		document.write("<br><br><br>");
@@ -60,9 +62,10 @@
 
 	mostarUsuarios();
 
-
-
-	
+	f = new Fornecedor();
+	f.CNPJ = 1234;
+	f.salvar();
+	f.listar();
 
 	</script>
 	</head>

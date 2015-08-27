@@ -14,6 +14,6 @@ c = 8
 
 
 puts('Digite seu nome')
-nome = $stdin.readline
+nome = gets
 
 puts('seu nome é ' + nome + ' e os valores secretos são:' + a.to_s + ',' + b.to_s + ',' + c.to_s)

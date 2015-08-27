@@ -5,37 +5,37 @@
 ################################################################################
 #1)
 puts("Digite um numero")
-a = $stdin.readline.to_i
+a = gets.to_i
 puts("Digite um numero")
-b = $stdin.readline.to_i
+b = gets.to_i
 c = a - b
 puts("A subitração é: " + c.to_s)
 
 #2)
 puts("Digite um numero")
-a = $stdin.readline.to_i
+a = gets.to_i
 puts("Digite um numero")
-b = $stdin.readline.to_i
+b = gets.to_i
 puts("Digite um numero")
-c = $stdin.readline.to_i
+c = gets.to_i
 c = a * b * c
 puts(c.to_s)
 puts("A multiplicação dos três numeros é: " + c.to_s)
 
 #3)
 puts("Digite um numero")
-a = $stdin.readline.to_i
+a = gets.to_i
 puts("Digite um numero que não seja zero")
-b = $stdin.readline.to_i
+b = gets.to_i
 c = a / b
 puts(c.to_s)
 puts("A divisão é: " + c.to_s)
 
 #4) 
 puts("Digite uma nota")
-nota1 = $stdin.readline.to_i
+nota1 = gets.to_i
 puts("Digite outra nota")
-nota2 = $stdin.readline.to_i
+nota2 = gets.to_i
 pesonota1 = 2
 pesonota2 = 3
 media = (nota1 * pesonota1 + nota2 * pesonota2) / (pesonota1 + pesonota2)
@@ -44,22 +44,22 @@ puts("A média ponderada é: " + c.to_s)
 
 #5) 
 puts("Digite o preço do produto")
-preco = $stdin.readline.to_f
+preco = gets.to_f
 desconto = (preco * 10) / 100
 puts("O desconto de 10% do preço é: " + (preco - desconto).to_s)
 
 #6)
 puts("Digite o seu salário")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 puts("Digite o valor de suas vendas")
-vendas = $stdin.readline.to_f
+vendas = gets.to_f
 comissao = (vendas * 4) / 100
 puts("O valor de sua comissão é: " + comissao.to_s)
 puts("Seu salário com a comissão é: " + (comissao + salario).to_s)
 
 #7)
 puts("Digite seu peso")
-peso = $stdin.readline.to_i
+peso = gets.to_i
 peso_engordo = ((peso * 15) / 100) + peso
 peso_emagreco = peso - ((peso * 20) / 100)
 puts("Seu peso se você engordar 15% é de: " + peso_engordo.to_s)
@@ -67,7 +67,7 @@ puts("Seu peso se você emagrecer 20% é de: " + peso_emagreco.to_s)
 
 #8)
 puts("Digite seu peso")
-peso = $stdin.readline.to_i
+peso = gets.to_i
 puts("Seu peso em gramas é de: " + (peso*1000).to_s)
 
 #9)
@@ -76,15 +76,15 @@ puts("Seu peso em gramas é de: " + (peso*1000).to_s)
 
 #12)
 puts("Digite o valor do salario minimo")
-salario_m = $stdin.readline.to_f
+salario_m = gets.to_f
 puts("Digite o valor de seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 quantidade = salario / salario_m
 puts("Voce ganha " + quantidade.to_s + " salarios minimos")
 
 #13)
 puts("Digite o numero da taboada")
-numero = $stdin.readline.to_i
+numero = gets.to_i
 puts(numero.to_s + " X 1:" + (numero*1).to_s)
 puts(numero.to_s + " X 2:" + (numero*2).to_s)
 puts(numero.to_s + " X 3:" + (numero*3).to_s)
@@ -98,9 +98,9 @@ puts(numero.to_s + " X 10:" + (numero*10).to_s)
 
 #14
 puts("Digite o seu ano de nascimento")
-ano_pessoa = $stdin.readline.to_i
+ano_pessoa = gets.to_i
 puts("Digite o ano atual")
-ano_atual = $stdin.readline.to_i
+ano_atual = gets.to_i
 anos = ano_atual - ano_pessoa
 puts("a idade em anos é: " + anos.to_s)
 meses = anos * 12
@@ -112,11 +112,11 @@ puts("a idade em semanas é: " + semanas.to_s)
 
 #15)
 puts("Digite o salario de joao")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 puts("Digite o valor da primeira conta atrazada")
-c1 = $stdin.readline.to_f
+c1 = gets.to_f
 puts("Digite o valor da segunda conta atrazada")
-c2 = $stdin.readline.to_f
+c2 = gets.to_f
 multa1 = (c1*2) / 100
 multa2 = (c2*2) / 100
 sobra = salario - ((c1 + multa1) + (c2 + multa2))
@@ -133,7 +133,7 @@ puts("A sobra de seu salario é de: " + sobra)
 
 #24)
 puts("Digite o valor do dinheiro em reais")
-reais = $stdin.readline.to_f
+reais = gets.to_f
 dolar = 1.80
 marco = 2.00
 libra = 1.57
@@ -143,9 +143,9 @@ puts("O valor convertido em libra esterlina é: " + (reais * libra).to_s)
 
 #25)
 puts("Digite uma hora")
-hora = $stdin.readline.to_i
+hora = gets.to_i
 puts("Digite minutos")
-minutos = $stdin.readline.to_i
+minutos = gets.to_i
 
 minutos_convertidos = hora * 60
 total_convertidos = minutos_convertidos + minutos
@@ -161,13 +161,13 @@ puts("O total de minutos convertidos em segundos é: " + (total_convertidos * 60
 ################################################################################
 #1)
 puts("Digite a primeira nota")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite a segunda nota")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 puts("Digite a terceira nota")
-n3 = $stdin.readline.to_i
+n3 = gets.to_i
 puts("Digite a quarta nota")
-n4 = $stdin.readline.to_i
+n4 = gets.to_i
 
 media = (n1+n2+n3+n4) / 4
 
@@ -179,9 +179,9 @@ end
 
 #2)
 puts("Digite a primeira nota")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite a segunda nota")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 media = (n1+n2) / 2
 
 if(media >=7 )
@@ -194,9 +194,9 @@ end
 
 #3)
 puts("Digite um numero")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite outro numero")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 
 if(n1 < n2)
   puts(n1.to_s + " é o numero menor")
@@ -208,9 +208,9 @@ end
 
 #4)
 puts("Digite um numero")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite outro numero")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 
 if(n1 > n2)
   puts(n1.to_s + " é o numero maior")
@@ -222,9 +222,9 @@ end
 
 #5)
 puts("Digite um numero")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite outro numero")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 
 if(n1 == 1)
   puts("a média entre os dos numeros é: " + ((n1+n2) / 2).to_s)
@@ -250,9 +250,9 @@ end
 
 #6)
 puts("Digite um numero")
-n1 = $stdin.readline.to_i
+n1 = gets.to_i
 puts("Digite outro numero")
-n2 = $stdin.readline.to_i
+n2 = gets.to_i
 
 case n1
 when 1
@@ -273,7 +273,7 @@ end
 
 #7)
 puts("Digite seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 if(salario < 500)
   porcentagem = (salario * 30) / 100
   puts("Seu salario com aumento é: " + (salario + porcentagem).to_s)
@@ -283,7 +283,7 @@ end
 
 #8)
 puts("Digite seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 if(salario <= 300)
   porcentagem = (salario * 35) / 100
   puts("Você teve um aumento de 35%, seu salario com aumento é: " + (salario + porcentagem).to_s)
@@ -294,7 +294,7 @@ end
 
 #9)
 puts("Digite seu saldo médio")
-saldo = $stdin.readline.to_i
+saldo = gets.to_i
 if(saldo <= 200)
   porcentagem = (saldo * 10) / 100
   puts("O saldo médio é de: #{(saldo + porcentagem)} e o valor do credito é de 10%: #{porcentagem}")
@@ -311,7 +311,7 @@ end
 
 #10)
 puts("Digite o custo de fabrica de um carro")
-custo_de_fabrica = $stdin.readline.to_i
+custo_de_fabrica = gets.to_i
 if(custo_de_fabrica <= 12000)
   porcentagem_distribuidor = (custo_de_fabrica * 5) / 100
   impostos = 0
@@ -328,7 +328,7 @@ end
 
 #11)
 puts("Digite seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 if(salario <= 300)
   porcentagem = (salario * 15) / 100
   puts("Você teve um aumento de 15%, seu salario com aumento é: " + (salario + porcentagem).to_s)
@@ -344,7 +344,7 @@ end
 
 #12)
 puts("Digite seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 if(salario <= 350)
   porcentagem = (salario * 7) / 100
   gratificacao = 100
@@ -365,7 +365,7 @@ end
 
 #13)
 puts("Digite o preço do produto")
-preco = $stdin.readline.to_f
+preco = gets.to_f
 if(preco <= 50)
   porcentagem = (preco * 5) / 100
   novo_preco = preco + porcentagem
@@ -390,7 +390,7 @@ end
 
 #14)
 puts("Digite seu salario")
-salario = $stdin.readline.to_f
+salario = gets.to_f
 if(salario <= 300)
   porcentagem = (salario * 50) / 100
   novo_salario = salario + porcentagem
@@ -417,9 +417,9 @@ puts("Seu novo salário com aumento é: " + novo_salario.to_s)
 puts("Digite o tipo de investimento")
 puts("(1) - Poupança")
 puts("(2) - Fundos de renda fixa")
-tipo = $stdin.readline.to_i
+tipo = gets.to_i
 puts("Digite o valor")
-valor = $stdin.readline.to_f
+valor = gets.to_f
 if(tipo == 1)
   porcentagem = (valor * 3) / 100
   valor = valor + porcentagem
@@ -434,7 +434,7 @@ end
 
 #16)
 puts("Digite o preço")
-preco = $stdin.readline.to_f
+preco = gets.to_f
 if(preco <= 30)
   puts("Preço: #{preco}, sem desconto, preço novo: #{preco}")
 elsif(preco <= 100)
@@ -449,7 +449,7 @@ end
 
 #17)
 puts("Digite sua senha")
-senha = $stdin.readline
+senha = gets
 if(senha.strip == "4531")
   puts("Acesso concedido")
 else
@@ -458,7 +458,7 @@ end
 
 #18)
 puts("Digite sua idade")
-idade = $stdin.readline.to_i
+idade = gets.to_i
 if(idade >= 18)
   puts("Você atingiu a maioridade")
 else
@@ -467,9 +467,9 @@ end
 
 #19)
 puts("Digite sua altura")
-altura = $stdin.readline.to_i
+altura = gets.to_i
 puts("Digite seu sexo")
-sexo = $stdin.readline
+sexo = gets
 
 if(sexo.strip == "masculino")
   peso = (72.7*altura) - 58
@@ -483,7 +483,7 @@ end
 
 #20)
 puts("Digite a idade do nadador")
-idade = $stdin.readline.to_i
+idade = gets.to_i
 if(idade >= 5 && idade <= 7)
   puts("Infantil")
 elsif(idade >= 8 && idade <= 10)
@@ -498,9 +498,9 @@ end
 
 #21)
 puts("Digite o preço do produto")
-preco = $stdin.readline.to_f
+preco = gets.to_f
 puts("Digite o código de origem")
-origem = $stdin.readline.to_i
+origem = gets.to_i
 
 procedencia = ""
 
@@ -526,9 +526,9 @@ puts("Preço do produto " + preco.to_s + ", procedência " + procedencia)
 
 #22)
 puts("Digite sua idade")
-idade = $stdin.readline.to_i
+idade = gets.to_i
 puts("Digite seu peso")
-peso = $stdin.readline.to_i
+peso = gets.to_i
 
 if(idade < 20)
   if(peso <= 60)
@@ -558,9 +558,9 @@ end
 
 #23)
 puts("Digite o código do produto")
-codigo = $stdin.readline.to_i
+codigo = gets.to_i
 puts("Digite a quantidade")
-quantidade = $stdin.readline.to_i
+quantidade = gets.to_i
 
 preco = 0
 if(codigo >= 1 && codigo <= 10)
@@ -595,11 +595,11 @@ end
 
 #24)
 puts("Digite o preço")
-preco = $stdin.readline.to_f
+preco = gets.to_f
 puts("Digite a categoria 1,2,3")
-categoria = $stdin.readline.to_i
+categoria = gets.to_i
 puts("Digite a situação R,N")
-situacao = $stdin.readline.strip
+situacao = gets.strip
 
 if(categoria == 1 || categoria == 2 || categoria == 3)
   if(situacao == "R" || situacao == "N" )
@@ -648,9 +648,9 @@ end
 
 #25)
 puts("Digite a quantidade de horas extras")
-extras = $stdin.readline.to_i
+extras = gets.to_i
 puts("Digite a quantidade de horas faltas")
-faltas = $stdin.readline.to_i
+faltas = gets.to_i
 
 h = extras - 2/3 * faltas
 
@@ -673,7 +673,7 @@ end
 
 #9)
 puts("Digite um numero")
-numero = $stdin.readline.to_i
+numero = gets.to_i
 puts("Taboada é:")
 (1..10).each do |x| 
   puts("#{numero} X #{x} = #{(numero*x).to_s}")
@@ -693,9 +693,9 @@ valor_prazo = 0
 
 (1..15).each do |i| 
   puts("Digite o código da transação V,P")
-  transacao = $stdin.readline.strip
+  transacao = gets.strip
   puts("Digite o valor")
-  valor = $stdin.readline.to_f
+  valor = gets.to_f
   if(transacao == "V")
     valor_vista += valor
   elsif(transacao == "P")
@@ -718,11 +718,11 @@ todas_pessoas = 0
 
 (1..25).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
   puts("Digite a altura")
-  altura = $stdin.readline.to_f
+  altura = gets.to_f
   puts("Digite a peso")
-  peso = $stdin.readline.to_f
+  peso = gets.to_f
 
   if(idade > 50)
     idade_mais_50_anos += 1
@@ -756,9 +756,9 @@ todas_pessoas = 0
 
 (1..7).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
   puts("Digite a peso")
-  peso = $stdin.readline.to_i
+  peso = gets.to_i
 
   if(peso > 90)
     idade_mais_90_quilos += 1
@@ -782,15 +782,15 @@ qtd_ruivos_nao_olhos_azuis = 0
 
 (1..20).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
   puts("Digite a peso")
-  peso = $stdin.readline.to_i
+  peso = gets.to_i
   puts("Digite a altura")
-  altura = $stdin.readline.to_f
+  altura = gets.to_f
   puts("Digite a cor dos olhos")
-  olhos = $stdin.readline.strip
+  olhos = gets.strip
   puts("Digite a cor dos cabelos")
-  cabelos = $stdin.readline.strip
+  cabelos = gets.strip
 
   if(idade > 50 && peso < 60)
     idade_superior_50_peso_inferior_60 += 1
@@ -823,7 +823,7 @@ puts("A quantidade de pessoas ruivos que não possuem olhos azuis: #{qtd_ruivos_
 quantidade_30_90 = 0
 (1..10).each do |i| 
   puts("Digite um numero")
-  numero = $stdin.readline.to_i
+  numero = gets.to_i
   if(numero >= 30 && numero <= 90)
     quantidade_30_90 += 1
   end
@@ -838,13 +838,13 @@ todas_pessoas = 0
 
 (1..10).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   puts("Digite um peso")
-  peso = $stdin.readline.to_f
+  peso = gets.to_f
 
   puts("Digite uma altura")
-  altura = $stdin.readline.to_f
+  altura = gets.to_f
 
   if(peso > 90 && altura < 1.50)
     peso_superior_90_altura_inferior_1_50 += 1
@@ -873,10 +873,10 @@ quantidade_mulheres = 0
 quantidade_homens = 0
 (1..quantidade).each do |i|
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   puts("Digite o sexo M/F")
-  sexo = $stdin.readline.strip
+  sexo = gets.strip
   puts(sexo)
 
   idades += idade
@@ -903,7 +903,7 @@ quantidade = 0
 while(idade != 0) do
   quantidade += 1
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
   idades += idade
 end
 
@@ -919,7 +919,7 @@ while(numero != 0) do
   end
 
   puts("Digite um numero")
-  numero = $stdin.readline.to_i
+  numero = gets.to_i
   
   if(numero < 0)
     puts("Somente numeros positivos")
@@ -940,7 +940,7 @@ puts("O menor numero é: #{menor.to_s}")
 
 #21)
 puts("Digite um numero: ") 
-numero = $stdin.readline.to_i
+numero = gets.to_i
 fatorial = 1 
 
 (fatorial..numero).each do |i|
@@ -964,10 +964,10 @@ pesos_pessoas_acima_30 = 0
 
 (1..15).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   puts("Digite um peso")
-  peso = $stdin.readline.to_f
+  peso = gets.to_f
 
   if(idade >=1 && idade<=10)
     qtd_pessoas_1_10 += 1
@@ -999,10 +999,10 @@ total = 15;
 
 (1..total).each do |i| 
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   puts("Digite sua opinião (ótimo - 3, bom - 2, regular - 1)")
-  opiniao = $stdin.readline.to_i
+  opiniao = gets.to_i
 
   if(opiniao == 3)
     qtd_otimo += 1
@@ -1028,10 +1028,10 @@ total_homem_nao = 0
 
 (1..10).each do |i| 
   puts("Digite sexo M/F")
-  sexo = $stdin.readline.strip
+  sexo = gets.strip
 
   puts("Digite a resposta S/N")
-  resposta = $stdin.readline.strip
+  resposta = gets.strip
 
   if(resposta == "S")
     total_sim += 1
@@ -1066,17 +1066,17 @@ reprovado_por_faltas = 0
 alunos = ""
 (1..total_alunos).each do |i| 
   puts("Digite o numero da matricula")
-  matricula = $stdin.readline.to_i
+  matricula = gets.to_i
 
   puts("Digite nota 1")
-  n1 = $stdin.readline.to_f
+  n1 = gets.to_f
   puts("Digite nota 2")
-  n2 = $stdin.readline.to_f
+  n2 = gets.to_f
   puts("Digite nota 3")
-  n3 = $stdin.readline.to_f
+  n3 = gets.to_f
 
   puts("Digite o numero de aulas frequentadas")
-  aulas = $stdin.readline.to_f
+  aulas = gets.to_f
 
   media = (n1+n2+n3) / 3
   status = "aprovado"
@@ -1145,7 +1145,7 @@ while(idade != 0) do
   end
 
   puts("Digite uma idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
   
   idades += idade
   qtd += 1
@@ -1167,18 +1167,18 @@ canal = 1
 while(canal != 0) do
   
   puts("Sua TV estava ligada S/N")
-  ligada = $stdin.readline.strip
+  ligada = gets.strip
 
   if(ligada == "S")
     puts("Digite o canal")
-    canal = $stdin.readline.to_i
+    canal = gets.to_i
 
     if(canal == 0)
       break
     end
 
     puts("Digite a quantidade de pessoas")
-    pessoas = $stdin.readline.to_i
+    pessoas = gets.to_i
 
     if(canal == 4)
       canal_4 += 1
@@ -1236,7 +1236,7 @@ total_pessoas_salarios_ate_150 = 0
 
 while(1 == 1) do
   puts("Digite seu salario")
-  salario = $stdin.readline.to_f
+  salario = gets.to_f
 
   if(salario < 0)
     break
@@ -1253,7 +1253,7 @@ while(1 == 1) do
   end
 
   puts("Digite o numero de filhos")
-  qtd_filhos = $stdin.readline.to_i
+  qtd_filhos = gets.to_i
 
   total_salarios += salario
   qtd_total_salarios += 1
@@ -1282,16 +1282,16 @@ sexo_menor_salario = ""
 while(1 == 1) do
 
   puts("Digite sua idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   if(idade < 0)
     break
   end
 
   puts("Digite seu sexo M/F")
-  sexo = $stdin.readline.strip
+  sexo = gets.strip
   puts("Digite seu salario")
-  salario = $stdin.readline.to_f
+  salario = gets.to_f
 
   if(menor_salario == 0)
     menor_salario = salario
@@ -1337,13 +1337,13 @@ total_precos_reajuste = 0
 quantidade = 0
 while(1 == 1) do
   puts("Digite código do produto")
-  codigo = $stdin.readline.to_i
+  codigo = gets.to_i
   if(codigo < 0)
     break
   end
 
   puts("Digite o preco do produto")
-  preco = $stdin.readline.to_f
+  preco = gets.to_f
   novo_preco = (preco + ((preco * 20) / 100))
 
   puts("Codigo do produto: #{codigo.to_s}, preço: #{preco.to_s}, prejo reajustado: #{novo_preco.to_s}")
@@ -1364,16 +1364,16 @@ total_preco_compra = 0
 total_preco_venda = 0
 while(1 == 1) do
   puts("Digite uma letra")
-  letra = $stdin.readline.strip
+  letra = gets.strip
   if(letra == "F")
     break
   end
 
   puts("Digite o preco de compra")
-  preco_compra = $stdin.readline.to_f
+  preco_compra = gets.to_f
 
   puts("Digite o preco de venda")
-  preco_venda = $stdin.readline.to_f
+  preco_venda = gets.to_f
 
   total_preco_compra += preco_compra
   total_preco_venda += preco_venda
@@ -1392,7 +1392,7 @@ numeros_entre_10_20 = 0
 
 (1..3).each do |i|
   puts("Digite um numero")
-  numero = $stdin.readline.to_i
+  numero = gets.to_i
 
   if(numero < 35)
     numeros_inferior_35 += 1
@@ -1430,36 +1430,36 @@ while(1 == 1) do
   puts("2 - Média ponderada")
   puts("3 - Sair")
 
-  c = $stdin.readline.to_i
+  c = gets.to_i
   
   case c
   when 1
     puts("Digite a nota 1")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite a nota 1")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("A média aritimética das notas é: #{((n1+n2)/2).to_s}")
   when 2
 
     puts("Digite a nota 1")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite o peso 1")
-    p1 = $stdin.readline.to_i
+    p1 = gets.to_i
 
     puts("Digite a nota 1")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("Digite o peso 2")
-    p2 = $stdin.readline.to_i
+    p2 = gets.to_i
 
     puts("Digite a nota 3")
-    n3 = $stdin.readline.to_i
+    n3 = gets.to_i
 
     puts("Digite o peso 3")
-    p3 = $stdin.readline.to_i
+    p3 = gets.to_i
 
     media = (n1 * p1 + n2 * p2 + n2 * p3) / (p1 + p2 + p3)
 
@@ -1482,7 +1482,7 @@ brancos = 0
 total_votos = 0
 while(1 == 1) do
   puts("Digite o código de seu candidato")
-  c = $stdin.readline.to_i
+  c = gets.to_i
   
   case c
   when 1
@@ -1524,7 +1524,7 @@ total_negativo = 0
 total_positivo = 0
 while(1 == 1) do
   puts("Digite um numero")
-  n=$stdin.readline.to_i
+  n=gets.to_i
 
   if(n == 0)
     break
@@ -1546,14 +1546,14 @@ alturas_mais_50 = 0
 qtd_alturas_mais_50 = 0
 while(1 == 1) do
   puts("Digite a idade")
-  idade = $stdin.readline.to_i
+  idade = gets.to_i
 
   if(idade <= 0)
     break
   end
 
   puts("Digite a altura")
-  altura = $stdin.readline.to_f
+  altura = gets.to_f
 
   if(idade > 50)
     alturas_mais_50 += altura
@@ -1576,39 +1576,39 @@ while(1 == 1) do
   puts("4 - Divisão")
   puts("5 - Sair")
 
-  c = $stdin.readline.to_i
+  c = gets.to_i
   
   case c
   when 1
     puts("Digite um numero")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite um numero")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("A Adição dos numeros é: #{(n1+n2).to_s}")
   when 2
     puts("Digite um numero")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite um numero")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("A Subitração dos numeros é: #{(n1-n2).to_s}")
   when 3
     puts("Digite um numero")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite um numero")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("A Multiplicação dos numeros é: #{(n1*n2).to_s}")
   when 4
     puts("Digite um numero")
-    n1 = $stdin.readline.to_i
+    n1 = gets.to_i
 
     puts("Digite um numero")
-    n2 = $stdin.readline.to_i
+    n2 = gets.to_i
 
     puts("A Divisão dos numeros é: #{(n1*n2).to_s}")
   when 5
@@ -1623,16 +1623,16 @@ total_juros = 0
 total_investimentos = 0
 while(1 == 1) do
   puts("Código do cliente")
-  codigo = $stdin.readline.to_i
+  codigo = gets.to_i
 
   if(codigo <= 0)
     break
   end
 
   puts("Tipo de conta")
-  tipo_conta = $stdin.readline.to_i
+  tipo_conta = gets.to_i
   puts("Valor investimento")
-  valor = $stdin.readline.to_f
+  valor = gets.to_f
   
   case tipo_conta
   when 1

@@ -1,5 +1,5 @@
 puts "Digite um valor: "
-a = $stdin.readline.to_i
+a = gets.to_i
 b = a*50/2
 b = b+5-(3*150)+2+5*3/2
 b = b -10

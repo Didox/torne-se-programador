@@ -1,5 +1,5 @@
-a = $stdin.readline.to_i
-b = $stdin.readline.to_i
+a = gets.to_i
+b = gets.to_i
 x = 1+6+2
 c = x-b*a-(1+6-4) + b * a 
 

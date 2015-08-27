@@ -1,4 +1,4 @@
-a = $stdin.readline
+a = gets
 b = 2
 c = 3
 

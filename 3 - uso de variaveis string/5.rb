@@ -1,5 +1,5 @@
 a = "oi"
 b = "eu sou"
-c = $stdin.readline
+c = gets
 
 puts(a + " " + b + " " + c)

@@ -1,3 +1,3 @@
 
-a = $stdin.readline
+a = gets
 puts("seu nomero é:" + "     -    " + a)

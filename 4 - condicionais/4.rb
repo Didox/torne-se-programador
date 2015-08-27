@@ -1,7 +1,7 @@
 puts("Digite" )
 puts("1 - taboada do  1" )
 puts("2 - taboada do 2" )
-a = $stdin.readline.to_i
+a = gets.to_i
 
 if(a == 1 || a == 2)
   puts(a.to_s + " X 1 = " + (a * 1).to_s)

@@ -1,8 +1,3 @@
-a = 1
-x = 3
-while(a < 10)
-  x = x + a
-  a = a+1
+(1..100000).each do |i| 
+  puts("numero: #{i}")
 end
-
-puts(x)
