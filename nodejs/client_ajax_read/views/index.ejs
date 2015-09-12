@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste Ajax status code</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/jquery-1.11.3.min.js' /></script>
+    <script src='/javascripts/api.js' ></script>
+  </head>
+  <body>
+    <h1>Teste Ajax status code</h1>
+    <ul>
+      <% all_status = [200, 403, 401] %>
+      <% for(var i=0; i<all_status.length; i++){ %>
+        <li>
+          <a href="#<%= all_status[i] %>" id="<%= all_status[i] %>" data-status="<%= all_status[i] %>" ><%= all_status[i] %></a>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
