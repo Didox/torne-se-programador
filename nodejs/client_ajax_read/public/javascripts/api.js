@@ -3,7 +3,10 @@ api = {
     $.ajax({
       url: "http://localhost:3000/" + status
     }).done(function( data ) {
-      alert(data.text);
+      if(data != undefined && data != '')
+        alert(data.text);
+      else
+        alert('sem conteúdo')
     }).fail(function( jqXHR, textStatus ) {
       responseJson = JSON.parse(jqXHR.responseText)
       alert( "Status de falha: " + jqXHR.status + ', mensagem: ' + responseJson.text);
