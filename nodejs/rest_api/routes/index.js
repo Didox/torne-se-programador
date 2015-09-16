@@ -28,7 +28,7 @@ router.get('/200', function(req, res, next) {
 });
 
 router.get('/204', function(req, res, next) {
-  res.status(204); //no content
+  res.status(204).send(''); //no content
 });
 
 router.get('/201', function(req, res, next) {

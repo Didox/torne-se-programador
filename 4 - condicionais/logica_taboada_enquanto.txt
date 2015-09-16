@@ -3,12 +3,17 @@ mostre("1 - taboada do  1" )
 mostre("2 - taboada do 2" )
 a = leia #1
 
-taboada = 1
 se(a == 1 ou a == 2)
-  enquanto(taboada <= 10)
-    mostre(a + " X " + taboada + " = " + (a * taboada))
-    taboada = taboada + 1
-  fim
+   mostre(a + " X 1 = " + (a * 1))
+   mostre(a + " X 2 = " + (a * 2))
+   mostre(a + " X 3 = " + (a * 3))
+   mostre(a + " X 4 = " + (a * 4))
+   mostre(a + " X 5 = " + (a * 5))
+   mostre(a + " X 6 = " + (a * 6))
+   mostre(a + " X 7 = " + (a * 7))
+   mostre(a + " X 8 = " + (a * 8))
+   mostre(a + " X 9 = " + (a * 9))
+   mostre(a + " X 10 = " + (a * 10))
 senao
   mostre("opção inválida")
 fim

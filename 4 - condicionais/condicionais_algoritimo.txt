@@ -1,0 +1,47 @@
+comandos já vistos
+variavel 
+mostre() = alert()
+leia() = prompt()
+
+comandos novos
+se = if
+senao = else
+senao se  = else if
+operadores lógicos (e ou nao) = (&& || !)
+
+
+a = 1
+se a == 1
+  mostre(a)
+senao se a == 2
+  mostre(2)
+senao
+  mostre('qualquer')
+fim
+
+
+b = 3
+if b == 3
+  se a == 1
+    mostre(a)
+  senao se a == 2
+    mostre(2)
+  senao
+    mostre('qualquer')
+  fim
+fim
+
+
+dado que eu leia um numero verifique se este numero é 1 se por mostre olá concatenando o valor digitado
+caso eu digite o valor 2 então mostre, olá amigo sou o numero dois
+caso eu digite qualquer outro numero, então mostre sou qualquer outro numero
+
+
+numero = leia()
+se numero = 1
+  mostre('ola' + numero)
+senao se numero = 2
+  mostre('ola amigo sou o numero dois')
+senao
+  mostre('sou qualquer outro numero')
+fim
