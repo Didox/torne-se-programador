@@ -1,0 +1,20 @@
+a = leia()
+se a == "jose" e a == "joao"
+  mostra(a + " do egito")
+senao se (a == "maria")
+  mostra(a + " mae de jesus")
+else
+  mostra("professor Didox")
+fim
+
+
+caso a
+ for 1
+   mostra("maria 1")
+ for 2
+   mostra("maria 2")
+ for 3
+   mostra("maria 2")
+ senao
+   mostra("professor Didox")
+end
