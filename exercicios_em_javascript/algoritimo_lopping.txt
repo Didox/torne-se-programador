@@ -1,0 +1,56 @@
+preciso fazer um programa onde ao digitar um numero ele mostre na tela de zero até o numero digitado.
+
+
+mostre("digite o numero inicial")
+numero = leia()
+se numero == 1
+  mostre(0)
+  mostre(1)
+senao se numero == 2
+  mostre(0)
+  mostre(1)
+  mostre(2)
+senao se numero == 3
+  mostre(0)
+  mostre(1)
+  mostre(2)
+  mostre(3)
+senao se numero == 4
+  mostre(0)
+  mostre(1)
+  mostre(2)
+  mostre(3)
+  mostre(4)
+senao se numero == 5
+  mostre(0)
+  mostre(1)
+  mostre(2)
+  mostre(3)
+  mostre(4)
+  mostre(5)
+senao se numero == 6
+  mostre(0)
+  mostre(1)
+  mostre(2)
+  mostre(3)
+  mostre(4)
+  mostre(5)
+  mostre(6)
+fim
+
+
+mostre("digite o numero inicial")
+numero = leia()
+controle = 0
+para 0 de numero faça
+enquanto(controle <= numero)
+  mostre(controle)
+  controle = controle + 1
+fim
+
+
+mostre("digite o numero inicial")
+numero = leia()
+para 0 até numero => controle
+  mostre(controle)
+fim
