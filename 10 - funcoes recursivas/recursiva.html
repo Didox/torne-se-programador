@@ -1,0 +1,19 @@
+<script>
+	
+	var globalIndex = 0;
+
+	function escreverNaTela(mensagem){
+		document.write(mensagem + "<br>")
+
+		globalIndex += 1;
+
+		if(globalIndex < 10){
+			escreverNaTela(mensagem)
+		}
+	}
+
+	debugger
+
+	escreverNaTela("oi");
+
+</script>

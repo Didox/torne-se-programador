@@ -1,0 +1,27 @@
+<script>
+	function escrever(mensagem){
+		document.write(mensagem + "<br>")
+	}
+
+	function escreverTabuada(multiplicador, mensagem, interator){
+		escrever(multiplicador + mensagem + (multiplicador * interator))
+
+		if(interator < 10){
+			novo_integator = (interator + 1)
+			escreverTabuada(multiplicador, " X " + novo_integator + " = ", novo_integator)
+		}
+	}
+
+	escrever("Digite" )
+	escrever("1 - tabuada do  1" )
+	escrever("2 - tabuada do 2" )
+	a = prompt()
+
+	if(a == 1 || a == 2){
+		escreverTabuada(a, " X 1 = ", 1)
+	}
+	else{
+		escrever("opcao invalida")
+	}
+
+</script>
