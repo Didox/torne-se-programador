@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+<body>
+
+  <script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/92%20-%20Orientacao%20a%20objetos/OO_pessoa/pessoa.js"></script>
+  <script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/92%20-%20Orientacao%20a%20objetos/OO_pessoa/cliente.js"></script>
+
+  <script>
+    var pessoa = new Pessoa();
+    pessoa.cpf = "635726527632";
+    pessoa.nome = "instancia de pessoa";
+    pessoa.endereco = "Endereço da pessoa";
+    //pessoa.informacoes();
+
+    var danilo = new Pessoa();
+    danilo.cpf = "453637383";
+    danilo.nome = "didox";
+    danilo.endereco = "rua tal são paulo";
+    //danilo.informacoes();
+
+    console.log(danilo.cpfFormatado());
+
+
+  </script>
+</body>
+</html>
