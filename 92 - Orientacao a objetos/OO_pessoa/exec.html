@@ -20,7 +20,25 @@
     danilo.endereco = "rua tal são paulo";
     //danilo.informacoes();
 
-    console.log(danilo.cpfFormatado());
+    var cliente = new Cliente("cl-001", 4553637383, "cliente", "rua abc são paulo");
+    cliente.informacoes();
+
+    // new Cliente("cl-001", 4553637383, "cliente", "rua abc são paulo").informacoes();
+
+    var ClienteSingleton = {
+      instancia: null,
+
+      iniciar: function(){
+        function ClienteSgln(){
+          this.nome = "";
+        }
+
+        if(ClienteSingleton.instancia == null){
+          ClienteSingleton.instancia = new ClienteSgln();
+        }
+      }
+    }
+
 
 
   </script>

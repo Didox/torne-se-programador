@@ -32,4 +32,14 @@ var Pessoa = function(){
   this.cpfFormatado = function(){
     return formataCPF(this.cpf);
   }
+
+  this.usaMetodoStatico = function(){
+    return Pessoa.metodoStatico();
+  }
 }
+
+Pessoa.metodoStatico = function(){
+  return "Esta é uma classe base de pessoa";
+}
+
+Pessoa.atributoStatico = "valor padrão atributo statico";
