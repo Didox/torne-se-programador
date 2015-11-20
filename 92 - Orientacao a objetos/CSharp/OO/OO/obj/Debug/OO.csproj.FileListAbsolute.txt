@@ -1,0 +1,9 @@
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\bin\Debug\OO.exe.config
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\bin\Debug\OO.exe
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\bin\Debug\OO.pdb
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\obj\Debug\OO.csprojResolveAssemblyReference.cache
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\obj\Debug\OO.exe
+c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\obj\Debug\OO.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\bin\Debug\OO.exe.config
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\obj\Debug\OO.exe
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\obj\Debug\OO.pdb
