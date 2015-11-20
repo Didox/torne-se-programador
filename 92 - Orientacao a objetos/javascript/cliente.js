@@ -5,6 +5,8 @@ function Cliente(id, nome, endereco, telefone){
 	this.telefone = telefone;
 	this.id = id;
 
+	this.valorPadrao = "valor padrão";
+
 	//metodos publicos//
 	this.salvar=function(){
 		Cliente.bancoEstatico.push(this);
