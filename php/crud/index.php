@@ -10,5 +10,7 @@
     <br>
     <br>
     <?php include 'include/tabela.php' ?>
+
+    <?php include 'models/exemplo.php' ?>
   </body>
 </html>
