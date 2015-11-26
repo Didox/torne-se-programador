@@ -3,6 +3,7 @@ class Pessoa
 		@nome_temp = "tmp nome"
 	end
 
+	public
 	#atributos publicos
 	attr_accessor :nome, :sobrenome, :cpf
 
