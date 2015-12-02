@@ -1,0 +1,31 @@
+<script type="text/javascript">
+function LavarCarro(){
+  //metodo programação não assincrona
+  this.euLavandoCarro = function(){
+    return "iniciei as 8:00 e acabei as 9:00"
+  }
+
+  //metodo programação assincrona
+  this.lavandoPeloLavaRapido = function(telefone){
+    console.log('executando ...')
+    var statusCarro = "carro lavar inicio: " + new Date();
+    telefone.call(null,statusCarro);
+  }
+}
+
+// executando metodo não assincrono (blocante)
+var lavar = new LavarCarro();
+var retorno = lavar.euLavandoCarro();
+alert(retorno);
+
+// debugger
+
+// executando metodo assincrono (não blocante)
+lavar.lavandoPeloLavaRapido(function(statusCarro){
+  var retorno = statusCarro + "\n" + "carro lavar termino: " + new Date();
+  alert(retorno);
+});
+
+
+
+</script>

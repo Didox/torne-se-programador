@@ -1,0 +1,14 @@
+// programação não assincrona - códico blocante
+
+var aluno = Aluno.todos();
+alert(aluno.nome)
+
+
+// programação assincrona - códico não blocante
+
+Aluno.todos(funcao(aluno){
+	alert(aluno.nome)
+});
+
+
+

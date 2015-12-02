@@ -1,0 +1,5 @@
+Para compilar usar:
+gcc exercicio.c
+
+Para executar usar: 
+./a.out
