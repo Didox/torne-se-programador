@@ -1,0 +1,85 @@
+<head>
+<meta charset="UTF-8">
+</head>
+
+<div id="texto">
+	Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+</div>
+
+<a href="http://tutsmais.com.br/blog/javascript-2/metodos-funcoes-javascript-number-array-string-regexp/" target="_blank"> link para tratamento de strings<a>
+
+<script type="text/javascript">
+	var textoDiv = document.getElementById("texto").innerText;
+
+	function procuraTexto(){
+		// procurando texto pelo indice "indexOf"
+		var textoDigitado = prompt("Digite o texto a ser procurado");
+
+		if(textoDiv.indexOf(textoDigitado) == -1){
+			alert("O texto que vc procura não existe");
+		}
+		else{
+			alert("O texto que vc procura existe no arquivo");
+		}
+	}
+
+	function utizandoSplit(){
+		// dividindo textos em um array "split"
+		var arrayTextoSeparadoPorVirgola = textoDiv.split(",")
+		alert("A quantidade de frases separadas por virgola é: " + arrayTextoSeparadoPorVirgola.length)
+	}
+
+
+	function retornandoParteDoTexto(){
+		// retorando um pedaço de um texto utilizando Regex(Regular expression)
+		alert(textoDiv.match(/da.*?I,/))
+		alert(textoDiv.match(/século.*?,/))
+	}
+
+	function alterandoTexto(){
+		// subistitui um texto por outro
+		var seculo = textoDiv.match(/século.*?,/);
+		seculo = seculo.toString().replace(",", "");
+		alert(seculo);
+	}
+
+
+	function substituindoTexto(){
+		// subistitui um texto por outro
+		var sb = prompt("Digite o texto a ser substituido");
+		var novoTexto = prompt("Digite o novo texto");
+		document.getElementById("texto").innerText = textoDiv.replace(sb, novoTexto); //substituindo por metch exato sem regex
+		document.getElementById("texto").innerText = textoDiv.replace(/é/, "eh"); //substituindo por regex
+	}
+
+	function outrosTratamentosDeString(){
+		// tratamento de strings com array
+		a = [3,4,6,7,9]
+		console.log(a.toString())
+		//"3,4,6,7,9"
+		console.log(a.join(", "))
+		//"3, 4, 6, 7, 9"
+		console.log(a.join(" - "))
+		//"3 - 4 - 6 - 7 - 9"
+		b = [10,11,20]
+		console.log(a.concat(b))
+		//[3, 4, 6, 7, 9, 10, 11, 20]
+		console.log("danilo".concat(" dos santos"))
+		//"danilo dos santos"
+		console.log("danilo" + " dos santos")
+		//"danilo dos santos"
+
+		a = ['b','a','f','j','i','c','h','g','e','d'];
+		console.log(a.sort())
+		console.log(a.sort(function(a, b){
+		   return a < b? 1 : 0;
+		}));
+
+
+
+		var texto = 'Tenho 3 namorada, uma me liga pelo número (11) 111-111 outra pelo número (22) 222-222 e a outra pelo número (33) 333-333, mas não diga a ninguém.';
+
+		retorno = texto.match(/\(\d{2}\)\s\d{3}-\d{3}/g); //g = todos os matches
+		alert("todos os numeros \n" + retorno.join("\n"));
+	}
+</script>
