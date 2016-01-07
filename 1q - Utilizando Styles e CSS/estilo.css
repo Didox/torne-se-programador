@@ -1,0 +1,72 @@
+header{
+	background-color:#ecedeb;height:130px;
+}
+.logo{
+	margin-left: 200px; margin-top: 25px;
+}
+.menu{
+	background-color:#fcfcfc;
+	height:37px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.menu ul{
+	float: left;
+	margin-top: 5px;
+}
+.menu ul li{
+	float: left;
+	margin-left: 70px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.menu ul li.active{
+	background-color: #8612a1;
+    color: #fff;
+    height: 18px;
+    width: 46px;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: -5px;
+}
+
+.container{
+	background-color: #540d7a;
+	height: 1000px;
+}
+
+footer{
+	height: 400px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c6c7c3+0,c6c7c3+100&1+0,0+100 */
+	background: -moz-linear-gradient(top,  rgba(198,199,195,1) 0%, rgba(198,199,195,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(198,199,195,1) 0%,rgba(198,199,195,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(198,199,195,1) 0%,rgba(198,199,195,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c7c3', endColorstr='#00c6c7c3',GradientType=0 ); /* IE6-9 */
+
+}
+.info{
+	height: 360px;
+}
+.copyright{
+	background-color: #d1d1d1;
+	height: 56px;
+}
+
+.copyright span{
+	font-family: arial;
+	color: #303030;
+	float: left;
+	margin-top: 18px;
+	margin-left: 88px;
+}
+
+.copyright img{
+	float: right;
+	margin-top: 10px;
+	margin-right: 100px;
+}
