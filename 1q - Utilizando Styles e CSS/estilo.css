@@ -1,3 +1,6 @@
+body{
+	font-family: Arial;
+}
 header{
 	background-color:#ecedeb;height:130px;
 }
@@ -38,6 +41,105 @@ header{
 .container{
 	background-color: #540d7a;
 	height: 1000px;
+}
+.container #colunas{
+	width: 1100px;
+	margin-left: 20%;
+	float: left;
+}
+.container #coluna1, .container #coluna2{
+	width: 970px;
+	height: 330px;
+	margin-top: 10px;
+}
+.container #coluna1 #bem-vindo h1{
+	color:#81ba25;
+}
+.container #coluna1 #bem-vindo a{
+    background-color: #ae20c7;
+    display: block;
+    width: 82px;
+    height: 0px;
+    padding: 27px;
+    padding-top: 10px;
+}
+.container #coluna1 #bem-vindo{
+	float:left;
+	width: 340px;
+	height: 290px;
+	color: #fff
+}
+.container #coluna1 #carrossel{
+	float:right;
+	width: 619px;
+	height: 290px;
+	background-color: #fff;
+	margin-top: 16px;
+}
+.container #coluna1 #carrossel img{
+	width: 619px;
+    height: 202px;
+}
+
+.container #coluna1 #carrossel div#texto{
+	width: 599px;
+    height: 78px;
+    background-color: #474747;
+    color: #fff;
+    padding: 10px;
+    padding-top: 2px;
+}
+.container #coluna1 #carrossel div#texto h2{
+	margin-top: 8px;
+    margin-bottom: -8px;
+}
+.container #coluna1 #carrossel div#texto p{
+	font-size: 14px;
+}
+.container #coluna2{
+	height: 30px;
+	float: left;
+}
+.container #coluna2 div#enviar-email{
+	background-image: url(imagens/enviaremail.jpg);
+	height: 75px;
+	width: 1000px;
+    margin-left: -24px;
+}
+.container #coluna2 div#enviar-email .titulo{
+    float: left;
+    margin-top: 27px;
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 95px;
+}
+.container #coluna2 div#enviar-email .texto{
+    float: left;
+    margin-top: 24px;
+    color: #000;
+    font-size: 12px;
+    margin-left: 27px;
+    width: 400px;
+}
+.container #coluna2 div#enviar-email .form{
+	float: left;
+	margin-top: 23px;
+	color: #fff;
+	font-size: 12px;
+}
+.container #coluna2 div#enviar-email .form #email{
+	height: 30px;
+    width: 190px;
+}
+.container #coluna2 div#enviar-email .form #enviar{
+	height: 30px;
+    width: 67px;
+    padding-top: 0px;
+    background-color: #9e22bd;
+    border: 0px;
+    color: #fff;
+    font-size: 14px;
 }
 
 footer{
