@@ -141,7 +141,56 @@ header{
     color: #fff;
     font-size: 14px;
 }
+.container .headlines{
+	margin-top: 30px;
+	float: left;
+}
 
+.container .headlines .head1, .container .headlines .head2, .container .headlines .head3{
+	width: 315px;
+	height: 320px;
+}
+
+.container .headlines .head1{
+	float: left;
+	margin-right: 24px;
+}
+.container .headlines .head1 strong{
+	color: #fc037b;
+    font-size: 20px;
+}
+.container .headlines .saiba{
+	color: #81ba25;
+	font-size: 14px;
+}
+.container .headlines .head1 .saiba{
+	color: #fc037b;
+}
+.container .headlines .saiba .quadrado{
+	background-color: #fc037b;
+    color: #fff;
+    width: 13px;
+    height: 18px;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.container .headlines p{
+	font-size: 13px;
+    color: #fff;
+    height: 243px;
+}
+.container .headlines .head2{
+	float: left;
+	margin-right: 24px;
+}
+.container .headlines .head2 strong, .container .headlines .head3, strong{
+	color: #81ba25;
+    font-size: 20px;
+}
+.container .headlines .head3{
+	float: left;
+}
 footer{
 	height: 400px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c6c7c3+0,c6c7c3+100&1+0,0+100 */
