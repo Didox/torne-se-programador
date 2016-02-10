@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Aprendendo JQuery</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/1s%20-%20JQuery/jquery-1.12.0.js"></script>
+		<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/1s%20-%20JQuery/dynamic.js"></script>
+
+		<style type="text/css">
+			input[class='campo']{
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Cadastro em tempo de execução utilizando JQuery</h1>
+
+		<fieldset id="formCadastro">
+			<legend>Cadastro de pessoas</legend>
+			<form>
+				<div>
+					<label for="nome">Nome: </label>
+					<input type="text" class="campo" name="nome" id="nome" /> 
+				</div>
+				<div>
+					<label for="sobrenome">Sobrenome:  </label>
+					<input type="text" class="campo" name="sobrenome" id="sobrenome" /> 
+				</div>
+				<div>
+					<label for="cpf">CPF:  </label>
+					<input type="text" class="campo" name="cpf" id="cpf" /> 
+				</div>
+				<div>
+					<label for="telefone">Telefone:  </label>
+					<input type="text" class="campo" name="telefone" id="telefone" /> 
+				</div>
+				<div>
+					<label for="endereco">Endereço:  </label>
+					<input type="text" class="campo" name="endereco" id="endereco" /> 
+				</div>
+				<hr>
+				<div>
+					<input type="button" value="Cadastrar" onclick="cadastrarPessoas()" /> 
+				</div>
+			</form>
+		</fieldset>
+		<input type="button" value="Formulário de cadastro" id="mostrarForm" onclick="mostrarFormulario()" style="display:none" /> 
+		<fieldset>
+			<legend>Pessoas cadastradas</legend>
+			<table border="1" id="registros">
+				<tr>
+					<td>Nome</td>
+					<td>Sobrenome</td>
+					<td>CPF</td>
+					<td>Telefone</td>
+					<td>Endereço</td>
+				</tr>
+			</table>
+		</fieldset>
+	</body>
+</html>
