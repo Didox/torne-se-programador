@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="/javascripts/validacao.js"></script>
   </head>
   <body>
-    <h1>Cadastro em tempo de execução</h1><br>
+    <h1>Cadastro com dados backend</h1><br>
     <a href="/">Home</a>
 	<fieldset id="formCadastro">
 		<legend>Cadastro de pessoas</legend>
@@ -35,6 +35,18 @@
 			<hr>
 			<div>
 				<input type="submit" value="Cadastrar" /> 
+			</div>
+		</form>
+	</fieldset>
+	<fieldset id="formCadastro">
+		<legend>Buscar</legend>
+		<form action="/pesquisar" method="GET">
+			<div>
+				<label for="nome">Nome: </label>
+				<input type="text" name="nome" id="nome" /> 
+			</div>
+			<div>
+				<input type="submit" value="buscar" /> 
 			</div>
 		</form>
 	</fieldset>
