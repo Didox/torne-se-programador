@@ -18,6 +18,82 @@ router.get('/', function(request, response, next) {
   });
 });
 
+
+router.get('/alterar', function(request, response, next) {
+  carregarBase(function read(err, data) {
+    if (err) { 
+      console.log(err);
+      dados['pessoas'] = [];
+    }
+    else{
+      var usuario = null;
+      var bancoDados = JSON.parse(data);
+      for(var i=0; i<bancoDados.length; i++){
+        if(bancoDados[i].cpf == request.query.cpf){
+          usuario = bancoDados[i];
+          break;
+        }
+      }
+
+      response.render('alterar', {'usuario': usuario})
+    }
+  });
+});
+
+
+router.post('/alterar-pessoa', function(request, response, next) {
+  carregarBase(function read(err, data) {
+    if (err) { 
+      console.log(err);
+      dados['pessoas'] = [];
+
+      response.redirect("/");
+    }
+    else{
+      var bancoDados = JSON.parse(data);
+      for(var i=0; i<bancoDados.length; i++){
+        if(bancoDados[i].cpf == request.query.cpfAterar){
+
+          bancoDados[i].nome = request.body.nome;
+          bancoDados[i].sobrenome = request.body.sobrenome;
+          //bancoDados[i].cpf = request.body.cpf;
+          bancoDados[i].telefone = request.body.telefone;
+          bancoDados[i].endereco = request.body.endereco;
+
+          salvarTodosBase(bancoDados);
+          break;
+        }
+      }
+      response.redirect("/");
+    }
+  });
+});
+
+
+router.get('/excluir', function(request, response, next) {
+  dados = { title: 'Node.js com framework express' };
+  carregarBase(function read(err, data) {
+    if (err) { 
+      console.log(err);
+      dados['pessoas'] = [];
+    }
+    else{
+      var bancoDados = JSON.parse(data);
+      var novosDados = [];
+      for(var i=0; i<bancoDados.length; i++){
+        if(bancoDados[i].cpf != request.query.cpf){
+          novosDados.push(bancoDados[i]);
+        }
+      }
+
+      salvarTodosBase(novosDados);
+      dados['pessoas'] = novosDados;
+    }
+
+    response.render('index', dados)
+  });
+});
+
 router.get('/pesquisar', function(request, response, next) {
   dados = { title: 'Pesquisando em arquivos' };
   carregarBase(function read(err, data) {
@@ -88,14 +164,18 @@ var carregarBase = function(callback){
   fs.readFile(BANCO_ARQUIVO, callback);
 }
 
-var salvarBase = function(hash){
-  pessoas.push(hash);
+var salvarTodosBase = function(array){
   var fs = require('fs');
-  fs.writeFile(BANCO_ARQUIVO, JSON.stringify(pessoas), function(err) {
+  fs.writeFile(BANCO_ARQUIVO, JSON.stringify(array), function(err) {
     if(err) {
       console.log(err);
     }
   });
+}
+
+var salvarBase = function(hash){
+  pessoas.push(hash);
+  salvarTodosBase(pessoas);
 }
 
 module.exports = router;

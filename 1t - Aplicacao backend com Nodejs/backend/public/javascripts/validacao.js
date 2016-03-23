@@ -1,4 +1,4 @@
-function validacao(){
+var validacao = function(){
 	var nome = $("#nome").val();
 	var cpf = $("#cpf").val();
 
@@ -15,4 +15,10 @@ function validacao(){
 	}
 
 	return true
+}
+
+var excluirDados = function(cpf){
+	if(confirm("Deseja realmente excluir?")){
+		window.location.href = "/excluir?cpf=" + cpf;
+	}
 }

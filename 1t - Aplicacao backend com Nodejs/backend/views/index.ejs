@@ -59,6 +59,8 @@
 				<td>CPF</td>
 				<td>Telefone</td>
 				<td>Endereço</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<% for(i=0; i<pessoas.length; i++) { %>
 				<tr>
@@ -67,6 +69,8 @@
 					<td><%= pessoas[i].cpf %></td>
 					<td><%= pessoas[i].telefone %></td>
 					<td><%= pessoas[i].endereco %></td>
+					<td><a href="/alterar?cpf=<%= pessoas[i].cpf %>">alterar</a></td>
+					<td><a href="#" onclick="excluirDados('<%= pessoas[i].cpf %>')">excluir</a></td>
 				</tr>
 			<% } %>
 		</table>
