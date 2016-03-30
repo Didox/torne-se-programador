@@ -11,26 +11,26 @@
     <a href="/">Home</a>
 	<fieldset id="formCadastro">
 		<legend>Cadastro de pessoas</legend>
-		<form action="/alterar-pessoa?cpfAterar=<%= usuario.cpf %>" method="POST" onsubmit="return validacao()">
+		<form action="/alterar-pessoa?cpfAterar=<%= pessoa.cpf %>" method="POST" onsubmit="return validacao()">
 			<div>
 				<label for="nome">Nome: </label>
-				<input type="text" name="nome" value="<%= usuario.nome %>" id="nome" /> 
+				<input type="text" name="nome" value="<%= pessoa.nome %>" id="nome" /> 
 			</div>
 			<div>
 				<label for="sobrenome">Sobrenome:  </label>
-				<input type="text" name="sobrenome" value="<%= usuario.sobrenome %>" id="sobrenome" /> 
+				<input type="text" name="sobrenome" value="<%= pessoa.sobrenome %>" id="sobrenome" /> 
 			</div>
 			<div>
 				<label for="cpf">CPF:  </label>
-				<input type="text" disabled="disabled" name="cpf" value="<%= usuario.cpf %>" id="cpf" /> 
+				<input type="text" readonly="true" name="cpf" value="<%= pessoa.cpf %>" id="cpf" /> 
 			</div>
 			<div>
 				<label for="telefone">Telefone:  </label>
-				<input type="text" name="telefone" value="<%= usuario.telefone %>" id="telefone" /> 
+				<input type="text" name="telefone" value="<%= pessoa.telefone %>" id="telefone" /> 
 			</div>
 			<div>
 				<label for="endereco">Endereço:  </label>
-				<input type="text" name="endereco" value="<%= usuario.endereco %>" id="endereco" /> 
+				<input type="text" name="endereco" value="<%= pessoa.endereco %>" id="endereco" /> 
 			</div>
 			<hr>
 			<div>
