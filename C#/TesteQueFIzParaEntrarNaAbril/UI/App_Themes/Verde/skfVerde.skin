@@ -1,0 +1,1 @@
+<asp:Image SkinID="topo" runat="server" ImageUrl="~/Images/topo.gif" />

@@ -1,0 +1,12 @@
+bin\Debug\Apendice.exe
+bin\Debug\Apendice.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Apendice.Properties.Resources.resources
+obj\Debug\Apendice.csproj.GenerateResource.Cache
+obj\Debug\Apendice.exe
+obj\Debug\Apendice.pdb
+obj\Debug\Apendice.Form1.resources
+bin\Debug\BusinessRule2541.dll
+bin\Debug\BusinessRule2541.pdb
+bin\Debug\DataManager2541.dll
+bin\Debug\DataManager2541.pdb

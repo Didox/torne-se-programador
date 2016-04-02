@@ -1,0 +1,38 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <script type="text/javascript" src="jsObjects/JObjects.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" >
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table id="tbGeral" align="center" height="100%" cellspacing="0" cellpadding="0"
+            width="98%" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Central">
+                        <tr>
+                            <td colspan="2" height="10" valign="top">
+                                <asp:ContentPlaceHolder ID="cphTopo" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150" valign="top">
+                                <asp:ContentPlaceHolder ID="cphMenu" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td valign="top" width="90%">
+                                <asp:ContentPlaceHolder ID="cphMeio" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!--script>setTimeout("Reload()",50)</script-->
+    </form>
+</body>
+</html>

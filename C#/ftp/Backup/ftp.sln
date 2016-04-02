@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ftp", "http://localhost/ftp/ftp.csproj", "{FEEC3ECA-417C-41A5-9285-868CE38D9180}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Componentes", "http://localhost/FTP/Componentes/Componentes.csproj", "{C1391EAC-63DC-4158-AFB8-15E8AB23DC6F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{31291DC8-6DCE-4943-A447-A3F7EE8833FC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FEEC3ECA-417C-41A5-9285-868CE38D9180}.Debug.ActiveCfg = Debug|.NET
+		{FEEC3ECA-417C-41A5-9285-868CE38D9180}.Debug.Build.0 = Debug|.NET
+		{FEEC3ECA-417C-41A5-9285-868CE38D9180}.Release.ActiveCfg = Release|.NET
+		{FEEC3ECA-417C-41A5-9285-868CE38D9180}.Release.Build.0 = Release|.NET
+		{C1391EAC-63DC-4158-AFB8-15E8AB23DC6F}.Debug.ActiveCfg = Debug|.NET
+		{C1391EAC-63DC-4158-AFB8-15E8AB23DC6F}.Debug.Build.0 = Debug|.NET
+		{C1391EAC-63DC-4158-AFB8-15E8AB23DC6F}.Release.ActiveCfg = Release|.NET
+		{C1391EAC-63DC-4158-AFB8-15E8AB23DC6F}.Release.Build.0 = Release|.NET
+		{31291DC8-6DCE-4943-A447-A3F7EE8833FC}.Debug.ActiveCfg = Debug|.NET
+		{31291DC8-6DCE-4943-A447-A3F7EE8833FC}.Debug.Build.0 = Debug|.NET
+		{31291DC8-6DCE-4943-A447-A3F7EE8833FC}.Release.ActiveCfg = Release|.NET
+		{31291DC8-6DCE-4943-A447-A3F7EE8833FC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

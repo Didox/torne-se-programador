@@ -1,0 +1,27 @@
+
+# Etapas para conclusão dos 4 modulos.
+
+  1. imprimir detalhe visita exibir acompanhamentos com pesquisa.
+
+Cadastros Básicos I
+
+	1.Criar cadastro de equipes com um main em parâmetros e adicionar no cadastro de corretor pra atribuir a equipe.
+	2.Criar um main e cadastro de propostas padrão com titulo e texto padrão para ser usado mais tarde.
+	3.Criar um main e cadastro de veículos de comunicação padrão com descrição e unidade métrica para ser usado mais tarde.
+
+Cadastros Básicos II
+
+	1.Criar um main pra tipos de moedas colocar descrição e valor padrão. Colocar um adicionar índice onde vai ser cadastrado o valor em real daquela moeda com os campos data e valor.
+	2.Em cadastro de imóveis colocar uma combo pra escolher a moeda e elmbrar de colocar nos tetalhes mais e relatórios	
+
+Interessados
+
+	1.Mudar nomenclatura de visita para Interessados.
+	2.Criar um relatório de interessados sem acompanhamentos
+	3.Relatório de interessados de um determinado corretor em um intervalo de datas
+	4.Adicionar endereço no cadastro de interessados
+
+Relatório de produtividade
+
+	1.Criar relatório de alugueis, vendas, visitas e movimentações entre um intervalo de datas e com opção de escolher por corretor ou por equipe.
+	2.Separar por mês ex: mês 12 teve 10 vendas, e alugueis e 4 visitas.

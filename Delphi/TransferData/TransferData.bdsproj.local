@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2007/04/28 17:02:35.862.pas,C:\Users\Danilo\Documents\Borland Studio Projects\WinForm.pas=C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\frmHome.pas</Transaction>
+    <Transaction>2007/04/28 17:18:53.584.pas,C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\Class1.pas=C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\Transfer.pas</Transaction>
+    <Transaction>2007/04/28 19:07:24.801.pas,C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\Class1.pas=C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\SrtingCn.pas</Transaction>
+    <Transaction>2007/04/28 19:20:33.799.pas,C:\Users\Danilo\Documents\Borland Studio Projects\TransferData\SrtingCn.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

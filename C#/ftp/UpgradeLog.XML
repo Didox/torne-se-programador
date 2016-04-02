@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ftp">
+</Property><Property Name="Solution File" Value="Z:\Arquivos\FTP\ftp.sln">
+</Property><Property Name="User Options File" Value="Z:\Arquivos\FTP\ftp.suo">
+</Property><Property Name="Date" Value="quarta-feira, 11 de julho de 2007">
+</Property><Property Name="Time" Value="17:42">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ftp.sln" Description="File successfully backed up as Z:\Arquivos\FTP\Backup\ftp.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ftp.suo" Description="File successfully backed up as Z:\Arquivos\FTP\Backup\ftp.suo">
+</Event><Event ErrorLevel="1" Project="ftp" Source="http://localhost/ftp/ftp.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="http://localhost/ftp/ftp.csproj" Source="http://localhost/ftp/ftp.csproj" Description="ERROR: Failed to backup website http://localhost/ftp/ftp.csproj">
+</Event><Event ErrorLevel="1" Project="Componentes" Source="http://localhost/FTP/Componentes/Componentes.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="http://localhost/FTP/Componentes/Componentes.csproj" Source="http://localhost/FTP/Componentes/Componentes.csproj" Description="ERROR: Failed to backup website http://localhost/FTP/Componentes/Componentes.csproj">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Business.csproj" Description="Project file successfully backed up as Z:\Arquivos\FTP\Backup\Business\Business.csproj">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Business.csproj.user" Description="Project user file successfully backed up as Z:\Arquivos\FTP\Backup\Business\Business.csproj.user">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Diretorios.cs" Description="File successfully backed up as Z:\Arquivos\FTP\Backup\Business\Diretorios.cs">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Business.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Business" Source="Business\Business.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ftp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ftp.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Business.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

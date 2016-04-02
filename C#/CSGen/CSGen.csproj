@@ -1,0 +1,126 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3F64E21-70D0-4352-8C7C-57BB518ED6C2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>CSGen</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Code\LoadDataBaseSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Code\SqlColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Code\SqlReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Code\SqlTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Configuracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSGen\CreateSolution\CreateProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\CreateSolution\CreateSolution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\CreateSolution\TipoProjeto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\GeraBusinessClass\GerarBusinessClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\GeraDataBaseClass\GerarDataBaseClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\GeraProcedures\GerarProcedure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSGen\Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSGen\ReportBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSGen\Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSGen\wsLuisSanches\LuisSanchesServices.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSGen\wsLuisSanches\ReportBugCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

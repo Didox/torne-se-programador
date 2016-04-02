@@ -1,0 +1,318 @@
+<!--#INCLUDE FILE ="chamar_banco.asp"-->
+<!--#INCLUDE FILE ="funcao_senha.asp"-->
+<!--#INCLUDE FILE ="CPF_CNPJ.asp"-->
+<!--#include file="aDOVBS.inc" -->
+<%codigo=request("codigo")%>
+<html>
+<head>
+<title>:::::Imobi....:::</title>
+<script language="javascript" src="formatacao.js"></script>
+<link rel="stylesheet" href="estilo.css" type="text/css">
+<meta name="description" content="BIG SOLUTIONS TECNOLOGIA DA INFORMAÇÃO LTDA">
+</head> 
+<script language="javascript">
+  function popup(url)
+  {
+    window.open(url,"popup","resizable=yes,scrollbars=yes,location=no,top=0,left=0,width=740,height=540");
+  }
+</script>
+<body marginheight="0" marginwidth="0" leftmargin=0 topmargin=0 bgcolor="#FFFFFF" text="#333333" link="#333333" vlink="#333333" alink="#333333">
+<table border="0" width="777" cellspacing="0" cellpadding="0">
+      <!--#INCLUDE FILE ="Main_Topo.asp"-->
+          <table><tr><td></td></tr></table>
+          <%set exibir=conn.execute("select * from imoveis where codigo="&codigo)%>
+          <table width=100% bgcolor=#CCCCCC>
+            <tr><td></td></tr>
+          </table>
+          <table width=100% border=0 bgcolor=#E8E8E8 cellspacing="0" cellpadding="0">
+            <tr> 
+              <td width=20><img src="../img/r_11.gif"></td>
+              <td class="tb">
+                <B>DETALHE IMÓVEL
+                </B>
+              </td>
+              <td class="tb" align=right>
+                <a href="javascript:popup('popup.asp?codigo2=<%=exibir("codigo")%>&pagina=Detalhe_Imovel.asp')"><img src="../img/Botao_foto.gif" border=0 alt=Fotos></a>&nbsp&nbsp
+                <%set registro_key = conn.execute("select cod_quadro from registro_chave where status=0 and cod_imovel="&exibir("codigo"))%>
+                <%if registro_key.eof=false then%>
+                <a href="javascript:popup('imprimir_registro_chave_imovel.asp?codigo=<%=exibir("codigo")%>&pagina=Detalhe_Imovel.asp')"><img src="../img/Botao_chaves.gif" alt="Registro de Ausência de Chave" border=0></a>
+                <%end if%>
+                <a href="Imprimir_detalhe_imoveis.asp?codigo=<%=exibir("codigo")%>&pagina=Main_imoveis"><img src="../img/icone-imprimir.gif" alt="Imprimir Imóvel" border=0></a>
+              </td>
+            </tr>
+          </table>
+          <table><tr height=10><td></td></tr></table>
+          <table width=100% border=0 cellspacing="0" cellpadding="0">
+           <tr>
+             <td>
+               <table width=100% border=0 cellspacing="0" cellpadding="0">
+                 <tr>
+                   <td class="tb" width=130><b>DESCRIÇÃO:</b></td>
+                   <td class="tb" colspan=3><%=exibir("descricao")%></td>
+                 </tr>
+                 <tr>
+                   <td class="tb" width=130><b>ENDEREÇO:</b></td>
+                   <td class="tb" colspan=3><%=exibir("endereco")%> &nbsp;&nbsp; <%=exibir("numero")%>&nbsp;&nbsp; <%=exibir("complemento")%></td>
+                 </tr>
+               </table> 
+             </td>
+             <td width=15%>
+               <table width=100% border=0 cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><font size=3><b>
+                      <%if registro_key.eof = false then%>
+                        <a href="cad_registro_chave_imovel.asp?imovel=<%=codigo%>&pagina=Detalhe_Imovel&quadro=<%=registro_key("cod_quadro")%>">
+                        <img src="../img/key.gif" border=0>
+                        <%=registro_key("cod_quadro")%>                      
+                      <%end if%> 
+                      </a>
+                      </b></font>
+                    </td>
+                  </tr>
+               </table>
+             </td>
+           </tr> 
+          </table>    
+           <table width=100% border=0 cellspacing="0" cellpadding="0">
+            <tr>
+             <td>
+            <table width=100% border=0 cellspacing="0" cellpadding="0">
+            <tr>
+              <tr><td class="tb" width=130><b>BAIRRO:</b></td>
+              <%set bairro = conn.execute ("select * from bairro where codigo = "&exibir("cod_bairro"))%>
+              <td class="tb"><%=bairro("descricao")%></td>
+              <td class="tb" width=130><b>CIDADE:</b></td>
+              <%set cidade = conn.execute ("select * from cidade where codigo = "&exibir("cod_cidade"))%>
+              <td class="tb"><%if not cidade.eof then%><%=cidade("descricao")%><%end if%></td>
+            </tr>
+            <tr>
+              <tr><td class="tb" width=130><b>ESTADO:</b></td>
+              <%set estado = conn.execute ("select * from estado where codigo = "&exibir("cod_estado"))%>
+              <td class="tb"><%=estado("descricao")%></td>
+              <td class="tb" width=130><b>UNIDADE:</b></td>
+              <%set unidade = conn.execute ("select * from unidade where codigo = "&exibir("cod_unidade"))%>
+              <td class="tb">
+                	<%if not unidade.eof then%>
+                   <%=unidade("descricao")%>
+                <%end if%>
+              </td>
+            </tr>
+              <td class="tb" width=130><b>TIPO IMÓVEL:</b></td>
+              <%set cidade = conn.execute ("select * from cidade where codigo = "&exibir("cod_cidade"))%>
+              <td class="tb">
+                <%set tipo_imovel = conn.execute ("select * from tipo_imovel where codigo in ("&exibir("tipo_imovel")&")")%>
+                <%do while not tipo_imovel.eof%>
+                  <%response.write(tipo_imovel("descricao"))%>&nbsp;
+                <%tipo_imovel.movenext
+   	        loop%></td>
+	     
+            <td class="tb" width=130><b>ESTÁGIO DA OBRA:</b></td>
+              <td class="tb">
+                <%set estagios_obra = conn.execute ("select * from estagios_obra where codigo in ("&exibir("cod_estagios_obra")&")")
+	          do while not estagios_obra.eof%>             
+                    <%=estagios_obra("descricao")%>
+                  <%estagios_obra.movenext
+                  loop%>
+              </td>
+   	    </tr>
+   	    <td class="tb" width=130><b>ÁREA ÚTIL (m²):</b></td>
+              <td class="tb">
+                <%
+                if exibir("cod_metragem") <> "" then
+                sqlMtg = "select * from metragem where codigo in ("&exibir("cod_metragem")&")"
+                'response.write sqlMtg
+                'response.end
+                set metragem = conn.execute (sqlMtg)
+	          do while not metragem.eof%>             
+                    <%=metragem("descricao")%>
+                  <%metragem.movenext
+                  loop
+                 end if%>
+              </td>
+   	      <td class="tb" width=130><b>DATA INCLUSÃO:</b></td>
+              <td class="tb"><%=exibir("data_inclusao")%></td><tr>
+            </tr>            <tr>
+            <td class="tb"><b>IDADE IMÓVEL:</b></td>
+              <td class="tb">
+              <%set idade = conn.execute("select * from tipo_idade_imovel where codigo = "&exibir("cod_idade_imovel"))%>
+              <%if not idade.eof then%>
+              <%=idade("descricao")%>
+              <%end if%>
+              </td>
+              <td class="tb"><b>CATEGORIA:</b></td>
+              <td class="tb">
+              <%set categoria = conn.execute("select * from Tipo_categoria where codigo = "&exibir("cod_categoria"))%>
+              <%=categoria("descricao")%></td>
+            </tr>
+            </tr>
+              <td class="tb"><b>N° DORMITÓRIO:</b></td>
+              <td class="tb"><%=exibir("dormitorio")%></td>
+              <td class="tb"><b>SUITES:</b></td>
+              <td class="tb"><%=exibir("suites")%></td>
+            </tr>
+            </tr>
+              <td class="tb"><b>VAGAS GARAGEM:</b></td>
+              <td class="tb"><%=exibir("garagem")%></td>
+              <td class="tb"><b>COM DÍVIDA?:</b></td>
+              <td class="tb">
+              <%if exibir("divida") = "0" then%>
+                 <%="Não"%>
+              <%else%>
+                 <%="Sim"%>
+              <%end if%></td>
+            </tr>
+            <tr height=3><td></td></tr>             
+             <table>
+            <tr><td width=600 bgcolor=#AAAAAA></td></tr>   
+             <tr>
+            <td class="tb" width=130><b>TIPO DE SERVIÇO:</b></td> 
+                    
+            <table width=585 cellspacing=0 cellpadding=0 border=1 bordercolor="#F8F8F8">
+              <tr>
+                <td bgcolor=#AAAAAA width=100%>
+                  <span class="estilo"><font color="#FFFFFF">Serviço&nbsp;(s)</font></span>
+                </td>
+                <td bgcolor=#AAAAAA align=center>
+                  <span class="estilo"><font color="#FFFFFF">Valor</font></span>
+                </td>
+              </tr>
+              <%set cbai=conn.execute("select * from perfil_servico where cod_imovel="&codigo&" and status=0 ORDER BY codigo desc")%>
+              <%do while not cbai.eof %>
+              <tr>
+                <td>
+                  <%set servico=conn.execute("select * from servico where codigo="&cbai("cod_servico"))%>
+                  <%=servico("descricao")%>
+                <td>
+                  <%set moed = conn.execute("select * from tipo_moeda where status=0 and codigo="&cbai("cod_moeda"))%>
+                  <%if not moed.eof then%>
+                     <%=moed("sigla")%>
+                  <%else%>
+                     R$
+                  <%end if%>
+                  &nbsp;<%=formatnumber(cbai("valor"),2)%>
+                </td>
+              </tr>
+              <%cbai.movenext%>
+              <%loop%>
+              </tr>
+            <td class="tb" width=130><b>TIPO DE COMODO:</b></td>            
+            </table>
+            <table width=585 cellspacing=0 cellpadding=0 border=1 bordercolor="#F8F8F8">
+              <tr>
+                <td bgcolor=#AAAAAA width=100%>
+                  <span class="estilo"><font color="#FFFFFF">Comodo&nbsp;(s)</font></span>
+                </td>
+                <td bgcolor=#AAAAAA align=center>
+                  <span class="estilo"><font color="#FFFFFF">Quantidade</font></span>
+                </td>
+              </tr>
+              <%set cbai=conn.execute("select * from perfil_imovel where cod_imovel="&codigo&" and status=0 ORDER BY codigo desc")%>
+              <%do while not cbai.eof %>
+              <tr>
+                <td>
+                  <%set comodo_nome=conn.execute("select * from tipo_comodo where codigo="&cbai("cod_comodo"))%>
+                  <%=comodo_nome("descricao")%>
+                <td align=center>
+                  <%=cbai("quantidade")%>
+                </td>
+              </tr>
+              <%cbai.movenext%>
+              <%loop%>
+            </table>            
+            <table><tr><td class="tb" width=130><b>DIFERERÊNCIAL:</b></td></tr></table>
+            <table width=585 cellspacing=0 cellpadding=0 border=1 bordercolor="#F8F8F8">
+              <tr>
+                <td bgcolor=#AAAAAA width=100%>
+                  <span class="estilo"><font color="#FFFFFF">Descrição</font></span>
+                </td>
+                <td bgcolor=#AAAAAA align=center>
+                  <span class="estilo"><font color="#FFFFFF">Quantidade</font></span>
+                </td>
+              </tr>
+              <%set cbai=conn.execute("select * from perfil_empreendimento where cod_imovel="&codigo&" and status=0 ORDER BY codigo desc")%>
+              <%do while not cbai.eof %>
+              <tr>
+                <td>
+                  <%set empreendimento_nome=conn.execute("select * from tipo_empreendimento where codigo="&cbai("cod_empreendimento"))%>
+                  <%=empreendimento_nome("descricao")%>
+                <td align=center>
+                  <%=cbai("quantidade")%>
+                </td>
+              </tr>
+              <%cbai.movenext%>
+              <%loop%>
+            </table>            
+            <table cellspacing=0 cellpadding=0>
+            <td class="tb" width=130><b>TIPO DE PLANO:</b></td>            
+            <table width=585 cellspacing=0 cellpadding=0 border=1 bordercolor="#F8F8F8">
+              <tr>
+                <td bgcolor=#AAAAAA align=center>
+                  <span class="estilo"><font color="#FFFFFF">Quantidade</font></span>
+                </td>
+                <td bgcolor=#AAAAAA width=100%>
+                  <span class="estilo"><font color="#FFFFFF">Plano</font></span>
+                </td>
+                <td bgcolor=#AAAAAA align="center">
+                  <span class="estilo"><font color="#FFFFFF">Valor</font></span>
+                </td>
+              </tr>
+              <%set plano1=conn.execute("select * from perfil_plano where cod_imovel="&codigo&" and status=0 ORDER BY codigo desc")%>
+              <%do while not plano1.eof %>
+              <tr>
+                <td align=center>
+                  <%=plano1("quantidade")%>
+                </td>
+                <td>
+                  <%set plano_nome=conn.execute("select * from tipo_conta where codigo="&plano1("cod_tipo_conta"))%>
+                  <%=plano_nome("descricao")%>
+                <td align=center>
+                  <%set moed = conn.execute("select * from tipo_moeda where status=0 and codigo="&plano1("cod_moeda"))%>
+                  <%if not moed.eof then%>
+                     <%=moed("sigla")%>
+                  <%else%>
+                     R$
+                  <%end if%>
+                  &nbsp;<%=formatnumber(plano1("valor"),2)%>
+                </td>
+              </tr>
+              <%plano1.movenext%>
+              <%loop%>
+            <td class="tb" width=130 colspan=2><b>DESPESAS EXTRAS:</b></td> 
+            <table width=585 cellspacing=0 cellpadding=0 border=1 bordercolor="#F8F8F8">
+              <tr>
+                <td bgcolor=#AAAAAA width=100%>
+                  <span class="estilo"><font color="#FFFFFF">Descrição</font></span>
+                </td>
+                <td bgcolor=#AAAAAA align=center>
+                  <span class="estilo"><font color="#FFFFFF">Valor</font></span>
+                </td>
+              </tr>
+              <%set cbai=conn.execute("select gasto_extra.valor as valor, despesa.descricao as despesa from (gasto_extra inner join despesa on despesa.codigo=gasto_extra.cod_despesa) where cod_imovel="&codigo&" and gasto_extra.status=0 ORDER BY despesa.descricao desc")%>
+              <%if cbai.eof=true then%>
+                <tr>
+                  <td>Nenhum registro encontrado.</td>
+                  <td></td>
+                </tr>
+              <%else%>
+                <%do while not cbai.eof %>
+                <tr>
+                  <td><%=cbai("despesa")%>
+                  <td align=center>
+                    R$<%=formatnumber(cbai("valor"),2)%>
+                  </td>
+                </tr>
+                <%cbai.movenext%>
+                <%loop%>
+              <%end if%>
+              </tr>
+            <td>
+            </table>
+          </table>
+        </td>
+      </tr>
+    <table width=100% background="../img/rod_2.gif"><tr><td><br><br></td></tr></table>      
+  </td>
+</tr>
+</table>
+</body>
+</html>

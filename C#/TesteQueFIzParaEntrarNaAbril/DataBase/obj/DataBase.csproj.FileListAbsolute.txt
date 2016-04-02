@@ -1,0 +1,10 @@
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\DataBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\DataBase\bin\Debug\DataBase.dll
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\DataBase\bin\Debug\DataBase.pdb
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\DataBase\obj\Debug\DataBase.dll
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\DataBase\obj\Debug\DataBase.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\DataBase\bin\Debug\DataBase.dll
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\DataBase\bin\Debug\DataBase.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\DataBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\DataBase\obj\Debug\DataBase.dll
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\DataBase\obj\Debug\DataBase.pdb

@@ -1,0 +1,20 @@
+unit untClass;
+
+interface
+
+
+type
+  TFiles = class
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    Nome: string;
+  end;
+
+var
+  Files: TFiles;
+
+implementation
+
+end.

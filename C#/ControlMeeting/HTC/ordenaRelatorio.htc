@@ -1,0 +1,153 @@
+<public:attach 	event=oncontentready onevent="init();" />
+<script>
+var tbody=null;					
+var theadrow=null;
+var colCount = null;
+
+var reverse = false;
+var lastclick = -1;					
+
+var oTR = null;
+var oStatus = null;
+var none = 0;
+
+function init() {
+	alert( 'ss' )
+	try{
+		tbody = element.firstChild;
+		
+		theadrow = tbody.firstChild
+		if (theadrow.tagName != "TR") return;
+
+		theadrow.runtimeStyle.cursor = "hand";	
+		theadrow.firstChild.runtimeStyle.cursor = "default"
+		theadrow.childNodes[1].runtimeStyle.cursor = "default"
+		theadrow.lastChild.runtimeStyle.cursor = "default"
+		colCount = theadrow.children.length - 1;
+		
+		 
+		var l, clickCell;
+		//for (var i=0; i<colCount; i++) altera a coluna de ordenação
+		for (var i=0; i<colCount+1; i++) 
+		{
+			
+			l=document.createElement("IMG");
+			l.src="../../htc/blank.gif";
+			l.id="srtImg";
+			l.width = 0
+								
+			clickCell = theadrow.children[i];
+			clickCell.title = "Clique na coluna " + clickCell.innerText + " para ordenar as linhas , ou com o botão direito para ordenar colunas "
+			clickCell.selectIndex = i;
+			clickCell.insertAdjacentElement("beforeEnd", l)
+			clickCell.attachEvent("onclick", doClick);
+		}
+	}
+	catch(e){}
+}
+
+
+function doClick(e) 
+{
+	var clickObject = e.srcElement;
+
+	while (clickObject.tagName != "TD") 
+	{
+		clickObject = clickObject.parentElement;
+	}
+
+	var imgcol= theadrow.all('srtimg');
+	for(var x = 0; x < imgcol.length; x++) 
+	{
+		imgcol[x].width=0
+		imgcol[x].src = "../../htc/blank.gif";
+	}
+	
+	if(lastclick == clickObject.selectIndex)
+	{
+		if(reverse == false)
+		{	
+			clickObject.children[0].width = 25
+			clickObject.children[0].src = "../../htc/down.gif";
+			clickObject.title = "Clique na coluna " + clickObject.innerText + " para organizar em orderm ascendente, ou com o botão direito para ordenar colunas "
+		      reverse = true;
+		}
+		else 
+		{
+			clickObject.children[0].width = 25
+			clickObject.children[0].src = "../../htc/up.gif";
+			clickObject.title = "Clique na coluna " + clickObject.innerText + " para organizar em orderm descendente, ou com o botão direito para ordenar colunas  "
+			reverse = false;
+		}
+	}
+	else
+	{
+		reverse = false;
+		lastclick = clickObject.selectIndex;
+		clickObject.children[0].src = "../../htc/up.gif";
+		clickObject.title = "Clique na coluna " + clickObject.innerText + " para organizar em orderm descendente, ou com o botão direito para ordenar colunas  "
+		clickObject.children[0].width = 25
+	}
+	
+	insertionSort(tbody, tbody.rows.length-1,  reverse, clickObject.selectIndex);
+	//incluo e retiro linha
+	//insertionSort(tbody, tbody.rows.length-1,  reverse, clickObject.selectIndex);
+}
+
+function insertionSort(t, iRowEnd, fReverse, iColumn)
+{
+	try{
+		var iRowInsertRow, iRowWalkRow, current, insert;						
+		for ( iRowInsert = 1 ; iRowInsert <= iRowEnd-1 ; iRowInsert++ )
+		{
+			if (iColumn) {	
+			if( typeof(t.children[iRowInsert].children[iColumn]) != "undefined")
+     				textRowInsert = t.children[iRowInsert].children[iColumn].innerText;
+			else
+				textRowInsert = "";
+			} else {
+			textRowInsert = t.children[iRowInsert].innerText;
+			}
+			
+			for ( iRowWalk = 0; iRowWalk <= iRowInsert ; iRowWalk++ )
+			{
+				if (iColumn) {
+				if(typeof(t.children[iRowWalk].children[iColumn]) != "undefined")
+					textRowCurrent = t.children[iRowWalk].children[iColumn].innerText;
+				else
+					textRowCurrent = "";
+				} else {
+				textRowCurrent = t.children[iRowWalk].innerText;
+				}
+
+			
+			current = textRowCurrent;
+			insert  = textRowInsert;
+
+
+			if ( !isNaN(current) ||  !isNaN(insert)) 
+			{
+				current= eval(current);
+				insert= eval(insert);
+			}
+			else
+			{
+				current	= current.toLowerCase();
+				insert	= insert.toLowerCase();
+			}
+
+
+				if ( (   (!fReverse && insert < current)
+					|| ( fReverse && insert > current) )
+					&& (iRowInsert != iRowWalk) )
+				{
+				eRowInsert = t.children[iRowInsert];
+					eRowWalk = t.children[iRowWalk];
+					t.insertBefore(eRowInsert, eRowWalk);
+					iRowWalk = iRowInsert; 
+				}
+			}			
+		}
+	}catch(e){}
+}
+</script>

@@ -1,0 +1,14 @@
+﻿<Clientes>
+  <Cliente>
+    <ID>1</ID>
+    <Nome>Ana</Nome>
+  </Cliente>
+  <Cliente>
+    <ID>2</ID>
+    <Nome>Maria</Nome>
+  </Cliente>
+  <Cliente>
+    <ID>3</ID>
+    <Nome>Tereza</Nome>
+  </Cliente>
+</Clientes>

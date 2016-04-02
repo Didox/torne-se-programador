@@ -1,0 +1,12 @@
+document.write("<script language=\"JavaScript\" src=\"Js/Geral.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/jsdocument.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/jsgeneral.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/jscompatibilitylib.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/ItensFolder.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/Folders.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/funcoes.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/Ajax.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/Services.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/form.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/login.js\"></script>");
+document.write("<script language=\"JavaScript\" src=\"Js/reviewsForm.js\"></script>");

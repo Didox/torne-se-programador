@@ -1,0 +1,9 @@
+bin\Debug\Modulo03.exe
+bin\Debug\Modulo03.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo03.Properties.Resources.resources
+obj\Debug\Modulo03.csproj.GenerateResource.Cache
+obj\Debug\Modulo03.exe
+obj\Debug\Modulo03.pdb
+obj\Debug\Modulo03.Form1.resources
+bin\Debug\Modulo03.exe.config

@@ -1,0 +1,5 @@
+C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\bin\Debug\DidoxComponents.dll
+C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\bin\Debug\DidoxComponents.pdb
+C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\obj\Debug\DidoxComponents.dll
+C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\obj\Debug\DidoxComponents.pdb

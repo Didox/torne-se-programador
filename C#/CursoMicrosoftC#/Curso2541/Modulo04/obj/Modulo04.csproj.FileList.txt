@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo04.Form1.resources
+obj\Debug\Modulo04.Properties.Resources.resources
+obj\Debug\Modulo04.csproj.GenerateResource.Cache
+bin\Debug\Modulo04.exe
+bin\Debug\Modulo04.pdb
+obj\Debug\Modulo04.exe
+obj\Debug\Modulo04.pdb
+obj\Debug\Modulo04.frmForm.resources
+bin\Debug\Modulo04.exe.config
