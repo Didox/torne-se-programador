@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alterando dados da pessoa</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script type="text/javascript" src="/javascripts/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="/javascripts/validacao.js"></script>
+  </head>
+  <body>
+    <h1>Alterando dados da pessoa</h1><br>
+    <a href="/">Home</a>
+	<fieldset id="formCadastro">
+		<legend>Cadastro de pessoas</legend>
+		<form action="/alterar-pessoa?cpfAterar=<%= pessoa.cpf %>" method="POST" onsubmit="return validacao()">
+			<div>
+				<label for="nome">Nome: </label>
+				<input type="text" name="nome" value="<%= pessoa.nome %>" id="nome" /> 
+			</div>
+			<div>
+				<label for="sobrenome">Sobrenome:  </label>
+				<input type="text" name="sobrenome" value="<%= pessoa.sobrenome %>" id="sobrenome" /> 
+			</div>
+			<div>
+				<label for="cpf">CPF:  </label>
+				<input type="text" readonly="true" name="cpf" value="<%= pessoa.cpf %>" id="cpf" /> 
+			</div>
+			<div>
+				<label for="telefone">Telefone:  </label>
+				<input type="text" name="telefone" value="<%= pessoa.telefone %>" id="telefone" /> 
+			</div>
+			<div>
+				<label for="endereco">Endereço:  </label>
+				<input type="text" name="endereco" value="<%= pessoa.endereco %>" id="endereco" /> 
+			</div>
+			<hr>
+			<div>
+				<input type="submit" value="Alterar" /> 
+			</div>
+		</form>
+	</fieldset>
+  </body>
+</html>
