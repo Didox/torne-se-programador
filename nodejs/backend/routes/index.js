@@ -41,7 +41,7 @@ router.post('/alterar-pessoa', function(request, response, next) {
 router.get('/excluir', function(request, response, next) {
   var pessoa = new Pessoa();
   pessoa.cpf = request.query.cpf;
-  pessoa.excluir(function(pessoas){
+  pessoa.excluir(function(){
     response.redirect("/");
   })
 

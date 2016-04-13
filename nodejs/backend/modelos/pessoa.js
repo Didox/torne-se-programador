@@ -1,146 +1,92 @@
 var App = require('../config/app')
 
 var Pessoa = function(){
-	this.nome = "";
-	this.sobrenome = "";
-	this.cpf = "";
-	this.telefone = "";
-	this.endereco = "";
+  this.nome = "";
+  this.sobrenome = "";
+  this.cpf = "";
+  this.telefone = "";
+  this.endereco = "";
 
-	this.salvar = function(callback, cpfAlteracao){
-		var nomeInstancia 		= this.nome;
-		var sobrenomeInstancia 	= this.sobrenome;
-		var cpfInstancia 		= this.cpf;
-		var telefoneInstancia 	= this.telefone;
-		var enderecoInstancia 	= this.endereco;
+  this.salvar = function(callback, cpfAlteracao){
+    var query = "";
+    if(cpfAlteracao == undefined){
+      query = "insert into teste.pessoas(cpf, nome, sobrenome, telefone, endereco)values('" + this.cpf + "', '" + this.nome +  "', '" + this.sobrenome + "', '" + this.telefone + "', '" + this.endereco + "')";
+    }
+    else{
+      query = "update teste.pessoas set cpf='" + this.cpf + "', nome='" + this.nome + "', sobrenome='" + this.sobrenome + "', telefone='" + this.telefone + "', endereco='" + this.endereco + "' where cpf='" + cpfAlteracao + "' ";
+    }
+    
+    console.log(query);
 
-		Pessoa.todos(function(pessoas) {
-		    if (pessoas == []) { 
-		      console.log("Pessoas não encontada na base de dados");
-		      callback.call();
-		    }
-		    else{
-		      if(cpfAlteracao == undefined){
-		      	var hash = {
-			      nome: nomeInstancia,
-			      sobrenome: sobrenomeInstancia,
-			      cpf: cpfInstancia,
-			      telefone: telefoneInstancia,
-			      endereco: enderecoInstancia
-			    }
+    App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
+      if(erro){
+        console.log("Erro ao executar a query (" + query + ")");
+        callback.call();
+      }
+      else{
+        callback.call();
+      }
+    });
+  }
 
-			    pessoas.push(hash);
-			    Pessoa.salvarTodos(pessoas);
-		      }
-		      else{
-			      for(var i=0; i<pessoas.length; i++){
-			        if(pessoas[i].cpf == cpfAlteracao){
+  this.excluir = function(callback){
+    var query = "delete from teste.pessoas where cpf='" + this.cpf + "' ";
+    console.log(query);
 
-			          pessoas[i].nome = nomeInstancia;
-			          pessoas[i].sobrenome = sobrenomeInstancia;
-			          pessoas[i].cpf = cpfInstancia;
-			          pessoas[i].telefone = telefoneInstancia;
-			          pessoas[i].endereco = enderecoInstancia;
-
-			          Pessoa.salvarTodos(pessoas);
-			          break;
-			        }
-			      }
-			  }
-		      callback.call();
-		    }
-		});
-	}
-
-	this.excluir = function(callback){
-		var cpfInstancia = this.cpf;
-		Pessoa.todos(function(pessoas) {
-		    if (pessoas == []) { 
-		      console.log("Pessoas não encontada na base de dados");
-		    }
-		    else{
-		      var pessoasRestantes = [];
-		      for(var i=0; i<pessoas.length; i++){
-		        if(pessoas[i].cpf != cpfInstancia){
-		          pessoasRestantes.push(pessoas[i]);
-		        }
-		      }
-
-		      Pessoa.salvarTodos(pessoasRestantes);
-		      pessoas = pessoasRestantes;
-		    }
-
-		    callback.call(null, pessoas)
-		});
-	}
+    App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
+      if(erro){
+        console.log("Erro ao executar a query (" + query + ")");
+        callback.call();
+      }
+      else{
+        callback.call();
+      }
+    });
+  }
 }
 
 Pessoa.buscar = function(cpf, callback){
-	Pessoa.todos(function(pessoas) {
-	    if (pessoas == []) { 
-	      console.log("Pessoa não encontrada em nossa base de dados");
-	      callback.call(null, null);
-	    }
-	    else{
-	      var pessoa = null;
-	      for(var i=0; i<pessoas.length; i++){
-	        if(pessoas[i].cpf == cpf){
-	          pessoa = pessoas[i];
-	          break;
-	        }
-	      }
-
-	      callback.call(null, pessoa);
-	    }
-	});
+  var query = "SELECT * FROM teste.pessoas where cpf = '" + cpf + "' ";
+  App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
+    if(erro){
+      console.log("Erro ao executar a query (" + query + ")");
+      callback.call(null, null);
+    }
+    else{
+      if(dadosRetornadosDaTabela.length > 0){
+        callback.call(null, dadosRetornadosDaTabela[0]);
+      }
+      else{
+        callback.call(null, null);
+      }
+    }
+  });
 }
 
 
 Pessoa.buscarPorNome = function(nome, callback){
-	Pessoa.todos(function(pessoas){
-	    if (pessoas == []) { 
-	      console.log("Pessoa não encontrada em nossa base de dados");
-	      callback.call(null, pessoas);
-	    }
-	    else{
-	      var dadosPesquisados = [];
-	      if(nome == ""){
-	        dadosPesquisados = pessoas;
-	      }
-	      else{
-	        for(var i=0; i<pessoas.length; i++){
-	          var reg = new RegExp(nome, "i");
-	          if(pessoas[i].nome.match(reg) != null){
-	            dadosPesquisados.push(pessoas[i]);
-	          }
-	        }
-		  }
-		 
-		  callback.call(null, dadosPesquisados);
-		}
-	});
-}
-
-Pessoa.salvarTodos = function(pessoas){
-  var fs = require('fs');
-  fs.writeFile(App.BANCO_ARQUIVO, JSON.stringify(pessoas), function(err) {
-    if(err) {
-      console.log(err);
+  var query = "SELECT * FROM teste.pessoas where nome like '%" + nome + "%' ";
+  App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
+    if(erro){
+      console.log("Erro ao executar a query (" + query + ")");
+      callback.call(null, []);
+    }
+    else{
+      callback.call(null, dadosRetornadosDaTabela);
     }
   });
 }
 
 Pessoa.todos = function(callback){
-  var fs = require('fs');
-  fs.readFile(App.BANCO_ARQUIVO, function(err, data) {
-    pessoas = [];
-    if (err) { 
-      console.log(err);
+  var query = "SELECT * FROM teste.pessoas ";
+  App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
+    if(erro){
+      console.log("Erro ao executar a query (" + query + ")");
+      callback.call(null, []);
     }
     else{
-      pessoas = JSON.parse(data);
+      callback.call(null, dadosRetornadosDaTabela);
     }
-    callback.call(null, pessoas);
   });
 }
 
