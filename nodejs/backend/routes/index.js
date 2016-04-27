@@ -56,6 +56,79 @@ router.get('/pesquisar', function(request, response, next) {
   });
 });
 
+
+router.get('/ajax-test-html', function(request, response, next) {
+  response.render('html-teste');
+});
+
+router.get('/estados.json', function(request, response, next) {
+  response.send([
+    {'SP': 'São Paulo'},
+    {'RJ': 'Rio de Janeiro'},
+    {'BH': 'Belo Horizonte'}
+  ])
+});
+
+router.get('/cidades.json', function(request, response, next) {
+  var cidades_estados = [
+    {'SP': [
+      'Álvares Florence',
+      'Aguaí',
+      'Águas da Prata'
+    ]},
+    {'RJ': [
+      'Aperibé',
+      'Areal',
+      'Armação dos Búzios',
+    ]},
+    {'BH': [
+      'Abre Campo',
+      'Açucena',
+      'Abaeté'
+    ]}
+  ]
+
+  if(request.query.estado != undefined && request.query.estado != ""){
+    var cidades = []
+
+    for(var i=0; i<cidades_estados.length; i++){
+      var estadoRequest = request.query.estado.toUpperCase();
+      if(cidades_estados[i][estadoRequest] != undefined){
+        cidades = cidades_estados[i][estadoRequest];
+      }
+    }
+
+    if(cidades == []){
+      cidades = [
+        'Álvares Florence',
+        'Aguaí',
+        'Águas da Prata',
+        'Aperibé',
+        'Areal',
+        'Armação dos Búzios',
+        'Abre Campo',
+        'Açucena',
+        'Abaeté'
+      ]
+    }
+    
+    response.send(cidades)
+  }
+  else{
+    response.send([
+      'Álvares Florence',
+      'Aguaí',
+      'Águas da Prata',
+      'Aperibé',
+      'Areal',
+      'Armação dos Búzios',
+      'Abre Campo',
+      'Açucena',
+      'Abaeté'
+    ]);
+  }
+});
+
 router.post('/cadastrar-pessoa', function(request, response, next) {
   var pessoa = new Pessoa();
 

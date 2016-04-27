@@ -6,6 +6,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 	<script type="text/javascript" src="/javascripts/jquery-1.12.0.js"></script>
 	<script type="text/javascript" src="/javascripts/validacao.js"></script>
+	<script type="text/javascript" src="/javascripts/ajax.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
@@ -33,6 +34,18 @@
 			<div>
 				<label for="endereco">Endereço:  </label>
 				<input type="text" class="form-control" name="endereco" id="endereco" /> 
+			</div>
+			<div>
+				<br>
+				<input type="button" class="btn btn-primary" value="Carrager estados" onclick="carregarEstados()" /> 
+			</div>
+			<div>
+				<label for="estado">Estado:  </label>
+				<select id="estado" onchange="carregarCidade()" class="form-control" required="true" nome="estado"></select>
+			</div>
+			<div>
+				<label for="cidade">Cidade:  </label>
+				<select id="cidade"class="form-control" nome="cidade"></select>
 			</div>
 			<hr>
 			<div>
