@@ -11,6 +11,13 @@ router.get('/', function(request, response, next) {
   });
 });
 
+router.get('/pessoas.json', function(request, response, next) {
+  Pessoa.todos(function(pessoas) {
+    response.send(pessoas);
+  });
+});
+
+
 router.get('/alterar', function(request, response, next) {
   Pessoa.buscar(request.query.cpf, function(pessoa) {
     if (pessoa == null) { 
