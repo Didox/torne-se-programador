@@ -21,6 +21,7 @@ var Pessoa = function(){
     App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
       if(erro){
         console.log("Erro ao executar a query (" + query + ")");
+        console.log(erro);
         callback.call();
       }
       else{

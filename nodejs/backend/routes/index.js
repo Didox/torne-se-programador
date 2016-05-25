@@ -12,9 +12,22 @@ router.get('/', function(request, response, next) {
 });
 
 router.get('/pessoas.json', function(request, response, next) {
-  Pessoa.todos(function(pessoas) {
-    response.send(pessoas);
-  });
+  if(request.query.cpf){
+    Pessoa.buscar(request.query.cpf, function(pessoa) {
+      if (pessoa == null) { 
+        console.log("Pessoa não encontrada");
+        response.send({});
+      }
+      else{
+        response.send(pessoa);
+      }
+    });
+  }
+  else{
+    Pessoa.todos(function(pessoas) {
+      response.send(pessoas);
+    });
+  }
 });
 
 
@@ -28,6 +41,20 @@ router.get('/alterar', function(request, response, next) {
       response.render('alterar', {'pessoa': pessoa})
     }
   });
+});
+
+router.post('/alterar-pessoa.json', function(request, response, next) {
+  var pessoa = new Pessoa();
+
+  pessoa.cpf        = request.body.cpf;
+  pessoa.nome       = request.body.nome;
+  pessoa.sobrenome  = request.body.sobrenome;
+  pessoa.telefone   = request.body.telefone;
+  pessoa.endereco   = request.body.endereco;
+
+  pessoa.salvar(function(){
+    response.send({});
+  }, request.query.cpfAterar)
 });
 
 router.post('/alterar-pessoa', function(request, response, next) {
@@ -134,6 +161,21 @@ router.get('/cidades.json', function(request, response, next) {
       'Abaeté'
     ]);
   }
+});
+
+
+router.post('/cadastrar-pessoa.json', function(request, response, next) {
+  var pessoa = new Pessoa();
+
+  pessoa.cpf        = request.body.cpf;
+  pessoa.nome       = request.body.nome;
+  pessoa.sobrenome  = request.body.sobrenome;
+  pessoa.telefone   = request.body.telefone;
+  pessoa.endereco   = request.body.endereco;
+
+  pessoa.salvar(function(){
+    response.send({});
+  });
 });
 
 router.post('/cadastrar-pessoa', function(request, response, next) {
