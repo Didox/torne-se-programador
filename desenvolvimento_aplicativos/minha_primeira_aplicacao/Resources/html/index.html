@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="javascripts/ajax.js"></script>
 	<script type="text/javascript" src="javascripts/index.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta charset="UTF-8">
   </head>
   <body>
     <h1>Cadastro com dados backend</h1><br>
@@ -18,13 +19,11 @@
     <a href="alterar.html" class="btn btn-primary botao-home" >Cadastrar</a>
 	<fieldset id="formCadastro">
 		<legend>Buscar</legend>
-		<form action="/pesquisar" method="GET">
-			<label for="nome">Nome: </label>
-			<div class="botoes-pesquisa">
-				<input type="text" class="form-control" name="nome" id="nome" /> 
-				<input type="submit" class="btn btn-primary" value="buscar" /> 
-			</div>
-		</form>
+		<label for="nome">Nome: </label>
+		<div class="botoes-pesquisa">
+			<input type="text" class="form-control" name="nome" id="nome" /> 
+			<input type="button" onclick="app.buscarPessoa();" class="btn btn-primary" value="buscar" /> 
+		</div>
 	</fieldset>
 	<fieldset>
 		<legend>Pessoas cadastradas</legend>

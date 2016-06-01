@@ -23,6 +23,11 @@ router.get('/pessoas.json', function(request, response, next) {
       }
     });
   }
+  else if(request.query.nome){
+    Pessoa.buscarPorNome(request.query.nome, function(pessoas) {
+      response.send(pessoas);
+    });
+  }
   else{
     Pessoa.todos(function(pessoas) {
       response.send(pessoas);
@@ -77,6 +82,15 @@ router.get('/excluir', function(request, response, next) {
   pessoa.cpf = request.query.cpf;
   pessoa.excluir(function(){
     response.redirect("/");
+  })
+
+});
+
+router.get('/excluir.json', function(request, response, next) {
+  var pessoa = new Pessoa();
+  pessoa.cpf = request.query.cpf;
+  pessoa.excluir(function(){
+    response.send({});
   })
 
 });

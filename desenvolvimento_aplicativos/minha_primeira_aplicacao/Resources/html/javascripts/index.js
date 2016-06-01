@@ -5,26 +5,80 @@ app.networkOffAlert = function(){
   }
 };
 
+app.confirmTitanium = function(mensagem, strCallback){
+  if(Ti !== undefined){
+    Ti.App.fireEvent('confirmTitanium', {
+      mensagem: mensagem,
+      strCallback: strCallback
+    });
+  }
+};
+
 app.carregarDadosCadastro = function(){
   $.ajax( "http://local.com.br:3000/pessoas.json" ).done(function(dados) {
-
-  	var html = "";
-  	for(var i=0; i<dados.length; i++){
-  		html += "<tr>";
-  		html += "<td>" + dados[i].nome + "</td>";
-  		html += "<td>" + dados[i].sobrenome + "</td>";
-  		html += "<td>" + dados[i].cpf + "</td>";
-  		html += "<td>" + dados[i].telefone + "</td>";
-  		html += "<td>" + dados[i].endereco + "</td>";
-  		html += "<td><a href='alterar.html?cpf=" + dados[i].cpf + "' class='btn btn-warning'>Alterar</a></td>";
-  		html += "<td><a href='#' onclick='excluirDados(\'" + dados[i].cpf + "\')' class='btn btn-danger'>Excluir</a></td>";
-  		html += "</tr>";
-  	}
-
-  	$("#registros #dados").html(html);
-  	
+  	app.escreverDadosTabelaPessoa(dados);
   });
 }
+
+app.escreverDadosTabelaPessoa = function(dados){
+  var html = "";
+  for(var i=0; i<dados.length; i++){
+    html += "<tr>";
+    html += "<td>" + dados[i].nome + "</td>";
+    html += "<td>" + dados[i].sobrenome + "</td>";
+    html += "<td>" + dados[i].cpf + "</td>";
+    html += "<td>" + dados[i].telefone + "</td>";
+    html += "<td>" + dados[i].endereco + "</td>";
+    html += "<td><a href='alterar.html?cpf=" + dados[i].cpf + "' class='btn btn-warning'>Alterar</a></td>";
+    html += "<td><a href='#' onclick='app.excluirDados(\"" + dados[i].cpf + "\")' class='btn btn-danger'>Excluir</a></td>";
+    html += "</tr>";
+  }
+
+  $("#registros #dados").html(html);
+}
+
+app.buscarPessoa = function(){
+  $.ajax( 
+    "http://local.com.br:3000/pessoas.json?nome=" + $(".botoes-pesquisa input#nome").val() 
+  ).done(function(dados) {
+    app.escreverDadosTabelaPessoa(dados);
+  }).fail(function(err,status){
+    alert("erro ao buscar dados do serviço");
+    console.log(err);
+    console.log(status);
+  });
+}
+
+// app.excluirDados = function(cpf){
+//   if(confirm("Deseja realmente excluir esta pessoa?")){
+//     $.ajax( 
+//       "http://local.com.br:3000/excluir.json?cpf=" + cpf 
+//     ).done(function(pessoa) {
+//       window.location.href = "index.html";
+//     }).fail(function(err,status){
+//       alert("erro ao excluir dados do serviço");
+//       console.log(err);
+//       console.log(status);
+//     });
+//   }
+// }
+
+app.excluirDados = function(cpf){
+  app.confirmTitanium("Deseja realmente excluir esta pessoa?", "app.excluirForcado('" + cpf + "')");
+}
+
+app.excluirForcado = function(cpf){
+  $.ajax( 
+    "http://local.com.br:3000/excluir.json?cpf=" + cpf 
+  ).done(function(pessoa) {
+    window.location.href = "index.html";
+  }).fail(function(err,status){
+    alert("erro ao excluir dados do serviço");
+    console.log(err);
+    console.log(status);
+  });
+}
+
 
 app.carregarDadosPessoa = function(){
   var url = window.location.href;

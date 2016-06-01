@@ -24,6 +24,19 @@ utils.networkOffAlert = function(){
   webview.evalJS("conectado = true");
 };
 
+utils.confirmTitanium = function(mensagem, strCallback){
+  var dialog = Ti.UI.createAlertDialog({
+    buttonNames: ['Sim', 'Não'],
+    message: mensagem,
+    title: 'Meu primeiro app'
+  });
+  dialog.addEventListener('click', function(e){
+    if (e.index === 0){
+      webview.evalJS(strCallback);
+    }
+  });
+  dialog.show();
+}
 
 Ti.App.addEventListener('networkOffAlert', function(e) {
   try{
@@ -34,6 +47,14 @@ Ti.App.addEventListener('networkOffAlert', function(e) {
   }
 });
 
+Ti.App.addEventListener('confirmTitanium', function(e) {
+  try{
+    utils.confirmTitanium(e.mensagem, e.strCallback);
+  }
+  catch(e){
+    alert(e.message);
+  }
+});
 
 
 
