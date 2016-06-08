@@ -14,6 +14,18 @@ app.confirmTitanium = function(mensagem, strCallback){
   }
 };
 
+app.abrirNovaJanela = function(urlJavascript){
+  if(Ti !== undefined){
+    Ti.App.fireEvent('abrirNovaJanela', { url: urlJavascript });
+  }
+}
+
+app.fecharJanelaGlobal = function(){
+  if(Ti !== undefined){
+    Ti.App.fireEvent('fecharJanelaGlobal');
+  }
+}
+
 app.carregarDadosCadastro = function(){
   $.ajax( "http://local.com.br:3000/pessoas.json" ).done(function(dados) {
   	app.escreverDadosTabelaPessoa(dados);

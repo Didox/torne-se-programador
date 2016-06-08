@@ -16,7 +16,18 @@
     <h1>Cadastro com dados backend</h1><br>
     <a href="#" onclick="alert('valor da variável conectado = ' + conectado)" class="btn btn-default botao-home" >Valor variável conectado</a>
     <a href="index.html" class="btn btn-default botao-home" >Home</a>
-    <a href="alterar.html" class="btn btn-primary botao-home" >Cadastrar</a>
+    <a href="javascript:;" onclick="app.abrirNovaJanela('html/alterar.html');" class="btn btn-primary botao-home" >Cadastrar</a>
+
+    <br>
+    <br>
+    <br>
+    <input type="text" id="escrever" >
+     <a href="javascript:;" onclick="$('#teste').html($('#escrever').val());" class="btn btn-primary botao-home" >Escreva na div abaixo</a>
+     <div id="teste">o texto vai aparecer aqui</div>
+    <br>
+    <br>
+    <br>
+
 	<fieldset id="formCadastro">
 		<legend>Buscar</legend>
 		<label for="nome">Nome: </label>

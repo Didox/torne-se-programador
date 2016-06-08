@@ -8,8 +8,6 @@ var telaInicial = Titanium.UI.createWindow({
 var webview = Titanium.UI.createWebView({url:'html/index.html'});
 telaInicial.add(webview);
 
-
-
 var utils = {};
 utils.networkOffAlert = function(){
   if(!Titanium.Network.online){
@@ -23,6 +21,23 @@ utils.networkOffAlert = function(){
   }
   webview.evalJS("conectado = true");
 };
+
+var telaGlobal = null;
+
+utils.abrirNovaJanela = function(url){
+  telaGlobal = Titanium.UI.createWindow({  
+    title:'Nova janela',
+    backgroundColor:'#fff'
+  });
+
+  var webviewNovo = Titanium.UI.createWebView({url: url});
+  telaGlobal.add(webviewNovo);
+  telaGlobal.open();
+}
+
+utils.fecharJanelaGlobal = function(){
+  telaGlobal.close();
+}
 
 utils.confirmTitanium = function(mensagem, strCallback){
   var dialog = Ti.UI.createAlertDialog({
@@ -56,6 +71,23 @@ Ti.App.addEventListener('confirmTitanium', function(e) {
   }
 });
 
+Ti.App.addEventListener('abrirNovaJanela', function(e) {
+  try{
+    utils.abrirNovaJanela(e.url);
+  }
+  catch(e){
+    alert(e.message);
+  }
+});
+
+Ti.App.addEventListener('fecharJanelaGlobal', function() {
+  try{
+    utils.fecharJanelaGlobal();
+  }
+  catch(e){
+    alert(e.message);
+  }
+});
 
 
 telaInicial.open()
