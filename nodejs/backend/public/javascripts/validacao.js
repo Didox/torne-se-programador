@@ -22,3 +22,10 @@ var excluirDados = function(cpf){
 		window.location.href = "/excluir?cpf=" + cpf;
 	}
 }
+
+$(document).ready(function(){
+	if(window.location.href.indexOf("liberar") != -1){
+		$("#cadastro").show();
+		$("#pagamento").hide();
+	}
+})

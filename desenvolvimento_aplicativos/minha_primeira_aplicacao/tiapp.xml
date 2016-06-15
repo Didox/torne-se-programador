@@ -50,6 +50,7 @@
 		<theme>default</theme>
 	</mobileweb>
 	<modules>
+        <module platform="android">ti.admob</module>
 	</modules>
 	<deployment-targets>
 		<target device="android">true</target>

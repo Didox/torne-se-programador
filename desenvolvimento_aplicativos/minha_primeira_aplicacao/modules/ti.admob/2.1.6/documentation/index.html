@@ -1,0 +1,92 @@
+<h1>Admob Module</h1>
+<h2>Description</h2>
+<p>Allows for the display of AdMob in Titanium Android applications. </p>
+<p>Please note that if your androidManifest has screen support set to: android:anyDensity="false", any banner ads will display too small on high density devices. 
+It is not clear at this point if this is a bug with AdMob or Titanium. 
+In any event, you will either need to NOT set your screen support -- or set android:anyDensity="true" and adjust your app layout accordingly</p>
+<h2>Getting Started</h2>
+<p>View the <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+<h2>Requirements</h2>
+<p>Add this to the &lt;android /&gt; node in tiapp.xml: </p>
+<pre><code>&lt;android&gt;
+    &lt;tool-api-level&gt;14&lt;/tool-api-level&gt;
+&lt;/android&gt;
+</code></pre>
+<h2>Accessing the Admob Module</h2>
+<p>To access this module from JavaScript, you would do the following (recommended):</p>
+<pre><code>var Admob = require('ti.admob');
+</code></pre>
+<p>The "Admob" variable is now a reference to the Module object. <br />
+</p>
+<h2>Doubleclick for Publishers Developer Docs</h2>
+<p><a href="https://developers.google.com/mobile-ads-sdk/">https://developers.google.com/mobile-ads-sdk/</a></p>
+<h2>Functions</h2>
+<h3>number isGooglePlayServicesAvailable()</h3>
+<p>Returns a number value indicating the availability of Google Play Services which are for push notifications.</p>
+<p>Possible values include <code>SUCCESS</code>, <code>SERVICE_MISSING</code>, <code>SERVICE_VERSION_UPDATE_REQUIRED</code>, <code>SERVICE_DISABLED</code>, and <code>SERVICE_INVALID</code>.</p>
+<h3>createAdMobView({ . . . })</h3>
+<p>Returns a view with an ad initialized by default.</p>
+<h4>Arguments</h4>
+<p>parameters[object]: a dictionary object of properties.</p>
+<h4>Example:</h4>
+<pre><code>var adMobView = Admob.createAdMobView({
+    publisherId: "&lt;&lt;YOUR PUBLISHER ID HERE&gt;&gt;",
+    testing:false, // default is false
+    top: 0, //optional
+    left: 0, // optional
+    right: 0, // optional
+    bottom: 0 // optional
+    adBackgroundColor:"FF8800", // optional
+    backgroundColorTop: "738000", //optional - Gradient background color at top
+    borderColor: "#000000", // optional - Border color
+    textColor: "#000000", // optional - Text color
+    urlColor: "#00FF00", // optional - URL color
+    linkColor: "#0000FF" //optional -  Link text color
+    primaryTextColor: "blue", // deprecated -- now maps to textColor
+    secondaryTextColor: "green" // deprecated -- now maps to linkColor
+});
+</code></pre>
+<h3>Admob.AD_RECEIVED</h3>
+<p>returns the constant for AD_RECEIVED -- for use in an event listener</p>
+<h4>Example:</h4>
+<pre><code>adMobView.addEventListener(Admob.AD_RECEIVED,function(){
+    alert("ad was just received");
+});
+</code></pre>
+<h3>Admob.AD_NOT_RECEIVED</h3>
+<p>returns the constant for AD_NOT_RECEIVED -- for use in an event listener</p>
+<h4>Example:</h4>
+<pre><code>adMobView.addEventListener(Admob.AD_NOT_RECEIVED,function(){
+    alert("ad was not received");
+});
+</code></pre>
+<h3>AdMobView.requestAd();</h3>
+<p>Calls for a new ad if needed.</p>
+<h4>Example:</h4>
+<pre><code>adMobView.requestAd();
+</code></pre>
+<h3>AdMobView.requestTestAd();</h3>
+<p>Calls for a test ad if needed. This works independently from the testing flag above.</p>
+<h4>Example:</h4>
+<pre><code>adMobView.requestTestAd();
+</code></pre>
+<h2>Constants</h2>
+<h3>number SUCCESS</h3>
+<p>Returned by <code>isGooglePlayServicesAvailable</code> if the connection to Google Play services was successful.</p>
+<h3>number SERVICE_MISSING</h3>
+<p>Returned by <code>isGooglePlayServicesAvailable</code> if Google Play services is missing on this device.</p>
+<h3>number SERVICE_VERSION_UPDATE_REQUIRED</h3>
+<p>Returned by <code>isGooglePlayServicesAvailable</code> if the installed version of Google Play services is out of date.</p>
+<h3>number SERVICE_DISABLED</h3>
+<p>Returned by <code>isGooglePlayServicesAvailable</code> if the installed version of Google Play services has been disabled on this device.</p>
+<h3>number SERVICE_INVALID</h3>
+<p>Returned by <code>isGooglePlayServicesAvailable</code> if the version of the Google Play services installed on this device is not authentic.</p>
+<h2>Module History</h2>
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+<h2>Feedback and Support</h2>
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=Android%20Admob%20Module">info@appcelerator.com</a>.</p>
+<h2>Author</h2>
+<p>Brian Kurzius | bkurzius@gmail.com</p>
+<h2>License</h2>
+<p>Copyright 2011 Brian Kurzius, Studio Classics. Please see the LICENSE file included in the distribution for further details.</p>
