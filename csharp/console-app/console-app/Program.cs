@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,42 +9,78 @@ namespace console_app
 {
     class Program
     {
+        //PacalCase
+        //camelCase
+        //under_line
+        public int CalcularSoma2()
+        {
+            int a = 1;
+            int b = 2;
+            int c = a + b;
+            return c;
+        }
+
+        public static int CalcularSoma()
+        {
+            int a = 1;
+            int b = 2;
+            int c = a + b;
+            return c;
+        }
+
+        public static void MostrarMensagemNaTela()
+        {
+            Console.WriteLine("Ola pessoal");
+        }
+
+        public static void Tabuada(int numero)
+        {
+            Console.WriteLine("============================================");
+            for(int i = 1;i<= 10; i++)
+            {
+                Console.WriteLine(numero + " X " + i + " = " + (numero*i));
+            }
+            Console.WriteLine("============================================");
+        }
+
+        private static void LerArquivo(int numeroArquivo)
+        {
+            string arquivoComCaminho = @"C:\arquivos\arq" + numeroArquivo + ".txt";
+            if (File.Exists(arquivoComCaminho))
+            {
+                using (StreamReader arquivo = File.OpenText(arquivoComCaminho))
+                {
+                    string linha;
+                    while ((linha = arquivo.ReadLine()) != null)
+                    {
+                        Console.WriteLine(linha);
+                    }
+                }
+            }
+
+            string arquivoComCaminho2 = @"C:\arquivos\arq" + (numeroArquivo + 1) + ".txt";
+            if (File.Exists(arquivoComCaminho2))
+            {
+                LerArquivo(numeroArquivo + 1);
+            }
+        }
+
+        public const int SAIDA_PROGRAMA = 1;
+
         static void Main(string[] args)
         {
-            string[] a1 = new string[3];
-            a1[0] = "Danilo1";
-            a1[1] = "Danilo2";
-            a1[2] = "Danilo3";
-
-            int size = a1.Length;
-            if(Array.Exists(a1, e=>e.IndexOf("Danilo") != -1))
+            while (true)
             {
-                Console.WriteLine("Existe o Danilo1 no meu array");
+                Console.WriteLine("Digite " + SAIDA_PROGRAMA + " para sair do programa");
+                int valor = int.Parse(Console.ReadLine());
+
+                if(SAIDA_PROGRAMA == valor)
+                {
+                    break;
+                }
             }
 
-
-            List<string> a = new List<string>();
-            a.Add("Danilo");
-            a.Add("Sheila");
-            a.Add("Lana");
-
-            foreach (string nome in a)
-            {
-                Console.WriteLine(nome);
-            }
-
-            if (a.Exists(e => e == "Danilo"))
-            {
-                Console.WriteLine("Encontrei o danilo no meu collection list");
-            }
-
-            int size_list = a.Count;
-
-
-
-
-
-            Console.Read();
+            LerArquivo(1);
         }
     }
 }
