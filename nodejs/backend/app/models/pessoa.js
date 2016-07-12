@@ -1,4 +1,4 @@
-var App = require('../config/app')
+var App = require('../../config/app')
 
 var Pessoa = function(){
   this.nome = "";
@@ -79,6 +79,7 @@ Pessoa.buscarPorNome = function(nome, callback){
 }
 
 Pessoa.todos = function(callback){
+  console.log(" ============== model ============");
   var query = "SELECT * FROM teste.pessoas ";
   App.db.cnn.exec(query, function(dadosRetornadosDaTabela, erro) {
     if(erro){
