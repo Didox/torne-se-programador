@@ -1,0 +1,7 @@
+bin\Debug\Business.dll
+bin\Debug\Business.pdb
+bin\Debug\DataBase.dll
+bin\Debug\DataBase.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Business.dll
+obj\Debug\Business.pdb

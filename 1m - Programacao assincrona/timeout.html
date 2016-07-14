@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+var telefone_para_o_cara_do_lava_rapido = function(){
+	document.write("oi amigo terminei de lavar o seu carro, vem buscar ? <br>")
+}
+var tempo_em_milesegundos = 3000;
+document.write("Entregando meu carro para o lava rápido <br>");
+setTimeout(telefone_para_o_cara_do_lava_rapido, tempo_em_milesegundos);
+
+
+
+document.write("iniciando segunda tread<br>")
+setTimeout(function(){
+	document.write("resposta segunda tread<br>")
+}, 2000);
+
+</script>

@@ -1,0 +1,234 @@
+<public:property name='HasTopMostPager' />
+<public:attach 	event=oncontentready onevent="init();" />
+
+<script>
+try{
+//
+// global variables
+//
+var tbody=null;					
+var theadrow=null;
+var colCount = null;
+
+
+var reverse = false;
+var lastclick = -1;					// stores the object of our last used object
+
+var oTR = null;
+var oStatus = null;
+var none = 0;
+var NoSort = "<b style='font-size:90%;font-family:wingdings 3'></b>";
+var sortUp = "&nbsp;&nbsp;<b style='font-size:90%;font-family:wingdings 3'>p</b>";
+var sortDn = "&nbsp;&nbsp;<b style='font-size:90%;font-family:wingdings 3'>q</b>";
+
+
+function init() 
+{
+	try{
+	// Retrieve the sort expression
+	var obj = element.parentElement;
+	while (obj.tagName != "FORM") 
+		obj = obj.parentElement;
+			
+	// sortExpression contains what we stored in the hidden field
+	var hiddenField = "__SORTEXPR_" + element.id;
+	var sortExpression = "";
+	if (obj[hiddenField] != null)
+		sortExpression = obj[hiddenField].value;
+	
+	// columnToSort contains "" if no sorting is required
+	var tmp = sortExpression.split(",");
+	var columnToSort = tmp[0];
+	var columnOrder = tmp[1];
+	reverseOrder = (columnOrder=="desc");	
+	
+	// get TBODY - take the first TBODY for the table to sort
+	tbody = element.tBodies(0);
+	if (!tbody) return;
+
+	// get THEAD  
+	var thead = element.tHead;
+	if (!thead)  return;
+	
+	// Determine the row to use (read from HasPager)
+	if (HasTopMostPager == "true")
+		theadrow = thead.children[1];
+	else 
+		theadrow = thead.children[0];
+
+	if (theadrow.tagName != "TR") return;
+
+	theadrow.runtimeStyle.cursor = "hand";
+	colCount = theadrow.children.length;
+
+	var sortedIndex = -1;
+	var l, clickCell;
+	for (var i=0; i<colCount; i++) 
+	{
+		// Create the correct marker for each column
+		l = document.createElement("SPAN");
+		l.id = "srtImg";
+		var currentColumnName = theadrow.children[i].innerText;
+		var sorted = (currentColumnName.toLowerCase() == columnToSort.toLowerCase());
+		l.innerHTML = (sorted ?(reverseOrder ?sortDn :sortUp) :NoSort);
+
+		clickCell = theadrow.children[i];
+		clickCell.selectIndex = i;
+		clickCell.insertAdjacentElement("beforeEnd", l)
+		clickCell.attachEvent("onclick", doClick);
+		
+		// Should we sort this?
+		if (sorted)
+			sortedIndex = i;
+		if (sorted)
+			insertionSort(tbody, tbody.rows.length-1, reverseOrder, sortedIndex);
+	}
+	
+	var div = element.parentElement; 
+ 	if (div.id == "__main_" + element.id)
+		div.style["visibility"] = "visible";
+	}catch( e ){}
+}
+
+//
+// doClick handler
+// 
+//
+function doClick(e) 
+{
+	try{
+	var clickObject = e.srcElement;
+	Sort(clickObject);
+	}catch( e ){}
+}
+
+function Sort(clickObject)
+{
+	try{
+	while (clickObject.tagName != "TD") 
+	{
+		clickObject = clickObject.parentElement;
+	}
+	
+	// Grab the name of the clicked column (removing any HTML tag)
+	columnName = clickObject.innerHTML;
+	pos = columnName.indexOf("<");
+	if (pos >-1)
+		columnName = columnName.substring(0, pos);
+	
+	
+	// clear the sort images in the head
+	var imgcol= theadrow.all('srtimg');
+	for(var x = 0; x < imgcol.length; x++) 
+		imgcol[x].innerHTML = NoSort;
+
+	if(lastclick == clickObject.selectIndex)
+	{
+		if(reverse == false)
+		{
+			clickObject.children[0].innerHTML = sortDn;
+		    reverse = true;
+		}
+		else 
+		{
+			clickObject.children[0].innerHTML = sortUp;
+			reverse = false;
+		}
+	}
+	else
+	{
+		reverse = false;
+		lastclick = clickObject.selectIndex;
+		clickObject.children[0].innerHTML = sortUp;
+	}
+
+	insertionSort(tbody, tbody.rows.length-1,  reverse, clickObject.selectIndex);
+	
+	// Persist the sort expression to a hidden field for .aspx page to retrieve it
+	// Go up in the hierarchy until the FORM is found
+	
+	// The columnName variable contains the column name. We add info about the order
+	var buf = columnName;
+	if (reverse == true)
+		buf += ",desc";
+	else 
+		buf += ",asc";
+	
+	
+	var obj = element.parentElement;
+	while (obj.tagName != "FORM") 
+		obj = obj.parentElement;
+			
+	var hiddenField = "__SORTEXPR_" + element.id;
+	obj[hiddenField].value = buf;
+	}catch( e ){}
+}
+
+function insertionSort(t, iRowEnd, fReverse, iColumn)
+{
+	try{
+	var iRowInsertRow, iRowWalkRow, current, insert;
+    for ( iRowInsert = 0 + 1 ; iRowInsert <= iRowEnd ; iRowInsert++ )
+    {
+        if (iColumn) {	
+		if( typeof(t.children[iRowInsert].children[iColumn]) != "undefined")
+     		      textRowInsert = t.children[iRowInsert].children[iColumn].innerText;
+		else
+			textRowInsert = "";
+        } else {
+           textRowInsert = t.children[iRowInsert].innerText;
+        }
+		
+        for ( iRowWalk = 0; iRowWalk <= iRowInsert ; iRowWalk++ )
+        {
+            if (iColumn) {
+			if(typeof(t.children[iRowWalk].children[iColumn]) != "undefined")
+				textRowCurrent = t.children[iRowWalk].children[iColumn].innerText;
+			else
+				textRowCurrent = "";
+            } else {
+			textRowCurrent = t.children[iRowWalk].innerText;
+            }
+
+		//
+		// We save our values so we can manipulate the numbers for
+		// comparison
+		//
+		current = textRowCurrent;
+		insert  = textRowInsert;
+
+
+		//  If the value is not a number, we sort normally, else we evaluate	
+		//  the value to get a numeric representation
+		//
+		if ( !isNaN(current) ||  !isNaN(insert)) 
+		{
+			try
+			{
+				current= eval(current);
+				insert= eval(insert);
+			}
+			catch( e ){}
+		}
+		else
+		{
+			current	= current.toLowerCase();
+			insert	= insert.toLowerCase();
+		}
+
+
+            if ( (   (!fReverse && insert < current)
+                 || ( fReverse && insert > current) )
+                 && (iRowInsert != iRowWalk) )
+            {
+		        eRowInsert = t.children[iRowInsert];
+                eRowWalk = t.children[iRowWalk];
+                t.insertBefore(eRowInsert, eRowWalk);
+                iRowWalk = iRowInsert; // done
+            }
+        }
+    }
+    }catch( e ){}
+}
+}catch( e ){}
+</script>

@@ -1,0 +1,177 @@
+﻿body
+{
+	background-color: #E1ECE6;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:11px; 
+	color:#535151;
+}
+
+.write
+{
+	background-color: #ffffff; 	
+}
+
+.font
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:11px; 
+	color:#535151;
+}
+
+.desProd
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:13px; 	
+	font-weight:bold;
+	color:#000000;
+}
+
+.desProdM12
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:12px; 	
+	font-weight:bold;
+	color:#000000;
+}
+
+
+.topo
+{
+	background-image:url(../../images/verde/topo.gif); 
+}
+
+.desPriceM12
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:12px; 	
+	font-weight:bold;
+	color:red;
+	
+}
+
+.desProdM
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:11px; 	
+	font-weight:bold;
+	color:#000000;
+}
+
+.desPriceM
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:11px; 	
+	font-weight:bold;
+	color:red;
+	
+}
+.desPrice
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:16px; 	
+	font-weight:bold;
+	color:red;
+}
+
+a:link		{font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none; color:#535151;}
+a:hover		{font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:underline; color:#000000;}
+a:visited 	{font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none; color:#535151;}
+a:active	{font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none; color:#535151;}
+
+table.Central
+{
+	width: 100%;
+	height:100%;
+	border:1px solid Green;
+}
+
+.divAlfa
+{
+	background-color: #2F4F4F
+}
+
+.carrinho
+{
+	background-color: #F8F8FF
+}
+
+.loading
+{	
+	background-image:url(../../images/verde/Loading.gif); 
+	width:50px; height:50px;
+}
+
+input
+{
+	
+}
+
+.search
+{
+	background-color:#2F4F4F;		
+}
+
+.produtos
+{
+	background-color:#2F4F4F;
+	font-size:16px;
+	font-weight:bold;
+	color:#ffffff;	
+	Filter: Alpha(Opacity=100, FinishOpacity=70, Style=1, StartX=2, StartY=1, FinishX=90, FinishY=1)
+}
+
+.publicidade
+{
+	background-color:#2F4F4F;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;	
+	Filter: Alpha(Opacity=100, FinishOpacity=70, Style=1, StartX=2, StartY=1, FinishX=90, FinishY=1)
+}
+
+select 
+{
+	FONT-SIZE: 11px; 
+	COLOR: #000000;
+	FONT-FAMILY: verdana;
+	border:1px solid #008B00;
+}
+
+input 
+{
+	FONT-SIZE: 11px; 
+	COLOR: #000000;
+	FONT-FAMILY: verdana;
+	border:1px solid #008B00;
+}
+
+textarea 
+{
+	FONT-SIZE: 11px; 
+	COLOR: #000000;
+	FONT-FAMILY: verdana;
+	border:1px solid #008B00;
+}
+
+
+.Publi01
+{	
+	background-image:url(../../images/verde/001.jpg); 
+	width:135px; height:62px;
+}
+
+.Publi02
+{	
+	background-image:url(../../images/verde/002.jpg); 
+	width:135px; height:62px;
+}
+
+.Publi03
+{	
+	background-image:url(../../images/verde/003.jpg); 
+	width:135px; height:62px;
+}

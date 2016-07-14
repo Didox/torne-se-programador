@@ -1,0 +1,14 @@
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\bin\Debug\Business.dll
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\bin\Debug\Business.pdb
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\obj\Debug\Business.dll
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\obj\Debug\Business.pdb
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\bin\Debug\DataBase.dll
+C:\Projetos\Itavema\Assembly\Asp Net\Itavema\Business\Business\bin\Debug\DataBase.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\bin\Debug\Business.dll
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\bin\Debug\Business.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\bin\Debug\DataBase.dll
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\bin\Debug\DataBase.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\obj\Debug\Business.dll
+C:\Documents and Settings\SAP7Dasa\Desktop\Business\Business\obj\Debug\Business.pdb

@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HTML básico</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Está é minha pagina básica de html</h1>
+
+		<span id="span">span:</span> elemento inline
+
+		<div>div:</div> elemento de bloco
+
+		<h3>Menu</h3>
+		<ul>
+			<li>
+				<a href="#final">Ancora para o final da pagina</a>
+			</li>
+			<li>
+				<a href="basico_css.html">link para pagina basico css</a>
+			</li>
+			<li>
+				<a href="http://www.torneseumprogramador.com.br" target="_blank">pagina do projeto torne-se um programador</a>
+			</li>
+		</ul>
+
+		<br>
+		<button onclick="window.location.reload();">botão com ação javascript para fazer reload</button>
+
+		<hr>
+
+		<!-- 
+		<p></p> = paragrafo
+		<b></b> = bold - negrito
+		<i></i> = itálico
+		<u></u> = sublinhado 
+		-->
+
+		<p style="background-color:yellow; width:50%">
+			<b style="color: blue;font-size: 33px;">Lorem Ipsum</b> é <u>simplesmente</u> uma <i>simulação</i> de texto da indústria <em>tipográfica</em> e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum <b>sobreviveu</b> não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+		</p>
+
+		<h3>Lista de compras</h3>
+		<ul>
+			<li>
+				sabonete
+			</li>
+			<li>
+				feijão
+			</li>
+			<li>
+				carne
+			</li>
+		</ul>
+
+
+		<table border="1">
+			<tr style="font-weight:bold">
+				<td>
+					coluna1 linha1
+				</td>
+				<td>
+					coluna2 linha1
+				</td>
+			</tr>
+			<tr>
+				<td>
+					coluna1 linha2
+				</td>
+				<td>
+					coluna2 linha2
+				</td>
+			</tr>
+			<tr>
+				<td>
+					coluna1 linha3
+				</td>
+				<td>
+					coluna2 linha3
+				</td>
+			</tr>
+			<tr>
+				<td>
+					coluna1 linha3
+				</td>
+				<td>
+					coluna2 linha3
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+
+		<fieldset>
+			<legend>informações professor</legend>
+			Nome: Danilo<br>
+			Email: danilo.aparecido.santos@gmail.com<br>
+			Data de aniversário: 09/12/1983
+		</fieldset>
+
+		.jpg
+		.jpeg
+
+		.git
+
+		.png
+
+		<img src="imagens/imagem.jpeg" style="width: 500px; height: 500px;" title="monstro">
+		<img src="http://www.inspi.com.br/wp-content/uploads/2015/03/florian-7.gif" title="gif animado">
+
+		<br>
+		<br>
+		<fieldset>
+			<legend>Formuário</legend>
+			<form action="basico_css.html" method="get">
+				Nome: 
+				<input type="text" name="nome" />
+				<br>
+
+				Opção: 
+				Sim - <input type="radio" checked="checked" name="opcao" value="sim" />
+				Não - <input type="radio" name="opcao" value="nao" />
+				Talvez - <input type="radio" name="opcao" value="talvez" />
+				<br>
+
+				Checar: 
+				1 - <input type="checkbox" checked="checked" name="checar" value="1" />
+				3 - <input type="checkbox" name="checar" value="2" />
+				3 - <input type="checkbox" name="checar" value="3" />
+
+
+				<br>
+				<input type="hidden" name="escondido" value="ola" />
+				Campo Texto:
+				<textarea name="campo_texto"></textarea>
+				<br>
+
+				Campo selecao:
+				<select name="selecao">
+					<option value="" selected="selected">[selecione]</option>
+					<option value="1">opção 1</option>
+					<option value="2">opção 2</option>
+					<option value="3">opção 3</option>
+					<option value="4">opção 4</option>
+				</select>
+
+				<br>
+
+				Campo selecao multipla:
+				<select name="selecao_multipla" multiple>
+					<optgroup label="teste">
+						<option value="1">opção 1</option>
+						<option value="2">opção 2</option>
+					</optgroup>
+					<optgroup label="teste 2">
+						<option value="3">opção 3</option>
+						<option value="4">opção 4</option>
+					</optgroup>
+				</select>
+
+				<br>
+				<input type="submit" value="Enviar" />
+			</form>
+		</fieldset>
+
+		<br>
+		<br>
+
+		<iframe src="basico.html" width="600px" height="800px"></iframe>
+		<br>
+		<br>
+		<br>
+
+		<h1>Meus códigos</h1>
+		<code>
+			&lt;!DOCTYPE&gt; define o tipo do documento, html 4 html5 xml etc.<br>
+			&lt;a&gt;&lt;/a&gt; = link<br>
+			&lt;b&gt; define texto em negrito<br>
+			&lt;body&gt; define o elemento de corpo<br>
+			&lt;br&gt; insere uma quebra de linha<br>
+			&lt;button&gt; define um bot&#227;o<br>
+			&lt;code&gt; define um texto de c&#243;digo de computador<br>
+			&lt;div&gt; define uma se&#231;&#227;o no documento<br>
+			&lt;em&gt; define um texto enfatizado<br>
+			&lt;fieldset&gt; define um arranjo de campos<br>
+			&lt;img&gt; define uma imagem<br>
+			&lt;form&gt; define um formul&#225;rio<br>
+			&lt;frame&gt; define uma sub-janela (frame ou quadro)<br>
+			&lt;frameset&gt; define um arranjo de frames<br>
+			&lt;iframe&gt; define um frame em linha<br>
+			&lt;h1&gt; to &lt;h6&gt; define cabe&#231;alhos 1 a 6<br>
+			&lt;head&gt; define informa&#231;&#245;es sobre o documento<br>
+			&lt;hr&gt; define uma linha horizontal<br>
+			&lt;html&gt; define um documento HTML<br>
+			&lt;i&gt; define um texto em it&#225;lico<br>
+			&lt;input&gt; define um campo de entrada<br>
+			&lt;label&gt; define um r&#243;tulo para controle de formul&#225;rio<br>
+			&lt;legend&gt; define o t&#237;tulo de um arranjo de campos<br>
+			&lt;li&gt; define um item de lista<br>
+			&lt;link&gt; define uma refer&#234;ncia de recurso<br>
+			&lt;meta&gt; define meta-informa&#231;&#227;o<br>
+			&lt;noframes&gt; define uma se&#231;&#227;o sem frames<br>
+			&lt;noscript&gt; define uma se&#231;&#227;o sem scripts<br>
+			&lt;object&gt; define um objeto embarcado<br>
+			&lt;ol&gt; define uma lista ordenada<br>
+			&lt;select&gt; define texto selecion&#225;vel<br>
+			&lt;optgroup&gt; define um grupo de op&#231;&#245;es<br>
+			&lt;option&gt; define uma op&#231;&#227;o em uma lista drop-down<br>
+			&lt;p&gt; define um par&#225;grafo<br>
+			&lt;param&gt; define um par&#226;metro para um objeto<br>
+			&lt;pre&gt; define texto pr&#233;-formatado (respeita espa&#231;os e par&#225;grafos)<br>
+			&lt;script&gt; define um script<br>
+			&lt;small&gt; define um texto pequeno<br>
+			&lt;span&gt; define uma se&#231;&#227;o em um documento<br>
+			&lt;strong&gt; define texto destacado<br>
+			&lt;style&gt; define uma defini&#231;&#227;o de estilo<br>
+			&lt;table&gt; define uma tabela<br>
+			&lt;tbody&gt; define o corpo de uma tabela<br>
+			&lt;td&gt; define uma c&#233;lula de uma tabela<br>
+			&lt;textarea&gt; define uma &#225;rea de texto<br>
+			&lt;th&gt; define o cabe&#231;alho de uma tabela<br>
+			&lt;thead&gt; define o cabe&#231;alho de uma tabela<br>
+			&lt;title&gt; define o t&#237;tulo de um documento<br>
+			&lt;tr&gt; define uma linha de tabela<br>
+			&lt;ul&gt; define uma lista n&#227;o ordenada<br>
+		<code>
+
+
+
+		<br>
+		<br>
+		<br>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<br>
+		<br>
+		<br>
+
+		<a name="final"></a>
+		<a href="#">inicio</a>
+
+		<script>
+			//alert(document.getElementById("span").innerHTML);
+		</script>
+		<!-- 
+		::: explicar elementos :::: referencia: http://www.cin.ufpe.br/~prsg/html.pdf
+			
+		<!DOCTYPE> define o tipo do documento, html 4 html5 xml etc.
+		<a></a> = link
+		<b> define texto em negrito
+		<body> define o elemento de corpo
+		<br> insere uma quebra de linha
+		<button> define um botão
+		<code> define um texto de código de computador
+		<div> define uma seção no documento
+		<em> define um texto enfatizado
+		<fieldset> define um arranjo de campos
+		<img> define uma imagem
+		<form> define um formulário
+		<frame> define uma sub-janela (frame ou quadro)
+		<frameset> define um arranjo de frames
+		<iframe> define um frame em linha
+		<h1> to <h6> define cabeçalhos 1 a 6
+		<head> define informações sobre o documento
+		<hr> define uma linha horizontal
+		<html> define um documento HTML
+		<i> define um texto em itálico
+		<input> define um campo de entrada
+		<label> define um rótulo para controle de formulário
+		<legend> define o título de um arranjo de campos
+		<li> define um item de lista
+		<link> define uma referência de recurso
+		<meta> define meta-informação
+		<noframes> define uma seção sem frames
+		<noscript> define uma seção sem scripts
+		<object> define um objeto embarcado
+		<ol> define uma lista ordenada
+		<select> define texto selecionável
+		<optgroup> define um grupo de opções
+		<option> define uma opção em uma lista drop-down
+		<p> define um parágrafo
+		<param> define um parâmetro para um objeto
+		<pre> define texto pré-formatado (respeita espaços e parágrafos)
+		<script> define um script
+		<small> define um texto pequeno
+		<span> define uma seção em um documento
+		<strong> define texto destacado
+		<style> define uma definição de estilo
+		<table> define uma tabela
+		<tbody> define o corpo de uma tabela
+		<td> define uma célula de uma tabela
+		<textarea> define uma área de texto
+		<th> define o cabeçalho de uma tabela
+		<thead> define o cabeçalho de uma tabela
+		<title> define o título de um documento
+		<tr> define uma linha de tabela
+		<ul> define uma lista não ordenada
+		-->
+	</body>
+</html>

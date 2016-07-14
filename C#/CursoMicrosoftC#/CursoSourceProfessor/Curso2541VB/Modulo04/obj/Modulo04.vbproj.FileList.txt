@@ -1,0 +1,11 @@
+bin\Debug\Modulo04.exe
+bin\Debug\Modulo04.pdb
+bin\Debug\Modulo04.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo04.Form1.resources
+obj\Debug\Modulo04.Resources.resources
+obj\Debug\Modulo04.vbproj.GenerateResource.Cache
+obj\Debug\Modulo04.exe
+obj\Debug\Modulo04.xml
+obj\Debug\Modulo04.pdb
+obj\Debug\Modulo04.Form2.resources

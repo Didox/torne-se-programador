@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CSGen">
+</Property><Property Name="Solution File" Value="C:\Users\Administrador\Documents\Source\CSGen\CSGen.sln">
+</Property><Property Name="Date" Value="sexta-feira, 22 de fevereiro de 2008">
+</Property><Property Name="Time" Value="20:31:13">
+</Property></Properties><Event ErrorLevel="0" Project="CSGen" Source="CSGen.csproj" Description="Project file successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen.csproj">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Code\LoadDataBaseSchema.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Code\LoadDataBaseSchema.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Code\SqlColumn.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Code\SqlColumn.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Code\SqlReference.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Code\SqlReference.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Code\SqlTable.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Code\SqlTable.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Configuracoes.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Configuracoes.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\CreateSolution\CreateProject.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\CreateSolution\CreateProject.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\CreateSolution\CreateSolution.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\CreateSolution\CreateSolution.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\CreateSolution\TipoProjeto.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\CreateSolution\TipoProjeto.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\GeraBusinessClass\GerarBusinessClass.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\GeraBusinessClass\GerarBusinessClass.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\GeraDataBaseClass\GerarDataBaseClass.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\GeraDataBaseClass\GerarDataBaseClass.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\GeraProcedures\GerarProcedure.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\GeraProcedures\GerarProcedure.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Principal.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Principal.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Program.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Program.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\ReportBug.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\ReportBug.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\Teste.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\Teste.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\wsLuisSanches\LuisSanchesServices.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\wsLuisSanches\LuisSanchesServices.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen\wsLuisSanches\ReportBugCompletedEventHandler.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen\wsLuisSanches\ReportBugCompletedEventHandler.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="Global.cs" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\Global.cs">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.Configuracoes.resources" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen.Configuracoes.resources">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.Principal.resources" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen.Principal.resources">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.ReportBug.resources" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen.ReportBug.resources">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.Teste.resources" Description="File successfully backed up as C:\Users\Administrador\Documents\Source\CSGen\Backup\CSGen.Teste.resources">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CSGen" Source="CSGen.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CSGen" Source="CSGen.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,9 @@
+bin\Debug\Modulo01.exe
+bin\Debug\Modulo01.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo01.Form1.resources
+obj\Debug\Modulo01.Properties.Resources.resources
+obj\Debug\Modulo01.csproj.GenerateResource.Cache
+obj\Debug\Modulo01.exe
+obj\Debug\Modulo01.pdb
+bin\Debug\Modulo01.exe.config

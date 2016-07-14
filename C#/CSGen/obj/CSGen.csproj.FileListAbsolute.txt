@@ -1,0 +1,10 @@
+C:\Documents and Settings\SAP7Dasa\Desktop\CSGen\obj\Debug\CSGen.exe
+C:\Documents and Settings\SAP7Dasa\Desktop\CSGen\obj\Debug\CSGen.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\CSGen\bin\Debug\CSGen.exe
+C:\Documents and Settings\SAP7Dasa\Desktop\CSGen\bin\Debug\CSGen.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\CSGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SAP7Dasa\Desktop\Projects\CSGen\obj\Debug\CSGen.exe
+C:\Documents and Settings\SAP7Dasa\Desktop\Projects\CSGen\obj\Debug\CSGen.pdb
+C:\Documents and Settings\SAP7Dasa\Desktop\Projects\CSGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SAP7Dasa\Desktop\Projects\CSGen\bin\Debug\CSGen.exe
+C:\Documents and Settings\SAP7Dasa\Desktop\Projects\CSGen\bin\Debug\CSGen.pdb

@@ -1,0 +1,2 @@
+Atualização ativada em: 05/05/2007 04:28:16
+SQL Server does not exist or access denied.

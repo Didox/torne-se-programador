@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DidoxComponents">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\DidoxComponents.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\DidoxComponents.suo">
+</Property><Property Name="Date" Value="quarta-feira, 14 de maio de 2008">
+</Property><Property Name="Time" Value="09:39">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DidoxComponents.sln" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\DidoxComponents.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DidoxComponents.suo" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\DidoxComponents.suo">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="DidoxComponents.csproj" Description="Project file successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\DidoxComponents.csproj">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="ImageLightBox.cs" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\ImageLightBox.cs">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="MyWebResource.cs" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\MyWebResource.cs">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\blank.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\blank.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\close.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\close.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\closelabel.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\closelabel.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\effects.js" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\effects.js">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="Icon.ico" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\Icon.ico">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\image-1.jpg" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\image-1.jpg">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\lightbox.css" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\lightbox.css">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\lightbox.js" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\lightbox.js">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\loading.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\loading.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\next.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\next.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\nextlabel.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\nextlabel.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\prev.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\prev.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\prevlabel.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\prevlabel.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\prototype.js" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\prototype.js">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\scriptaculous.js" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\scriptaculous.js">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="FilesLigthox\thumb-1.jpg" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\FilesLigthox\thumb-1.jpg">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="MyResources\Test.css" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\MyResources\Test.css">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="MyResources\Test.gif" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\MyResources\Test.gif">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="MyResources\Test.js" Description="File successfully backed up as C:\Documents and Settings\dansantos\Desktop\My Folders\Projects\DidoxComponents\Backup\MyResources\Test.js">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="DidoxComponents.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DidoxComponents" Source="DidoxComponents.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DidoxComponents.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DidoxComponents.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DidoxComponents" Source="DidoxComponents.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

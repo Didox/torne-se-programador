@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Aprendendo html</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/1r%20-%20Aprendendo%20DHTML/dynamic.js"></script>
+	</head>
+	<body>
+		<h1>Cadastro em tempo de execução</h1>
+
+		<fieldset id="formCadastro">
+			<legend>Cadastro de pessoas</legend>
+			<form>
+				<div>
+					<label for="nome">Nome: </label>
+					<input type="text" name="nome" id="nome" /> 
+				</div>
+				<div>
+					<label for="sobrenome">Sobrenome:  </label>
+					<input type="text" name="sobrenome" id="sobrenome" /> 
+				</div>
+				<div>
+					<label for="cpf">CPF:  </label>
+					<input type="text" name="cpf" id="cpf" /> 
+				</div>
+				<div>
+					<label for="telefone">Telefone:  </label>
+					<input type="text" name="telefone" id="telefone" /> 
+				</div>
+				<div>
+					<label for="endereco">Endereço:  </label>
+					<input type="text" name="endereco" id="endereco" /> 
+				</div>
+				<hr>
+				<div>
+					<input type="button" value="Cadastrar" onclick="cadastrarPessoas()" /> 
+				</div>
+			</form>
+		</fieldset>
+		<input type="button" value="Formulário de cadastro" id="mostrarForm" onclick="mostrarFormulario()" style="display:none" /> 
+		<fieldset>
+			<legend>Pessoas cadastradas</legend>
+			<table border="1" id="registros">
+				<tr>
+					<td>Nome</td>
+					<td>Sobrenome</td>
+					<td>CPF</td>
+					<td>Telefone</td>
+					<td>Endereço</td>
+				</tr>
+			</table>
+		</fieldset>
+	</body>
+</html>

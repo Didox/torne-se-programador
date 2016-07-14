@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+  <NewDataSet>
+    <Table diffgr:id="Table1" msdata:rowOrder="0">
+      <id>1</id>
+      <nome>danilo teste</nome>
+    </Table>
+    <Table diffgr:id="Table2" msdata:rowOrder="1">
+      <id>107</id>
+      <nome>teste dd</nome>
+    </Table>
+    <Table diffgr:id="Table3" msdata:rowOrder="2">
+      <id>109</id>
+      <nome>danilo teste</nome>
+    </Table>
+  </NewDataSet>
+</diffgr:diffgram>

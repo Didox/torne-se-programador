@@ -1,0 +1,650 @@
+
+
+
+
+
+ 	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+   <TITLE>Pesquisa por Palavra-chave</TITLE>
+<link rel="STYLESHEET" type="text/css" href="../icones/stock.css">
+<script language="JavaScript" src="../js/dynlayer.js"></script>
+<script language="JavaScript" src="../js/dynlayer-wipe.js"></script>
+<script language="JavaScript">
+<!--
+function changepage(num,numerodefotos,proxima) {
+	document.formulario.Ultimo.value = (num-1)*numerodefotos
+	if (proxima) document.formulario.proxima.value = 1
+	fn_submit(1)
+	document.all.navegacao1.innerHTML = "Aguarde . . .";
+	document.all.navegacao2.innerHTML = "Aguarde . . .";
+}
+function fn_submit(operacao) {
+	document.formulario.operacao.value = operacao
+	document.formulario.submit()
+}
+//-->
+</script>
+</head>
+
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onload="init()">
+<div align="center">
+
+
+
+
+	
+
+
+
+		
+<script language="JavaScript">
+function init() {
+window.name = 'stock'
+}
+
+cor = new Array()
+cor[0] = "#ED1C24"
+cor[1] = "#F26522"
+cor[2] = "#F7941D"
+cor[3] = "#FFF200"
+cor[4] = "#8DC63F"
+cor[5] = "#39B54A"
+cor[6] = "#00A651"
+cor[7] = "#00A99D"
+cor[8] = "#00AEEF"
+cor[9] = "#0072BC"
+cor[10] = "#0054A6"
+cor[11] = "#2E3192"
+cor[12] = "#662D91"
+cor[13] = "#92278F"
+cor[14] = "#EC008C"
+cor[15] = "#ED145B"
+cor[16] = "#9E0B0E"
+cor[17] = "#A0410D"
+cor[18] = "#A36209"
+cor[19] = "#ABA000"
+cor[20] = "#598527"
+cor[21] = "#197B30"
+cor[22] = "#007236"
+cor[23] = "#00746B"
+cor[24] = "#0076A3"
+cor[25] = "#004A80"
+cor[26] = "#003471"
+cor[27] = "#1B1464"
+cor[28] = "#440E62"
+cor[29] = "#630460"
+cor[30] = "#9E005D"
+cor[31] = "#9E0039"
+cor[32] = "#F26C4F"
+cor[33] = "#F68E56"
+cor[34] = "#FBAF5D"
+cor[35] = "#FFF568"
+cor[36] = "#ACD373"
+cor[37] = "#7CC576"
+cor[38] = "#3CB878"
+cor[39] = "#1CBBB4"
+cor[40] = "#00BFF3"
+cor[41] = "#448CCB"
+cor[42] = "#5674B9"
+cor[43] = "#605CA8"
+cor[44] = "#8560A8"
+cor[45] = "#A864A8"
+cor[46] = "#F06EAA"
+cor[47] = "#F26D7D"
+cor[48] = "#790000"
+cor[49] = "#7B2E00"
+cor[50] = "#7D4900"
+cor[51] = "#827B00"
+cor[52] = "#406618"
+cor[53] = "#005E20"
+cor[54] = "#005826"
+cor[55] = "#005952"
+cor[56] = "#005B7F"
+cor[57] = "#003663"
+cor[58] = "#002157"
+cor[59] = "#0D004C"
+cor[60] = "#32004B"
+cor[61] = "#4B0049"
+cor[62] = "#7B0046"
+cor[63] = "#7A0026"
+
+document.write('<table border=0 cellspacing=0 cellpadding=0 height=27><tr>')
+resto = 780
+while (resto > 0) {
+	rand = Math.random()
+	width = Math.ceil(rand*150)
+	width = width > resto ? resto : width
+	cor1 = Math.ceil(Math.random()*63)
+	varcor = cor[cor1]
+	document.write('<td bgcolor='+varcor+' width='+width+'></td>')
+	resto -= width
+}
+document.write('</tr></table>')
+</script>
+
+<table width=780 height=80 border=0 cellspacing=0 cellpadding=0>
+<tr><td valign="top" style="padding-left:9;padding-top:18;" width="40">
+</td>
+</td>
+</tr>
+</table>
+
+<div id="fotosdiv" onMouseOver="show('fotosdiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:10px; top:12px; z-index:3;">
+<div id="fotostitdiv"><img src="/imagens/fotos_over.gif" width="103" height="16" border="0"></div>
+<div id="fotostextodiv" style="">
+<table width="145" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/search/busca.cfm" class="linksmenu">Busca Avançada</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/search/royaltyfree.cfm" class="linksmenu">Royalty Free</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/fotos/home.cfm" class="linksmenu">Catálogos</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.corbis.com/professional/" target="_top" class="linksmenu">Corbis</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.mindenpictures.com" target="_top" class="linksmenu">Minden</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.sciencephoto.com/" target="_top" class="linksmenu">SPL</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.zefa.biz/start.html" target="_top" class="linksmenu">Zefa</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.bokelberg.com" target="_top" class="linksmenu">Bokelberg</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="mystockdiv" onMouseOver="show('mystockdiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:114px; top:12px; z-index:3">
+<div id="mystocktitdiv"><img src="/imagens/mystock_over.gif" width="103" height="16" border="0"></div>
+<div id="mystocktextodiv" style="">
+<table width="145" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/cadastro/home_cad.cfm" class="linksmenu">Cadastre-se</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/cadastro/home_cad.cfm?alterar=1" class="linksmenu">Alterar Cadastro</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/pesquisa/pesquisa.cfm" class="linksmenu">Minhas Pesquisas</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/shopping/extrato.cfm" class="linksmenu">Meu Extrato</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="filmesdiv" onMouseOver="show('filmesdiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:218px; top:12px; z-index:3">
+<div id="filmestitdiv"><img src="/imagens/filmes_over.gif" width="103" height="16" border="0"></div>
+<div id="filmestextodiv" style="">
+<table width="165" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="150" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.corbismotion.com" class="linksmenu">Corbis Motion (Footage)</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="150" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.omnimovi.com" class="linksmenu">OmniMovi</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="150" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/bigshot/home.cfm" class="linksmenu">Bigshot (Flash)</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="audiodiv" onMouseOver="show('audiodiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:322px; top:12px; z-index:3">
+<div id="audiotitdiv"><img src="audio_over.gif" width="103" height="16" border="0"></div>
+<div id="audiotextodiv" style="">
+<table width="145" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.omnibluedot.com/musicsource/musicsource.cfm " class="linksmenu">Omni Music</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="produtosdiv" onMouseOver="show('produtosdiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:426px; top:12px; z-index:3">
+<div id="produtostitdiv"><img src="/imagens/produtos_over.gif" width="103" height="16" border="0"></div>
+<div id="produtostextodiv" style="">
+<table width="145" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/screen/home.cfm" class="linksmenu">Campaign Screen</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/xtreme/home.cfm" class="linksmenu">Xtreme Information</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr> 
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.stockphotos.com.br/frame_externo.cfm?link=www.pantone.com" target="_top" class="linksmenu">Pantone</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a href="http://www.worklab.com.br" class="linksmenu" target="_blank">Worklab</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/Fest_londres/home.cfm" class="linksmenu">Festival de Londres</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/calendario2003/calendario.cfm" class="linksmenu">Calendário 2003</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="aboutusdiv" onMouseOver="show('aboutusdiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:530px; top:12px; z-index:3">
+<div id="aboutustitdiv"><img src="/imagens/aboutus_over.gif" width="103" height="16" border="0"></div>
+<div id="aboutustextodiv" style="">
+<table width="145" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/clientes/home.cfm" class="linksmenu">Clientes</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/campanha/home.cfm" class="linksmenu">Campanhas</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/endereco/home.cfm" class="linksmenu">Filiais</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/home/tres_vz_brasil.cfm" class="linksmenu">Sala de Imprensa</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="ajudadiv" onMouseOver="show('ajudadiv',1,this)" onMouseOut="closeAll(1)" align="left" style="position:absolute; visibility:hidden; left:634px; top:12px; z-index:3">
+<div id="ajudatitdiv"><img src="/imagens/ajuda_over.gif" width="103" height="16" border="0"></div>
+<div id="ajudatextodiv" style="">
+<table width="122" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/ajuda/contato.cfm" class="linksmenu">Contato</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/ajuda/faq.cfm" class="linksmenu">FAQ</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="white" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+<tr>
+<td bgcolor="#E6E6E6" width="2"><img src="/imagens/x.gif" width="2" height="1" border="0"></td>
+<td class="td_linksmenu" width="130" valign="absmiddle"><a target="_top" href="http://www.stockphotos.com.br/ajuda/tutorialrf.cfm" class="linksmenu">E-commerce</a></td>
+<td bgcolor="#D6D6D6"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td bgcolor="white"><img src="/imagens/x.gif" width="1" height="1" border="0"></td>
+<td width="10" bgcolor="#E6E6E6"><img src="../icones/seta.gif" width="10" height="18" border="0" align="absmiddle"></td>
+<td bgcolor="#B7B6B7" width="1"></td>
+</tr>
+<tr><td bgcolor="#BBBABA" colspan=6><img src="/imagens/x.gif" width="1" height="1" border="0"></td></tr>
+</table>
+</div>
+</div>
+
+<div id="menu" align="left" style="position:absolute; visibility:visible; left:-10px; top:12px; z-index:2">
+<img src="/imagens/blank.gif" width="19" height="15" border="0"><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('fotosdiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/fotos.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('mystockdiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/mystock.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('filmesdiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/filmes.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('audiodiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/audio.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('produtosdiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/produtos.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('aboutusdiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/aboutus.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><a target="_top" href="javascript:void(null)" onMouseOver="show('ajudadiv',1,this)" onMouseOut="closeAll(1)"><img src="/imagens/ajuda.gif" width="103" height="15" border="0"></a><img src="/imagens/x.gif" width="1" height="1" border="0"><img src="/imagens/blank.gif" width="32" height="15" border="0">
+</div>
+
+<script language="JavaScript">
+<!--
+
+var remember = new Array();
+var remember2 = new Array();
+var checkIt;
+
+var DHTML = (document.getElementById || document.all || document.layers);
+
+function show(name,lvl,obj)
+{
+	if (!DHTML) return;
+//	checkUserInput();
+	if (remember[lvl] && remember[lvl] == name) return;
+	if (remember[lvl])
+	{
+		closeAll(lvl);
+	}
+	if (name)
+	{
+		var x = getObj(name);
+		x.visibility = 'visible';
+	}
+	remember[lvl] = name;
+	if (obj.parentNode) y = obj.parentNode;
+	else if (obj.parentElement) y = obj.parentElement;
+	else return;
+	if (y.className) return;
+	y.className = 'over';
+	if (remember2[lvl]) remember2[lvl].className = '';
+	remember2[lvl] = y;
+}
+
+function closeAll(lvl)
+{
+	for (i=remember.length - 1;i>=lvl;i--)
+	{
+		if (remember[i]) //IE4 Mac
+		{
+			var x = getObj(remember[i]);
+			x.visibility = 'hidden';
+		}
+		remember[i] = null;
+		if (remember2[i])
+		{
+			remember2[i].className = '';
+			remember2[i] = null;
+		}
+	}
+
+}
+
+function checkUserInput()
+{
+	if (checkIt) clearTimeout(checkIt);
+	checkIt = setTimeout('closeAll(1)',1000);
+}
+
+function getObj(name)
+{
+  if (document.getElementById)
+  {
+    return document.getElementById(name).style;
+  }
+  else if (document.all)
+  {
+    return document.all[name].style;
+  }
+  else if (document.layers)
+  {
+    return document.layers[name];
+  }
+  else return false;
+}
+
+resolucao = navigator.userAgent.indexOf("MSIE") < 0 ? window.innerWidth : document.body.offsetWidth
+
+tam = (resolucao-780)/2
+lista = new Array();
+i = 0;
+lista[i] = "menu"; i++;
+lista[i] = "fotosdiv"; i++;
+lista[i] = "mystockdiv"; i++;
+lista[i] = "filmesdiv"; i++;
+lista[i] = "audiodiv"; i++;
+lista[i] = "produtosdiv"; i++;
+lista[i] = "aboutusdiv"; i++;
+lista[i] = "ajudadiv"; i++;
+if (document.layers) {
+	for (i=0;i<lista.length;i++) {
+		if (resolucao > 800) document.layers[lista[i]].left = document.layers[lista[i]].left + tam
+		
+		if (lista[i] == "menu") document.layers[lista[i]].style.visibility = 'visible';
+	}
+} else {
+	for (i=0;i<lista.length;i++) {
+		var myElement = document.getElementById(lista[i]);
+		if (resolucao > 800) myElement.style.left = parseInt(myElement.style.left) + tam + "px";
+		
+		if (lista[i] == "menu") myElement.style.visibility = 'visible';
+	}
+}
+
+//-->
+</script>
+
+
+<br>
+</div>
+</body>
+</html>
+      

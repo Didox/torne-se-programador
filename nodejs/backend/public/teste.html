@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js com framework express</title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script type="text/javascript" src="/javascripts/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="/javascripts/validacao.js"></script>
+	<script type="text/javascript" src="/javascripts/ajax.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+
+  	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2755599186248333",
+    enable_page_level_ads: true
+  });
+</script>
+
+    <h1>Cadastro com dados backend</h1><br>
+    <a href="/" class="btn btn-default botao-home" >Home</a>
+	<fieldset id="formCadastro">
+		<legend>Cadastro de pessoas</legend>
+		<form action="/cadastrar-pessoa" method="POST" onsubmit="return validacao()">
+			<div>
+				<label for="nome">Nome: </label>
+				<input type="text" class="form-control" name="nome" id="nome" /> 
+			</div>
+			<div>
+				<label for="sobrenome">Sobrenome:  </label>
+				<input type="text" class="form-control" name="sobrenome" id="sobrenome" /> 
+			</div>
+			<div>
+				<label for="cpf">CPF:  </label>
+				<input type="text" class="form-control" name="cpf" id="cpf" /> 
+			</div>
+			<div>
+				<label for="telefone">Telefone:  </label>
+				<input type="text" class="form-control" name="telefone" id="telefone" /> 
+			</div>
+			<div>
+				<label for="endereco">Endereço:  </label>
+				<input type="text" class="form-control" name="endereco" id="endereco" /> 
+			</div>
+			<div>
+				<br>
+				<input type="button" class="btn btn-primary" value="Carrager estados" onclick="carregarEstados()" /> 
+			</div>
+			<div>
+				<label for="estado">Estado:  </label>
+				<select id="estado" onchange="carregarCidade()" class="form-control" required="true" nome="estado"></select>
+			</div>
+			<div>
+				<label for="cidade">Cidade:  </label>
+				<select id="cidade"class="form-control" nome="cidade"></select>
+			</div>
+			<hr>
+			<div>
+				<input type="submit" class="btn btn-success" value="Cadastrar" /> 
+			</div>
+		</form>
+	</fieldset>
+	<fieldset id="formCadastro">
+		<legend>Buscar</legend>
+		<form action="/pesquisar" method="GET">
+			<label for="nome">Nome: </label>
+			<div class="botoes-pesquisa">
+				<input type="text" class="form-control" name="nome" id="nome" /> 
+				<input type="submit" class="btn btn-primary" value="buscar" /> 
+			</div>
+		</form>
+	</fieldset>
+	<fieldset>
+		<legend>Pessoas cadastradas</legend>
+		<div class="tabela-responsiva">
+			<table border="1" id="registros" class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<td>Nome</td>
+						<td>Sobrenome</td>
+						<td>CPF</td>
+						<td>Telefone</td>
+						<td>Endereço</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</thead>
+				
+			</table>
+		<div>
+	</fieldset>
+
+	<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2755599186248333",
+    enable_page_level_ads: true
+  });
+</script>
+  </body>
+</html>

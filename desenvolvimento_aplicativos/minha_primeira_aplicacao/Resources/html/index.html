@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js com framework express</title>
+    <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='stylesheets/style.css' />
+	<script type="text/javascript" src="javascripts/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="javascripts/validacao.js"></script>
+	<script type="text/javascript" src="javascripts/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/index.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Cadastro com dados backend</h1><br>
+    <a href="#" onclick="alert('valor da variável conectado = ' + conectado)" class="btn btn-default botao-home" >Valor variável conectado</a>
+    <a href="index.html" class="btn btn-default botao-home" >Home</a>
+    <a href="javascript:;" onclick="app.abrirNovaJanela('html/alterar.html');" class="btn btn-primary botao-home" >Cadastrar</a>
+
+    <br>
+    <br>
+    <br>
+    <input type="text" id="escrever" >
+     <a href="javascript:;" onclick="$('#teste').html($('#escrever').val());" class="btn btn-primary botao-home" >Escreva na div abaixo</a>
+     <div id="teste">o texto vai aparecer aqui</div>
+    <br>
+    <br>
+    <br>
+
+	<fieldset id="formCadastro">
+		<legend>Buscar</legend>
+		<label for="nome">Nome: </label>
+		<div class="botoes-pesquisa">
+			<input type="text" class="form-control" name="nome" id="nome" /> 
+			<input type="button" onclick="app.buscarPessoa();" class="btn btn-primary" value="buscar" /> 
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Pessoas cadastradas</legend>
+		<div class="tabela-responsiva">
+			<table border="1" id="registros" class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<td>Nome</td>
+						<td>Sobrenome</td>
+						<td>CPF</td>
+						<td>Telefone</td>
+						<td>Endereço</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody id="dados">
+				</tbody>
+			</table>
+		<div>
+	</fieldset>
+  </body>
+</html>

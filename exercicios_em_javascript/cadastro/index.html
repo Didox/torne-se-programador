@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+</head>
+<body>
+  <script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/exercicios_em_javascript/cadastro/produto.js"></script>
+  <script type="text/javascript" src="file:///Users/didox/projects/torne-se-programador/exercicios_em_javascript/cadastro/function2.js"></script>
+  <h1>Cadastrar produtos</h1>
+  <hr>
+  Nome produto:
+  <input type="text" id="nomeProduto" ><br>
+
+  Valor produto:
+  <input type="text" id="valorProduto"><br>
+
+  <input type="button" value="Salvar" onclick="salvarProduto();">
+  <hr>
+
+  <h1>Relatório</h1>
+  <table id="produtos" border="1">
+  </table>
+
+  <hr>
+
+  <h1>Resumo</h1>
+  <div>Quantidade menor que 50: <span id="qtdMenoresQue50"></span></div>
+  <div>Nome dos produtos entre 50 a 100: <span id="nomeProdutosEntre50e100"></span></div>
+  <div>Media acima de 100: <span id="mediaPrecoAcimaDe100"></span></div>
+</body>
+</html>

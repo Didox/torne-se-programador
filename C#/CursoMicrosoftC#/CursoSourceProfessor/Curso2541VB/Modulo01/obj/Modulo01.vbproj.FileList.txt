@@ -1,0 +1,15 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo01.Form1.resources
+obj\Debug\Modulo01.Resources.resources
+obj\Debug\Modulo01.vbproj.GenerateResource.Cache
+bin\Debug\Modulo01.exe.config
+bin\Debug\Modulo01.exe
+bin\Debug\Modulo01.pdb
+bin\Debug\Modulo01.xml
+obj\Debug\Modulo01.exe
+obj\Debug\Modulo01.xml
+obj\Debug\Modulo01.pdb
+..\Assemblies\Modulo01.exe.config
+..\Assemblies\Modulo01.exe
+..\Assemblies\Modulo01.pdb
+..\Assemblies\Modulo01.xml

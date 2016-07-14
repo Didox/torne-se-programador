@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlMeeting", "http://localhost/ControlMeeting/ControlMeeting.csproj", "{9BFF787C-021E-491E-8541-1ED36B2B270B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Bussiness\Business.csproj", "{B6EFFD7F-02A8-48FD-9B0C-B267A6113000}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{06260F83-D95D-4FFE-839A-ADB803D6F692}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9BFF787C-021E-491E-8541-1ED36B2B270B}.Debug.ActiveCfg = Debug|.NET
+		{9BFF787C-021E-491E-8541-1ED36B2B270B}.Debug.Build.0 = Debug|.NET
+		{9BFF787C-021E-491E-8541-1ED36B2B270B}.Release.ActiveCfg = Release|.NET
+		{9BFF787C-021E-491E-8541-1ED36B2B270B}.Release.Build.0 = Release|.NET
+		{B6EFFD7F-02A8-48FD-9B0C-B267A6113000}.Debug.ActiveCfg = Debug|.NET
+		{B6EFFD7F-02A8-48FD-9B0C-B267A6113000}.Debug.Build.0 = Debug|.NET
+		{B6EFFD7F-02A8-48FD-9B0C-B267A6113000}.Release.ActiveCfg = Release|.NET
+		{B6EFFD7F-02A8-48FD-9B0C-B267A6113000}.Release.Build.0 = Release|.NET
+		{06260F83-D95D-4FFE-839A-ADB803D6F692}.Debug.ActiveCfg = Debug|.NET
+		{06260F83-D95D-4FFE-839A-ADB803D6F692}.Debug.Build.0 = Debug|.NET
+		{06260F83-D95D-4FFE-839A-ADB803D6F692}.Release.ActiveCfg = Release|.NET
+		{06260F83-D95D-4FFE-839A-ADB803D6F692}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

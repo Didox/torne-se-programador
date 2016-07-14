@@ -1,0 +1,12 @@
+bin\Debug\Modulo07.exe
+bin\Debug\Modulo07.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Modulo07.Form1.resources
+obj\Debug\Modulo07.Properties.Resources.resources
+obj\Debug\Modulo07.csproj.GenerateResource.Cache
+obj\Debug\Modulo07.exe
+obj\Debug\Modulo07.pdb
+bin\Debug\BusinessRule2541.dll
+bin\Debug\BusinessRule2541.pdb
+bin\Debug\DataManager2541.dll
+bin\Debug\DataManager2541.pdb

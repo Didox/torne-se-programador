@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" src="script.js">
+</script>
+</head>
+
+<body>
+nome <input name="nome" id="nome" type="text">
+email <input name="email" id="email" type="text">
+<span id="bot" ><input name="enviar"  type="button" onClick="cadastrar('cadastrar.asp','nome','email')" value="cadastrar"></span>
+<br>
+nome : <input name="bnome" id="bnome" type="text" onKeyDown="Buscar('buscar.asp','bnome','grid','pag','1')">
+<input name="buscar" type="button"  onClick="Buscar('buscar.asp','bnome','grid','pag','1')" value="buscar">
+<!--input name="buscar" type="button" onClick="BuscarReg()" value="buscar"-->
+<table border="2" width="500" height="300">
+<tr>
+<td id="grid"  valign="top" >
+
+</td>
+</tr>
+<tr>
+<td id="pag"  valign="top" >
+
+</td>
+</tr>
+</table>
+</body>
+</html>

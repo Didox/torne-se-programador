@@ -1,0 +1,5 @@
+Criptografar
+aspnet_regiis -pef "connectionStrings" C:\Curso2541\Modulo02
+
+Decriptografar
+aspnet_regiis -pdf "connectionStrings" C:\Curso2541\Modulo02

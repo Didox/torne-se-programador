@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2006/02/24 21:37:10.107.aspx,c:\inetpub\wwwroot\cadastoDelphi\WebForm1.aspx=c:\inetpub\wwwroot\cadastoDelphi\default.aspx</Transaction>
+    <Transaction>2006/02/24 21:37:10.107.pas,c:\inetpub\wwwroot\cadastoDelphi\WebForm1.pas=c:\inetpub\wwwroot\cadastoDelphi\default.pas</Transaction>
+    <Transaction>2006/02/24 21:37:10.154.aspx,c:\inetpub\wwwroot\cadastoDelphi\WebForm1.aspx=c:\inetpub\wwwroot\cadastoDelphi\default.aspx</Transaction>
+    <Transaction>2006/02/24 21:37:10.154.pas,c:\inetpub\wwwroot\cadastoDelphi\WebForm1.pas=c:\inetpub\wwwroot\cadastoDelphi\default.pas</Transaction>
+    <Transaction>2006/02/24 21:39:48.247.pas,c:\inetpub\wwwroot\cadastoDelphi\Class1.pas=c:\inetpub\wwwroot\cadastoDelphi\cliente.pas</Transaction>
+    <Transaction>2006/02/24 21:56:09.794.pas,c:\inetpub\wwwroot\cadastoDelphi\cliente.pas=C:\Inetpub\wwwroot\cadastoDelphi\cliente.pas</Transaction>
+    <Transaction>2006/02/24 22:20:14.404.aspx,c:\inetpub\wwwroot\cadastoDelphi\default.aspx=c:\inetpub\wwwroot\cadastoDelphi\WebForm1.aspx</Transaction>
+    <Transaction>2006/02/24 22:20:14.404.pas,c:\inetpub\wwwroot\cadastoDelphi\default.pas=c:\inetpub\wwwroot\cadastoDelphi\WebForm1.pas</Transaction>
+    <Transaction>2006/02/24 22:20:14.451.aspx,c:\inetpub\wwwroot\cadastoDelphi\default.aspx=c:\inetpub\wwwroot\cadastoDelphi\WebForm1.aspx</Transaction>
+    <Transaction>2006/02/24 22:20:14.451.pas,c:\inetpub\wwwroot\cadastoDelphi\default.pas=c:\inetpub\wwwroot\cadastoDelphi\WebForm1.pas</Transaction>
+    <Transaction>2006/02/24 22:20:14.513.resx,c:\inetpub\wwwroot\cadastoDelphi\default.resx=c:\inetpub\wwwroot\cadastoDelphi\WebForm1.resx</Transaction>
+    <Transaction>2006/02/24 22:20:32.966.aspx,c:\inetpub\wwwroot\cadastoDelphi\WebForm1.aspx=</Transaction>
+    <Transaction>2006/02/24 22:35:55.029.aspx,c:\inetpub\wwwroot\cadastoDelphi\WebForm2.aspx=c:\inetpub\wwwroot\cadastoDelphi\Default.aspx</Transaction>
+    <Transaction>2006/02/24 22:35:55.029.pas,c:\inetpub\wwwroot\cadastoDelphi\WebForm2.pas=c:\inetpub\wwwroot\cadastoDelphi\Default.pas</Transaction>
+    <Transaction>2006/02/24 22:35:55.076.aspx,c:\inetpub\wwwroot\cadastoDelphi\WebForm2.aspx=c:\inetpub\wwwroot\cadastoDelphi\Default.aspx</Transaction>
+    <Transaction>2006/02/24 22:35:55.076.pas,c:\inetpub\wwwroot\cadastoDelphi\WebForm2.pas=c:\inetpub\wwwroot\cadastoDelphi\Default.pas</Transaction>
+  </Transactions>
+</BorlandProject>

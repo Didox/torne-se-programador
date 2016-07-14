@@ -1,0 +1,9 @@
+
+Error: The SqlParameterCollection only accepts non-null SqlParameter type objects, not ParameterDirection objects.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Syntax error: Missing operand after 'tb_clientes' operator.
+Error: Filter expression '1' does not evaluate to a Boolean term.

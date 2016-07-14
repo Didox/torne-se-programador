@@ -1,0 +1,223 @@
+body{
+	font-family: Arial;
+}
+header{
+	background-color:#ecedeb;height:130px;
+}
+.logo{
+	margin-left: 200px; margin-top: 25px;
+}
+.menu{
+	background-color:#fcfcfc;
+	height:37px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.menu ul{
+	float: left;
+	margin-top: 5px;
+}
+.menu ul li{
+	float: left;
+	margin-left: 70px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.menu ul li.active{
+	background-color: #8612a1;
+    color: #fff;
+    height: 18px;
+    width: 46px;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: -5px;
+}
+
+.container{
+	background-color: #540d7a;
+	height: 1000px;
+}
+.container #colunas{
+	width: 1100px;
+	margin-left: 20%;
+	float: left;
+}
+.container #coluna1, .container #coluna2{
+	width: 970px;
+	height: 330px;
+	margin-top: 10px;
+}
+.container #coluna1 #bem-vindo h1{
+	color:#81ba25;
+}
+.container #coluna1 #bem-vindo a{
+    background-color: #ae20c7;
+    display: block;
+    width: 82px;
+    height: 0px;
+    padding: 27px;
+    padding-top: 10px;
+}
+.container #coluna1 #bem-vindo{
+	float:left;
+	width: 340px;
+	height: 290px;
+	color: #fff
+}
+.container #coluna1 #carrossel{
+	float:right;
+	width: 619px;
+	height: 290px;
+	background-color: #fff;
+	margin-top: 16px;
+}
+.container #coluna1 #carrossel img{
+	width: 619px;
+    height: 202px;
+}
+
+.container #coluna1 #carrossel div#texto{
+	width: 599px;
+    height: 78px;
+    background-color: #474747;
+    color: #fff;
+    padding: 10px;
+    padding-top: 2px;
+}
+.container #coluna1 #carrossel div#texto h2{
+	margin-top: 8px;
+    margin-bottom: -8px;
+}
+.container #coluna1 #carrossel div#texto p{
+	font-size: 14px;
+}
+.container #coluna2{
+	height: 30px;
+	float: left;
+}
+.container #coluna2 div#enviar-email{
+	background-image: url(imagens/enviaremail.jpg);
+	height: 75px;
+	width: 1000px;
+    margin-left: -24px;
+}
+.container #coluna2 div#enviar-email .titulo{
+    float: left;
+    margin-top: 27px;
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 95px;
+}
+.container #coluna2 div#enviar-email .texto{
+    float: left;
+    margin-top: 24px;
+    color: #000;
+    font-size: 12px;
+    margin-left: 27px;
+    width: 400px;
+}
+.container #coluna2 div#enviar-email .form{
+	float: left;
+	margin-top: 23px;
+	color: #fff;
+	font-size: 12px;
+}
+.container #coluna2 div#enviar-email .form #email{
+	height: 30px;
+    width: 190px;
+}
+.container #coluna2 div#enviar-email .form #enviar{
+	height: 30px;
+    width: 67px;
+    padding-top: 0px;
+    background-color: #9e22bd;
+    border: 0px;
+    color: #fff;
+    font-size: 14px;
+}
+.container .headlines{
+	margin-top: 30px;
+	float: left;
+}
+
+.container .headlines .head1, .container .headlines .head2, .container .headlines .head3{
+	width: 315px;
+	height: 320px;
+}
+
+.container .headlines .head1{
+	float: left;
+	margin-right: 24px;
+}
+.container .headlines .head1 strong{
+	color: #fc037b;
+    font-size: 20px;
+}
+.container .headlines .saiba{
+	color: #81ba25;
+	font-size: 14px;
+}
+.container .headlines .head1 .saiba{
+	color: #fc037b;
+}
+.container .headlines .saiba .quadrado{
+	background-color: #fc037b;
+    color: #fff;
+    width: 13px;
+    height: 18px;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.container .headlines p{
+	font-size: 13px;
+    color: #fff;
+    height: 243px;
+}
+.container .headlines .head2{
+	float: left;
+	margin-right: 24px;
+}
+.container .headlines .head2 strong, .container .headlines .head3, strong{
+	color: #81ba25;
+    font-size: 20px;
+}
+.container .headlines .head3{
+	float: left;
+}
+footer{
+	height: 400px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c6c7c3+0,c6c7c3+100&1+0,0+100 */
+	background: -moz-linear-gradient(top,  rgba(198,199,195,1) 0%, rgba(198,199,195,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(198,199,195,1) 0%,rgba(198,199,195,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(198,199,195,1) 0%,rgba(198,199,195,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c7c3', endColorstr='#00c6c7c3',GradientType=0 ); /* IE6-9 */
+
+}
+.info{
+	height: 360px;
+}
+.copyright{
+	background-color: #d1d1d1;
+	height: 56px;
+}
+
+.copyright span{
+	font-family: arial;
+	color: #303030;
+	float: left;
+	margin-top: 18px;
+	margin-left: 88px;
+}
+
+.copyright img{
+	float: right;
+	margin-top: 10px;
+	margin-right: 100px;
+}

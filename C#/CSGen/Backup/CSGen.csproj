@@ -1,0 +1,44 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="95808473-0d9e-4d44-b85e-2bddadee819b">
+    <Build>
+      <Settings AssemblyName="CSGen" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="WinExe">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="System.Web.Services" AssemblyName="System.Web.Services" />
+        <Reference Name="System.Data" AssemblyName="System.Data" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\GeraProcedures\GerarProcedure.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Code\SqlColumn.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\GeraDataBaseClass\GerarDataBaseClass.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Code\LoadDataBaseSchema.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Configuracoes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\ReportBug.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Program.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\wsLuisSanches\LuisSanchesServices.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Teste.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Principal.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\CreateSolution\CreateProject.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Code\SqlTable.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\Code\SqlReference.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\wsLuisSanches\ReportBugCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\CreateSolution\TipoProjeto.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\GeraBusinessClass\GerarBusinessClass.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen\CreateSolution\CreateSolution.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="CSGen.Teste.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="CSGen.Configuracoes.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="CSGen.ReportBug.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="CSGen.Principal.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

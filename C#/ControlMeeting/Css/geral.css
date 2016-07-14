@@ -1,0 +1,175 @@
+.tab_fio {
+	border-right-style: dotted;
+	border-right-width: 1px;
+	border-right-color: #666666;
+	
+	border-left-style: dotted;
+	border-left-width: 1px;
+	border-left-color: #666666;
+	
+	border-top-style: dotted;
+	border-top-width: 1px;
+	border-top-color: #666666;
+		
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: #666666;	
+}
+
+.tab_fio2 {
+	border-right-style: dotted;
+	border-right-width: 1px;
+	border-right-color: Green;
+	
+	border-left-style: dotted;
+	border-left-width: 1px;
+	border-left-color: Green;
+	
+	border-top-style: dotted;
+	border-top-width: 1px;
+	border-top-color: Green;
+		
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: Green;
+	
+	font-weight: bold;
+	COLOR: Green;	
+	background-color: #f0f0f0
+}
+
+.grid
+{
+	behavior: url( ../htc/ordenaRelatorio.htc) url( ../htc/destaque.htc) url( ../htc/dragdrop.htc);
+}
+
+a:link
+{
+	text-decoration:none;
+	color:#666666;
+}
+a:active{
+	text-decoration:none;
+	color:#666666;
+}
+a:visited{
+	text-decoration:none;
+	color:#666666;
+}
+a:hover{
+	font-weight: bold;
+	color:#666666;
+	text-decoration:underline;
+}
+
+a.aWhite:link{
+	text-decoration:none;
+	color:#ffffff;
+}
+a.aWhite:active{
+	text-decoration:none;
+	color:#ffffff;
+}
+a.aWhite:visited{
+	text-decoration:none;
+	color:#ffffff;
+}
+a.aWhite:hover{
+	text-decoration:none;
+	color:#DCE4F2;
+}
+
+select 
+{
+	FONT-SIZE: 9px; 
+	COLOR: #666666;
+	FONT-FAMILY: verdana;
+	border:1px solid #c0c0c0;
+}
+
+.folderSelect
+{
+	border-right-style: dotted;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	
+	border-left-style: dotted;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	
+	border-top-style: dotted;
+	border-top-width: 1px;
+	border-top-color: #000000;
+		
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	
+	font-weight: bold;
+	COLOR: #000000;
+}
+
+.trItemForm
+{
+	font-weight: bold;
+	color:#666666;
+}
+
+
+.folderNotSelect
+{
+	COLOR: #666666;
+}
+
+
+input 
+{
+	FONT-SIZE: 9px; 
+	COLOR: #666666;
+	FONT-FAMILY: verdana;
+	border:1px solid #c0c0c0;
+}
+
+body
+{
+	margin-bottom: 3;
+	margin-left: 3;
+	margin-right:3;
+	margin-top:3;	
+}
+
+.tdTitle
+{
+	font-size: 15px;
+	font-family:verdana;
+	color:#666666;	
+	font-weight: bold;	
+}
+
+.maisMenos
+{
+	font-size: 12px;
+	font-family:verdana;
+	color:#ffffff;	
+	font-weight: bold;	
+}
+
+.tdForm
+{
+	font-size: 11px;
+	font-family:verdana;
+	color:#666666;	
+	font-weight: bold;
+}
+
+td
+{
+	font-size: 9px;
+	font-family:verdana;
+	color:#666666;
+}
+
+.destaqueGridHtc
+{
+	behavior: url( htc/destaqueAll.htc);
+}

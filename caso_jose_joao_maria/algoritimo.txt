@@ -1,0 +1,59 @@
+Se = if
+Senão = else
+Senão se = else if
+Case = switch
+
+Sintax
+
+Algoritimo
+//--------------- Caso joão ------------------
+mostre("Digite a opção do joao")
+joao = leia()
+se(joao = 'academia')
+	mostre('Forte');
+senao
+	mostre('inteligente');
+fim
+
+//--------------- Caso jose ------------------
+mostre("Digite a opção do jose")
+jose = leia()
+se(jose = 'josefina')
+	mostre('beijos');
+senao se(jose = 'bar')
+	mostre('bebado');
+senao
+	se(jose = 'trabalho')
+		mostre('ganhar dinheiro');
+	senao
+		mostre('ficar inteligente');
+fim
+//--------------- Caso maria ------------------
+mostre("Digite a opção da maria")
+maria = leia()
+caso(maria)
+    igual 'unhas':
+        mostre("gastei com unhas");
+    igual 'cabeleireiro':
+        mostre("gastei com o cabelo");
+    igual 'academia':
+        mostre("melhorei aparencia");
+    igual 'compras':
+        mostre("gastei com compras");
+    igual 'trabalho':
+        mostre("ganhei com trabalho");
+    qualquerCoisa:
+        mostre("gastei com sapatos");
+fim
+
+
+
+
+
+
+
+
+
+
+
+

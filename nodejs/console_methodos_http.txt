@@ -1,0 +1,7 @@
+
+curl -X GET -d arg=val -d arg2=val2 localhost:3000/200
+curl -X PUT -d arg=val -d arg2=val2 localhost:3000/200
+curl -X DELETE -d arg=val -d arg2=val2 localhost:3000/200
+curl -X POST -d arg=val -d arg2=val2 localhost:3000/200
+curl -X PATCH -d arg=val -d arg2=val2 localhost:3000/200
+curl -X OPTIONS -d arg=val -d arg2=val2 localhost:3000/200
