@@ -10,12 +10,15 @@ namespace console_app
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            do
-            {
-                Console.WriteLine(i);
-                i++;
-            } while (i < 10);
+            looping(1);
+        }
+
+        public static void looping(int a)
+        {
+            Console.WriteLine(a);
+            if(a < 3) {
+                looping(a + 1);
+            } 
         }
     }
 }
