@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OO
 {
-    class Joao : Pessoa
+    public class Joao : Pessoa
     {
         //sobrescrevi e falei que ninguem pode sobrescrever mais
         public sealed override string MerodoSobrescrever()

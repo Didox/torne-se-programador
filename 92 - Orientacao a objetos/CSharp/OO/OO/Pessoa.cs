@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OO
 {
-    class Pessoa : interfacePessoa // implementa a interface
+    public class Pessoa : interfacePessoa // implementa a interface
     {
         //construtor
         public Pessoa() { }
@@ -31,6 +31,11 @@ namespace OO
         public string AttrPublico { get; set; }
 
 
+        //metodos privados
+        public string getAttrPrivado()
+        {
+            return this.attrPrivado;
+        }
 
         //metodos privados
         private string metodoPrivado()

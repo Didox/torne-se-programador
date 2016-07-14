@@ -1,0 +1,9 @@
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\OO.exe
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\OO.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\UnitTestProject1\bin\Debug\TechTalk.SpecFlow.dll

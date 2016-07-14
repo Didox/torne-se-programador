@@ -7,3 +7,7 @@ c:\users\didox\onedrive\documentos\visual studio 2015\Projects\OO\OO\obj\Debug\O
 C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\bin\Debug\OO.exe.config
 C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\obj\Debug\OO.exe
 C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\obj\Debug\OO.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\obj\Debug\OO.csprojResolveAssemblyReference.cache
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\bin\Debug\OO.exe
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\bin\Debug\OO.pdb
+C:\projetos\torne-se-programador\92 - Orientacao a objetos\CSharp\OO\OO\bin\Debug\TechTalk.SpecFlow.dll
