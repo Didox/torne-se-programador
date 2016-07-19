@@ -1,7 +1,9 @@
 api = {
   get: function(status){
     $.ajax({
-      url: "http://localhost:3000/" + status
+      url: "http://localhost:3000/" + status,
+      type: 'GET',
+      data: "nome=Danilo&sobrenome=Aparecido",
     }).done(function( data ) {
       if(data != undefined && data != '')
         alert(data.text);

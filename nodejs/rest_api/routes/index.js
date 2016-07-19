@@ -27,6 +27,17 @@ router.get('/200', function(req, res, next) {
   });
 });
 
+router.post('/200', function(req, res, next) {
+  res.status(201).send({
+    text:'Retorno de pagina sucesso',
+    home:HOST
+  });
+});
+
+router.put('/200', function(req, res, next) {
+  res.status(204).send("");
+});
+
 router.get('/204', function(req, res, next) {
   res.status(204).send(''); //no content
 });
